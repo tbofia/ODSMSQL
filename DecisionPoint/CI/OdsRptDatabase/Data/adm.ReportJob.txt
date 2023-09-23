@@ -1,0 +1,15 @@
+0	RPT: Reporting Launcher-Spool	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		0	1	0	0	0	0	0
+1	RPT: DP Performance Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		4	1	0	0	0	25	0
+2	RPT: VPN Monitoring Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		5	1	0	0	0	1	0
+3	RPT: Industry Comparison Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		7	1	0	0	0	0	7
+4	RPT: ProcedureCode Analysis Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		8	1	0	0	0	0	7
+5	RPT: Loss Year Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	-1	0		9	0	0	0	0	0	23
+6	RPT: ERD Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		6	1	0	0	0	25	0
+7	RPT: Adjuster Workspace Service Requested Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		2	1	1	0	1	0	0
+8	RPT: DP Performance Report 3rdParty	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		10	0	0	0	0	25	0
+9	RPT: Provider Data Explorer	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	-1	0		11	1	0	0	0	1	0
+10	ETL: PrePPOBillInfo Endnotes	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		1	1	0	1	0	0	0
+11	RPT: PPO Activity Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		3	1	2	0	1	2	0
+12	RPT: Provider Data Explorer Industry Comparison Report	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	-1	0		12	1	0	0	0	1	0
+13	RPT: Self Serve Performance Report Savings	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	-1	0		13	0	0	0	0	25	0
+14	RPT: Self Serve Performance Report Operations	AcsOds	CSGProviderAnalytics@mitchell.com;CorpITBITeam@mitchell.com	0	0		14	0	0	0	0	25	0

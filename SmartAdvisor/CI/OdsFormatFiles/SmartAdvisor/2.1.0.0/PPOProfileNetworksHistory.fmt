@@ -1,0 +1,26 @@
+11.0
+24
+1       SQLNCHAR            0       42      "|\0"        1     PPOProfileNetworksHistorySeq                                 ""
+2       SQLNCHAR            0       2       "|\0"        2     RecordDeleted                                                ""
+3       SQLNCHAR            0       48      "|\0"        3     LogDateTime                                                  ""
+4       SQLNCHAR            0       512     "|\0"        4     loginame                                                     SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       6       "|\0"        5     PPOProfileSiteCode                                           SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       24      "|\0"        6     PPOProfileID                                                 ""
+7       SQLNCHAR            0       6       "|\0"        7     ProfileRegionSiteCode                                        SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       24      "|\0"        8     ProfileRegionID                                              ""
+9       SQLNCHAR            0       14      "|\0"        9     NetworkOrder                                                 ""
+10      SQLNCHAR            0       4       "|\0"        10    PPONetworkID                                                 SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "|\0"        11    SearchLogic                                                  SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "|\0"        12    Verification                                                 SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       48      "|\0"        13    EffectiveDate                                                ""
+14      SQLNCHAR            0       48      "|\0"        14    TerminationDate                                              ""
+15      SQLNCHAR            0       2       "|\0"        15    JurisdictionInd                                              SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       24      "|\0"        16    JurisdictionInsurerSeq                                       ""
+17      SQLNCHAR            0       2       "|\0"        17    JurisdictionUseOnly                                          SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       2       "|\0"        18    PPOSSTinReq                                                  SQL_Latin1_General_CP1_CI_AS
+19      SQLNCHAR            0       2       "|\0"        19    PPOSSLicReq                                                  SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       14      "|\0"        20    DefaultExtendedSearches                                      ""
+21      SQLNCHAR            0       14      "|\0"        21    DefaultExtendedFilters                                       ""
+22      SQLNCHAR            0       2       "|\0"        22    SeveredTies                                                  SQL_Latin1_General_CP1_CI_AS
+23      SQLNCHAR            0       1000    "|\0"        23    POS                                                          SQL_Latin1_General_CP1_CI_AS
+24      SQLNCHAR            0       2       "\r\0\n\0"   24    DmlOperation                                                 SQL_Latin1_General_CP1_CI_AS

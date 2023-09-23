@@ -1,0 +1,6 @@
+11.0
+4
+1       SQLNCHAR            0       24      "|\0"        1     EntityTypeID                   ""
+2       SQLNCHAR            0       500     "|\0"        2     EntityTypeKey                  SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       0       "|\0"        3     Description                    SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "\r\0\n\0"   4     DmlOperation                   SQL_Latin1_General_CP1_CI_AS

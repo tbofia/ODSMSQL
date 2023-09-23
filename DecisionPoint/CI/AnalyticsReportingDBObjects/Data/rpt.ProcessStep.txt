@@ -1,0 +1,88 @@
+1	103	Extract data for BillExclusionLookUpTable from source	1	SELECT 
+ BillExclusionLookUpTable.ReportID ,
+ REPLACE(REPLACE(REPLACE(BillExclusionLookUpTable.ReportName, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ 'I'
+FROM ~SNAPSHOT~.dbo.BillExclusionLookUpTable	SELECT 
+ ct.ReportID ,
+ REPLACE(REPLACE(REPLACE(BillExclusionLookUpTable.ReportName, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ ct.SYS_CHANGE_OPERATION
+FROM ~SNAPSHOT~.dbo.BillExclusionLookUpTable
+RIGHT OUTER JOIN CHANGETABLE (CHANGES ~SNAPSHOT~.dbo.BillExclusionLookUpTable, ~PREVIOUSCTVERSION~) AS ct ON BillExclusionLookUpTable.ReportID = ct.ReportID
+	1.0
+2	102	Extract data for CustomerBillExclusion from source	1	SELECT 
+ CustomerBillExclusion.BillIDNo ,
+ REPLACE(REPLACE(REPLACE(CustomerBillExclusion.Customer, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ CustomerBillExclusion.ReportID ,
+ CustomerBillExclusion.CreateDate ,
+ 'I'
+FROM ~SNAPSHOT~.dbo.CustomerBillExclusion	SELECT 
+ ct.BillIDNo ,
+ REPLACE(REPLACE(REPLACE(ct.Customer, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ ct.ReportID ,
+ CustomerBillExclusion.CreateDate ,
+ ct.SYS_CHANGE_OPERATION
+FROM ~SNAPSHOT~.dbo.CustomerBillExclusion
+RIGHT OUTER JOIN CHANGETABLE (CHANGES ~SNAPSHOT~.dbo.CustomerBillExclusion, ~PREVIOUSCTVERSION~) AS ct ON CustomerBillExclusion.BillIDNo = ct.BillIDNo
+ AND CustomerBillExclusion.Customer = ct.Customer
+ AND CustomerBillExclusion.ReportID = ct.ReportID
+	1.0
+3	104	Extract data for ProviderSpecialtyToProvType from source	1	SELECT 
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.ProviderType, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.ProviderType_Desc, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.Specialty, '|', ' '), CHAR(13), ' '), CHAR(10), ' ')  ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.Specialty_Desc, '|', ' '), CHAR(13), ' '), CHAR(10), ' ')  ,
+ ProviderSpecialtyToProvType.CreateDate ,
+ ProviderSpecialtyToProvType.ModifyDate ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.LogicalDelete, '|', ' '), CHAR(13), ' '), CHAR(10), ' ')  ,
+ 'I'
+FROM ~SNAPSHOT~.dbo.ProviderSpecialtyToProvType	SELECT 
+ REPLACE(REPLACE(REPLACE(ct.ProviderType, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.ProviderType_Desc, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(ct.Specialty, '|', ' '), CHAR(13), ' '), CHAR(10), ' ')  ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.Specialty_Desc, '|', ' '), CHAR(13), ' '), CHAR(10), ' ')  ,
+ ProviderSpecialtyToProvType.CreateDate ,
+ ProviderSpecialtyToProvType.ModifyDate ,
+ REPLACE(REPLACE(REPLACE(ProviderSpecialtyToProvType.LogicalDelete, '|', ' '), CHAR(13), ' '), CHAR(10), ' ')  ,
+ ct.SYS_CHANGE_OPERATION
+FROM ~SNAPSHOT~.dbo.ProviderSpecialtyToProvType
+RIGHT OUTER JOIN CHANGETABLE (CHANGES ~SNAPSHOT~.dbo.ProviderSpecialtyToProvType, ~PREVIOUSCTVERSION~) AS ct ON ProviderSpecialtyToProvType.ProviderType = ct.ProviderType
+ AND ProviderSpecialtyToProvType.Specialty = ct.Specialty
+ 	1.0
+4	137	Extract data for VPNActivityFlag from source	1	SELECT 
+ VPNActivityFlag.Activity_Flag ,
+ REPLACE(REPLACE(REPLACE(VPNActivityFlag.AF_Description, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(VPNActivityFlag.AF_ShortDesc, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(VPNActivityFlag.Data_Source, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ VPNActivityFlag.Default_Billable ,
+ VPNActivityFlag.Credit ,
+ 'I'
+FROM ~SNAPSHOT~.dbo.VPNActivityFlag	SELECT 
+ VPNActivityFlag.Activity_Flag ,
+ REPLACE(REPLACE(REPLACE(VPNActivityFlag.AF_Description, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(VPNActivityFlag.AF_ShortDesc, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(VPNActivityFlag.Data_Source, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ VPNActivityFlag.Default_Billable ,
+ VPNActivityFlag.Credit ,
+ ct.SYS_CHANGE_OPERATION
+FROM ~SNAPSHOT~.dbo.VPNActivityFlag
+RIGHT OUTER JOIN CHANGETABLE(CHANGES ~SNAPSHOT~.dbo.VPNActivityFlag, ~PREVIOUSCTVERSION~) AS ct ON VPNActivityFlag.Activity_Flag = ct.Activity_Flag	1.0
+5	151	Extract data for MedicalCodeCutOffs from source	1	SELECT 
+ MedicalCodeCutOffs.CodeTypeID ,
+ REPLACE(REPLACE(REPLACE(MedicalCodeCutOffs.CodeType, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(MedicalCodeCutOffs.Code, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(MedicalCodeCutOffs.FormType, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ MedicalCodeCutOffs.MaxChargedPerUnit ,
+ MedicalCodeCutOffs.MaxUnitsPerEncounter ,
+ 'I'
+FROM ~SNAPSHOT~.dbo.MedicalCodeCutOffs	SELECT 
+ MedicalCodeCutOffs.CodeTypeID ,
+ REPLACE(REPLACE(REPLACE(MedicalCodeCutOffs.CodeType, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(MedicalCodeCutOffs.Code, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ REPLACE(REPLACE(REPLACE(MedicalCodeCutOffs.FormType, '|', ' '), CHAR(13), ' '), CHAR(10), ' ') ,
+ MedicalCodeCutOffs.MaxChargedPerUnit ,
+ MedicalCodeCutOffs.MaxUnitsPerEncounter ,
+ ct.SYS_CHANGE_OPERATION
+FROM ~SNAPSHOT~.dbo.MedicalCodeCutOffs
+RIGHT OUTER JOIN CHANGETABLE(CHANGES ~SNAPSHOT~.dbo.MedicalCodeCutOffs, ~PREVIOUSCTVERSION~) AS ct ON MedicalCodeCutOffs.CodeTypeID = ct.CodeTypeID
+ AND MedicalCodeCutOffs.Code = ct.Code
+ AND MedicalCodeCutOffs.FormType = ct.FormType	1.0

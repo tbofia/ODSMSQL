@@ -1,0 +1,14 @@
+11.0
+11
+1       SQLCHAR             0       24      "|"      1     StartDate                    ""
+2       SQLCHAR             0       24      "|"      2     EndDate                      ""
+3       SQLCHAR             0       5       "|"      3     ZIP_Code                     SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       2       "|"      4     State                        SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       2       "|"      5     Region                       SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       2       "|"      6     AmbRegion                    SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       7       "|"      7     RuralFlag                    ""
+8       SQLCHAR             0       7       "|"      8     ASCRegion                    ""
+9       SQLCHAR             0       7       "|"      9     PlusFour                     ""
+10      SQLCHAR             0       12      "|"      10    CarrierId                    ""
+11      SQLCHAR             0       1       "\r\n"   11    DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

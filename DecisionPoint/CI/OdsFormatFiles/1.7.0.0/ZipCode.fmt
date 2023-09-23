@@ -1,0 +1,12 @@
+11.0
+10
+1       SQLCHAR             0       5       "|"      1     ZipCode                            SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       1       "|"      2     PrimaryRecord                      ""
+3       SQLCHAR             0       2       "|"      3     STATE                              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       30      "|"      4     City                               SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       30      "|"      5     CityAlias                          SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       30      "|"      6     County                             SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       5       "|"      7     Cbsa                               SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       5       "|"      8     CbsaType                           SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       5       "|"      9     ZipCodeRegionId                    ""
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                       SQL_Latin1_General_CP1_CI_AS

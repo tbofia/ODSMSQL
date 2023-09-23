@@ -1,0 +1,3 @@
+IF SCHEMA_ID('rpt') IS NULL
+EXEC ('CREATE SCHEMA rpt')
+GO

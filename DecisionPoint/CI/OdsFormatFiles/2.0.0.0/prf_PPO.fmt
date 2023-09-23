@@ -1,0 +1,18 @@
+11.0
+15
+1       SQLCHAR             0       12      "|"      1     PPOSysId                                                     ""
+2       SQLCHAR             0       12      "|"      2     ProfileId                                                    ""
+3       SQLCHAR             0       12      "|"      3     PPOId                                                        ""
+4       SQLCHAR             0       7       "|"      4     bStatus                                                      ""
+5       SQLCHAR             0       24      "|"      5     StartDate                                                    ""
+6       SQLCHAR             0       24      "|"      6     EndDate                                                      ""
+7       SQLCHAR             0       7       "|"      7     AutoSend                                                     ""
+8       SQLCHAR             0       7       "|"      8     AutoResend                                                   ""
+9       SQLCHAR             0       7       "|"      9     BypassMatching                                               ""
+10      SQLCHAR             0       7       "|"      10    UseProviderNetworkEnrollment                                 ""
+11      SQLCHAR             0       7       "|"      11    TieredTypeId                                                 ""
+12      SQLCHAR             0       7       "|"      12    Priority                                                     ""
+13      SQLCHAR             0       24      "|"      13    PolicyEffectiveDate                                          ""
+14      SQLCHAR             0       12      "|"      14    BillFormType                                                 ""
+15      SQLCHAR             0       1       "\r\n"   15    DmlOperation                                                 SQL_Latin1_General_CP1_CI_AS
+

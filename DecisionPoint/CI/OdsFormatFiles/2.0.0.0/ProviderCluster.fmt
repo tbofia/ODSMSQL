@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     PvdIDNo                                    ""
+2       SQLCHAR             0       12      "|"      2     OrgOdsCustomerId                           ""
+3       SQLCHAR             0       200     "|"      3     MitchellProviderKey                        SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       200     "|"      4     ProviderClusterKey                         SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       30      "|"      5     ProviderType                               SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                               SQL_Latin1_General_CP1_CI_AS
+

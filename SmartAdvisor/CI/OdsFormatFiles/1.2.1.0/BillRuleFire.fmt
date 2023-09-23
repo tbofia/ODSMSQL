@@ -1,0 +1,18 @@
+11.0
+15
+1       SQLNCHAR            0       8       "|\0"        1     ClientCode                             SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     BillSeq                                ""
+3       SQLNCHAR            0       14      "|\0"        3     LineSeq                                ""
+4       SQLNCHAR            0       10      "|\0"        4     RuleID                                 SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       2       "|\0"        5     RuleType                               SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       48      "|\0"        6     DateRuleFired                          ""
+7       SQLNCHAR            0       2       "|\0"        7     Validated                              SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       4       "|\0"        8     ValidatedUserID                        SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       48      "|\0"        9     DateValidated                          ""
+10      SQLNCHAR            0       26      "|\0"        10    PendToID                               SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "|\0"        11    RuleSeverity                           SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       24      "|\0"        12    WFTaskSeq                              ""
+13      SQLNCHAR            0       8       "|\0"        13    ChildTargetSubset                      SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       24      "|\0"        14    ChildTargetSeq                         ""
+15      SQLNCHAR            0       2       "\r\0\n\0"   15    DmlOperation                           SQL_Latin1_General_CP1_CI_AS
+

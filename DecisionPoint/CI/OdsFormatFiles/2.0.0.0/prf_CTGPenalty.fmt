@@ -1,0 +1,14 @@
+11.0
+11
+1       SQLCHAR             0       12      "|"      1     CTGPenID                                           ""
+2       SQLCHAR             0       12      "|"      2     ProfileId                                          ""
+3       SQLCHAR             0       7       "|"      3     ApplyPreCerts                                      ""
+4       SQLCHAR             0       7       "|"      4     NoPrecertLogged                                    ""
+5       SQLCHAR             0       7       "|"      5     MaxTotalPenalty                                    ""
+6       SQLCHAR             0       7       "|"      6     TurnTimeForAppeals                                 ""
+7       SQLCHAR             0       7       "|"      7     ApplyEndnoteForPercert                             ""
+8       SQLCHAR             0       7       "|"      8     ApplyEndnoteForCarePath                            ""
+9       SQLCHAR             0       7       "|"      9     ExemptPrecertPenalty                               ""
+10      SQLCHAR             0       1       "|"      10    ApplyNetworkPenalty                                ""
+11      SQLCHAR             0       1       "\r\n"   11    DmlOperation                                       SQL_Latin1_General_CP1_CI_AS
+

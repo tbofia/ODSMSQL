@@ -1,0 +1,10 @@
+11.0
+8
+1       SQLNCHAR            0       14      "|\0"        1     ReductionCode                                        ""
+2       SQLNCHAR            0       100     "|\0"        2     ReductionDescription                                 SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       2       "|\0"        3     BEOverride                                           SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "|\0"        4     BEMsg                                                SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       16      "|\0"        5     Abbreviation                                         SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       12      "|\0"        6     DefaultMessageCode                                   SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       12      "|\0"        7     DefaultDenialMessageCode                             SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       2       "\r\0\n\0"   8     DmlOperation                                         SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,21 @@
+10.0
+19
+1       SQLCHAR             0       12      "|"      1     CompanyId                      ""
+2       SQLCHAR             0       12      "|"      2     OfficeId                       ""
+3       SQLCHAR             0       4       "|"      3     OfcNo                          SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       40      "|"      4     OfcName                        SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       30      "|"      5     OfcAddr1                       SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       30      "|"      6     OfcAddr2                       SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       30      "|"      7     OfcCity                        SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       2       "|"      8     OfcState                       SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       12      "|"      9     OfcZip                         SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       20      "|"      10    OfcPhone                       SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       7       "|"      11    OfcDefault                     ""
+12      SQLCHAR             0       50      "|"      12    OfcClaimMask                   SQL_Latin1_General_CP1_CI_AS
+13      SQLCHAR             0       50      "|"      13    OfcTinMask                     SQL_Latin1_General_CP1_CI_AS
+14      SQLCHAR             0       7       "|"      14    Version                        ""
+15      SQLCHAR             0       12      "|"      15    OfcEdits                       ""
+16      SQLCHAR             0       7       "|"      16    OfcCOAEnabled                  ""
+17      SQLCHAR             0       7       "|"      17    CTGEnabled                     ""
+18      SQLCHAR             0       24      "|"      18    LastChangedOn                  ""
+19      SQLCHAR             0       1       "\r\n"   19    DmlOperation                   SQL_Latin1_General_CP1_CI_AS

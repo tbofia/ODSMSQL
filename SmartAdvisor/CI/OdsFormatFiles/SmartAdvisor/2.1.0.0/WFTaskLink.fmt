@@ -1,0 +1,6 @@
+11.0
+4
+1       SQLNCHAR            0       24      "|\0"        1     FromTaskSeq                  ""
+2       SQLNCHAR            0       14      "|\0"        2     LinkWhen                     ""
+3       SQLNCHAR            0       24      "|\0"        3     ToTaskSeq                    ""
+4       SQLNCHAR            0       2       "\r\0\n\0"   4     DmlOperation                 SQL_Latin1_General_CP1_CI_AS

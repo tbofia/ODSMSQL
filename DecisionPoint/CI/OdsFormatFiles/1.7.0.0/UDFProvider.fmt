@@ -1,0 +1,8 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     PvdIdNo                            ""
+2       SQLCHAR             0       12      "|"      2     UDFIdNo                            ""
+3       SQLCHAR             0       255     "|"      3     UDFValueText                       SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       41      "|"      4     UDFValueDecimal                    ""
+5       SQLCHAR             0       24      "|"      5     UDFValueDate                       ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                       SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,12 @@
+11.0
+9
+1       SQLCHAR             0       12      "|"      1     BillIdNo                             ""
+2       SQLCHAR             0       7       "|"      2     Line_No                              ""
+3       SQLCHAR             0       5       "|"      3     PaymentAPC                           SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       2       "|"      4     ServiceIndicator                     SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       1       "|"      5     PaymentIndicator                     SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       41      "|"      6     OutlierAmount                        ""
+7       SQLCHAR             0       41      "|"      7     PricerAllowed                        ""
+8       SQLCHAR             0       41      "|"      8     MedicareAmount                       ""
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                         SQL_Latin1_General_CP1_CI_AS
+

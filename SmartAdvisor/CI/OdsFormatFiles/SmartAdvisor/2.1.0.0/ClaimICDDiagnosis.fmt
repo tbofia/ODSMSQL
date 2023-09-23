@@ -1,0 +1,7 @@
+11.0
+5
+1       SQLNCHAR            0       8       "|\0"        1     ClaimSysSubSet                         SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     ClaimSeq                               ""
+3       SQLNCHAR            0       14      "|\0"        3     ClaimDiagnosisSeq                      ""
+4       SQLNCHAR            0       24      "|\0"        4     ICDDiagnosisID                         ""
+5       SQLNCHAR            0       2       "\r\0\n\0"   5     DmlOperation                           SQL_Latin1_General_CP1_CI_AS

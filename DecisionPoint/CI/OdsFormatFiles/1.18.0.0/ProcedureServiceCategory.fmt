@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLCHAR             0       5       "|"      1     ProcedureServiceCategoryId                                                 ""
+2       SQLCHAR             0       50      "|"      2     ProcedureServiceCategoryName                                               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       100     "|"      3     ProcedureServiceCategoryDescription                                        SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       100     "|"      4     LegacyTableName                                                            SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     LegacyBitValue                                                             ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                                                               SQL_Latin1_General_CP1_CI_AS
+

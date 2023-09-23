@@ -1,0 +1,11 @@
+11.0
+9
+1       SQLNCHAR            0       8       "^\0|\0"     1     ClientCode                                             SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "^\0|\0"     2     BillSeq                                                ""
+3       SQLNCHAR            0       14      "^\0|\0"     3     PendSeq                                                ""
+4       SQLNCHAR            0       14      "^\0|\0"     4     PendCommentSeq                                         ""
+5       SQLNCHAR            0       15000   "^\0|\0"     5     PendComment                                            SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       4       "^\0|\0"     6     CreateUserID                                           SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       48      "^\0|\0"     7     CreateDate                                             ""
+8       SQLNCHAR            0       256     "^\0|\0"     8     CreatedByExternalUserName                              SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       2       "\r\0\n\0"   9     DmlOperation                                           SQL_Latin1_General_CP1_CI_AS

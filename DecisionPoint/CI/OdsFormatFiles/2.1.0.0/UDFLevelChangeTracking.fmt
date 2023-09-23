@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLCHAR             0       12      "|"      1     UDFLevelChangeTrackingId                             ""
+2       SQLCHAR             0       12      "|"      2     EntityType                                           ""
+3       SQLCHAR             0       12      "|"      3     EntityId                                             ""
+4       SQLCHAR             0       50      "|"      4     CorrelationId                                        SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     UDFId                                                ""
+6       SQLCHAR             0       0       "|"      6     PreviousValue                                        SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       0       "|"      7     UpdatedValue                                         SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       12      "|"      8     UserId                                               ""
+9       SQLCHAR             0       30      "|"      9     ChangeDate                                           ""
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                                         SQL_Latin1_General_CP1_CI_AS
+

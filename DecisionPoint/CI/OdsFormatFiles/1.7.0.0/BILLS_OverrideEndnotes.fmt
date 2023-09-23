@@ -1,0 +1,9 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     OverrideEndNoteID                      ""
+2       SQLCHAR             0       12      "|"      2     BillIdNo                               ""
+3       SQLCHAR             0       7       "|"      3     Line_No                                ""
+4       SQLCHAR             0       7       "|"      4     OverrideEndNote                        ""
+5       SQLCHAR             0       30      "|"      5     PercentDiscount                        ""
+6       SQLCHAR             0       7       "|"      6     ActionId                               ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                           SQL_Latin1_General_CP1_CI_AS

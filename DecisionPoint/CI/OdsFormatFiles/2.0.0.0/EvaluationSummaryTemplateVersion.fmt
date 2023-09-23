@@ -1,0 +1,8 @@
+11.0
+5
+1       SQLCHAR             0       12      "|"      1     EvaluationSummaryTemplateVersionId                                       ""
+2       SQLCHAR             0       0       "|"      2     Template                                                                 SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       64      "|"      3     TemplateHash                                                             ""
+4       SQLCHAR             0       37      "|"      4     CreatedDate                                                              ""
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                                                             SQL_Latin1_General_CP1_CI_AS
+

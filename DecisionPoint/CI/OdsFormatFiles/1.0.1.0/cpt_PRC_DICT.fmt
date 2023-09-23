@@ -1,0 +1,19 @@
+10.0
+17
+1       SQLCHAR             0       7       "|"      1     PRC_CD                             SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       24      "|"      2     StartDate                          ""
+3       SQLCHAR             0       24      "|"      3     EndDate                            ""
+4       SQLCHAR             0       0       "|"      4     PRC_DESC                           SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     Flags                              ""
+6       SQLCHAR             0       1       "|"      6     Vague                              SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       7       "|"      7     PerVisit                           ""
+8       SQLCHAR             0       7       "|"      8     PerClaimant                        ""
+9       SQLCHAR             0       7       "|"      9     PerProvider                        ""
+10      SQLCHAR             0       12      "|"      10    BodyFlags                          ""
+11      SQLCHAR             0       7       "|"      11    Colossus                           ""
+12      SQLCHAR             0       1       "|"      12    CMS_Status                         SQL_Latin1_General_CP1_CI_AS
+13      SQLCHAR             0       7       "|"      13    DrugFlag                           ""
+14      SQLCHAR             0       7       "|"      14    CurativeFlag                       ""
+15      SQLCHAR             0       7       "|"      15    ExclPolicyLimit                    ""
+16      SQLCHAR             0       7       "|"      16    SpecNetFlag                        ""
+17      SQLCHAR             0       1       "\r\n"   17    DmlOperation                       SQL_Latin1_General_CP1_CI_AS

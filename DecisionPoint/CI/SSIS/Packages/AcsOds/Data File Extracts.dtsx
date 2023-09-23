@@ -1,0 +1,2015 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/10/2016 9:42:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AB101348"
+  DTS:CreatorName="CORP\ab101348"
+  DTS:DTSID="{DD196B4E-CF21-4A17-93B2-15A8FEF226A8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.68"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Data File Extracts"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="361"
+  DTS:VersionGUID="{F0A18955-FC76-4A37-98FE-BE3353A1EBDF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PrimaryConnection]"
+      DTS:CreationName="OLEDB"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+      DTS:ObjectName="PrimaryConnection">
+      <DTS:PropertyExpression
+        DTS:Name="InitialCatalog">@[User::SourceDatabase]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="ServerName">@[User::SourceServer]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=QSQL101V\MEDQA1;Initial Catalog=MMedical_Esurance;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SecondaryConnection]"
+      DTS:CreationName="OLEDB"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{47230C28-3463-4901-8A25-7AE283FC4127}"
+      DTS:ObjectName="SecondaryConnection">
+      <DTS:PropertyExpression
+        DTS:Name="InitialCatalog">@[User::SourceDatabase]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="ServerName">@[User::DBSnapshotServer]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=QSQL101V\MEDQA1;Initial Catalog=MMedical_Esurance;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{6A8CA78E-F452-4A83-92C0-4698991CF283}"
+      DTS:ObjectName="DataExtractTypeId">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">1</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{C677C5FA-8176-4FE2-9B63-FC02FFCBE78D}"
+      DTS:ObjectName="FileSize">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">100</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{EFF44B0A-E012-43DD-BEE0-0BC64ECE752F}"
+      DTS:ObjectName="SourceDatabase">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">MMedical_Esurance</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{5D6196D0-8362-4413-9EBE-382688FE2A77}"
+      DTS:ObjectName="SourceServer">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">QSQL101V\MEDQA1</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BA5307B1-F284-4A12-A9E0-9DFBCD4D2857}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BatchColumnName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D0C6AB8C-914B-4097-9642-D44D16B987F2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BatchColumnType">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CE5E5D5A-C588-4700-9BC5-FDB4654ECD95}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="BatchNumber">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2CD6ED76-4730-446F-B552-2E5C840D04FC}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ControlFileStatus">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{62F72901-C377-40A5-8842-E64681873263}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentCTVersion">
+      <DTS:VariableValue
+        DTS:DataType="20">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8CD35FCF-345A-4D7C-839C-BB19FE989B0E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::DataExtractTypeId]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataExtractTypeId">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92B2E3DA-A06F-41BA-9154-6112701FF62C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataFileSize">
+      <DTS:VariableValue
+        DTS:DataType="5">0.</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E7DA6C0C-CCF7-4742-8F6F-8706EC5D1AB7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DBSnapshotName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AB2AACCF-CE4C-46FB-9348-39937CE0E1F5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DBSnapshotServer">
+      <DTS:VariableValue
+        DTS:DataType="8">QSQL101V\MEDQA1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5FED6850-690D-4450-9935-F4BDC3D349BE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DMAppVersion">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{698A4D19-EB27-41F7-B695-9E581FC1158A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DMAppVersionId">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9BDAC609-1679-4E02-AABD-82302CD3CCE7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DPAppVersion">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9FDA036B-4FAE-4576-9AFC-C4E49CD87492}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DPAppVersionId">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6C9CF415-D906-400B-AB65-7A77CD555267}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DropSnapshot">
+      <DTS:VariableValue
+        DTS:DataType="2">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FEC78377-A38E-43CE-93D9-8A245EA91D5A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileColumnDelimiter">
+      <DTS:VariableValue
+        DTS:DataType="8">|</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{195D6F76-5D08-43CF-B160-35036AB4B6BE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileExtension">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{604BDB8E-8B13-4445-8DC7-5D3352F3ABE6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{093B2679-A626-44BA-9B41-21730EDFE2C1}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::NumberOfBatches]==0?1:@[User::NumberOfBatches]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="LastFileNumber">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7BA54161-0A7A-48A9-99B4-94201657C1B3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MMedStaticDataVersionId">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{038C0A88-8636-4694-AE0A-19D72958340A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NextStatus">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{94A11BFE-1605-4D86-927C-35B587467B4A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NumberOfBatches">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BB00A5E3-1FDF-4EED-8E6E-8E95C451FFFE}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NumberProcessesNeedReconciliation">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2BAE4E5F-0B86-4302-AB72-A4B6CD8A73E2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="OutputPath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\qa14nas\CSG-Analytics\OdsFileExtracts\DecisionPoint\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C4E8870C-DB04-4A37-84A1-3DD4EE6B6EC3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="PostingGroupAuditId">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{708D227B-18C8-47EA-A506-CDF1A0677DD0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PostingGroupId">
+      <DTS:VariableValue
+        DTS:DataType="2">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1FAF0FD9-3622-461E-A4A9-D6BF017A3C7A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Priority">
+      <DTS:VariableValue
+        DTS:DataType="2">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5871E551-5985-422B-835C-CBC8D0C6D5D0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ProcessAuditId">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3408EF55-1CF3-4BA1-AAFA-B363BD5E24BA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ProcessQueueRowcount">
+      <DTS:VariableValue
+        DTS:DataType="2">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D3F38205-F2EC-4C0E-8B4D-ADA648E35DDA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ProcessStepAuditId">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0BE7274A-12B7-4A3A-A2AC-91B48ECFA37B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ProcessStepId">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{88FF8B20-E989-4D2D-A9EE-10136113B3F0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SnapshotCreateDate">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B23666B1-9A10-4959-9407-F4E23B155536}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::SourceDatabase]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceDatabase">
+      <DTS:VariableValue
+        DTS:DataType="8">MMedical_Esurance</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7C2C456A-6EBA-487D-B958-535B355926FC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceQuery">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{739453D0-10BB-446F-B82F-17F1B50C652D}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::SourceServer]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceServer">
+      <DTS:VariableValue
+        DTS:DataType="8">QSQL101V\MEDQA1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7567547D-220C-476F-A06F-26A9B4D4101B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalProcessedRecords">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6C007E76-3093-4D17-9A4E-D2C638783233}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalRowCount">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B5C8C3B5-AD23-4D18-9DC4-7B1F10A814AA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalRowsAffected">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract data from queue"
+      DTS:CreationName="STOCK:FORLOOP"
+      DTS:DelayValidation="True"
+      DTS:Description="Extract data from queue"
+      DTS:DTSID="{9353BC80-2960-4B4F-9001-B52DACFAF829}"
+      DTS:EvalExpression="@[User::ProcessAuditId] != -1"
+      DTS:ExecutableType="STOCK:FORLOOP"
+      DTS:LocaleID="-1"
+      DTS:MaxConcurrent="1"
+      DTS:ObjectName="Extract data from queue">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Extract data from queue\Create Folder If Not Exists"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:DelayValidation="True"
+          DTS:Description="File System Task"
+          DTS:DTSID="{DF3B18BD-8341-494F-B568-B0FB1458C0A0}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Folder If Not Exists"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::OutputPath"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract data from queue\For Loop Container"
+          DTS:AssignExpression="@BatchNumber = @BatchNumber + 1"
+          DTS:CreationName="STOCK:FORLOOP"
+          DTS:Description="For Loop Container"
+          DTS:DTSID="{1AC103D2-3BF4-4E15-8EE9-01A0C279C4E7}"
+          DTS:EvalExpression="@BatchNumber&lt;@LastFileNumber"
+          DTS:ExecutableType="STOCK:FORLOOP"
+          DTS:InitExpression="@BatchNumber = 0"
+          DTS:LocaleID="-1"
+          DTS:MaxConcurrent="1"
+          DTS:ObjectName="For Loop Container">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract data from queue\For Loop Container\Generate file extract on secondary replica"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{8F98146B-5CBE-4ED3-8C21-39D91C724D8F}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Generate file extract on secondary replica"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+                  SQLTask:SqlStatementSource="EXEC rpt.GenerateDataExtract&#xA; @ProcessStepId = ? ,&#xA; @SourceQuery = ? ,&#xA; @OutputPath = ? ,&#xA; @BatchNumber = ? ,&#xA; @FileExtension = ? ,&#xA; @FileColumnDelimiter = ? ,&#xA; @DBSnapshotName = ?,&#xA; @BatchColumnName = ?,&#xA; @BatchColumnType = ?,&#xA; @NumberOfBatches =?"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::TotalRowsAffected" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="1"
+                    SQLTask:DtsVariableName="User::TotalRowCount" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="2"
+                    SQLTask:DtsVariableName="User::DataFileSize" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::ProcessStepId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::SourceQuery"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="2"
+                    SQLTask:DtsVariableName="User::OutputPath"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="3"
+                    SQLTask:DtsVariableName="User::BatchNumber"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="4"
+                    SQLTask:DtsVariableName="User::FileExtension"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="5"
+                    SQLTask:DtsVariableName="User::FileColumnDelimiter"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="6"
+                    SQLTask:DtsVariableName="User::DBSnapshotName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="7"
+                    SQLTask:DtsVariableName="User::BatchColumnName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="8"
+                    SQLTask:DtsVariableName="User::BatchColumnType"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="9"
+                    SQLTask:DtsVariableName="User::NumberOfBatches"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Extract data from queue\For Loop Container\LogFileExtract"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{925F2C7D-F920-4D4A-B66C-880EF6D3827B}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="LogFileExtract"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:EventHandlers>
+                <DTS:EventHandler
+                  DTS:refId="Package\Extract data from queue\For Loop Container\LogFileExtract.EventHandlers[OnPostExecute]"
+                  DTS:CreationName="OnPostExecute"
+                  DTS:DTSID="{62CBDEF6-EEA6-4DE2-991E-30A35E241E28}"
+                  DTS:EventID="0"
+                  DTS:EventName="OnPostExecute"
+                  DTS:LocaleID="-1">
+                  <DTS:Variables>
+                    <DTS:Variable
+                      DTS:CreationName=""
+                      DTS:Description="The propagate property of the event"
+                      DTS:DTSID="{2CB340F7-8239-496F-BD5F-B1857EA2582F}"
+                      DTS:IncludeInDebugDump="6789"
+                      DTS:Namespace="System"
+                      DTS:ObjectName="Propagate">
+                      <DTS:VariableValue
+                        DTS:DataType="11">-1</DTS:VariableValue>
+                    </DTS:Variable>
+                  </DTS:Variables>
+                  <DTS:Executables>
+                    <DTS:Executable
+                      DTS:refId="Package\Extract data from queue\For Loop Container\LogFileExtract.EventHandlers[OnPostExecute]\CummulativeRowCount"
+                      DTS:CreationName="Microsoft.ExecuteSQLTask"
+                      DTS:Description="Execute SQL Task"
+                      DTS:DTSID="{AD51FA24-FB7B-4C9E-AE6A-238FD3122CF9}"
+                      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                      DTS:LocaleID="-1"
+                      DTS:ObjectName="CummulativeRowCount">
+                      <DTS:Variables />
+                      <DTS:ObjectData>
+                        <SQLTask:SqlTaskData
+                          SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+                          SQLTask:SqlStatementSource="DECLARE @TotalProcessedRecords INT = ?,&#xA;&#x9;  @TotalRowsAffected INT = ?&#xA;&#xA;SELECT @TotalProcessedRecords + @TotalRowsAffected"
+                          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                          <SQLTask:ResultBinding
+                            SQLTask:ResultName="0"
+                            SQLTask:DtsVariableName="User::TotalProcessedRecords" />
+                          <SQLTask:ParameterBinding
+                            SQLTask:ParameterName="0"
+                            SQLTask:DtsVariableName="User::TotalProcessedRecords"
+                            SQLTask:ParameterDirection="Input"
+                            SQLTask:DataType="3"
+                            SQLTask:ParameterSize="-1" />
+                          <SQLTask:ParameterBinding
+                            SQLTask:ParameterName="1"
+                            SQLTask:DtsVariableName="User::TotalRowsAffected"
+                            SQLTask:ParameterDirection="Input"
+                            SQLTask:DataType="3"
+                            SQLTask:ParameterSize="-1" />
+                        </SQLTask:SqlTaskData>
+                      </DTS:ObjectData>
+                    </DTS:Executable>
+                  </DTS:Executables>
+                </DTS:EventHandler>
+              </DTS:EventHandlers>
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+                  SQLTask:SqlStatementSource="DECLARE  @ProcessAuditId INT =?&#xA;&#x9;&#x9;,@TotalRecordsInFile INT =?&#xA;&#x9;&#x9;,@FileSize FLOAT =?&#xA;&#x9;&#x9;,@FileNumber INT= ?&#xA;&#xA;INSERT INTO rpt.ProcessFileAudit(&#xA;&#x9; ProcessAuditId&#xA;&#x9;,FileNumber&#xA;&#x9;,Status&#xA;&#x9;,TotalRecordsInFile&#xA;&#x9;,LoadDate&#xA;&#x9;,CreateDate&#xA;&#x9;,LastChangeDate&#xA;&#x9;,FileSize )&#xA;SELECT &#xA;&#x9; @ProcessAuditId&#xA;&#x9;,@FileNumber&#xA;&#x9;,'FI'&#xA;&#x9;,@TotalRecordsInFile&#xA;&#x9;,GETDATE()&#xA;&#x9;,GETDATE()&#xA;&#x9;,GETDATE()&#xA;&#x9;,@FileSize" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::ProcessAuditId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::TotalRowsAffected"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="2"
+                    SQLTask:DtsVariableName="User::DataFileSize"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="4"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="3"
+                    SQLTask:DtsVariableName="User::BatchNumber"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Extract data from queue\For Loop Container.PrecedenceConstraints[Constraint 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{A52A7C93-BFE3-4CE2-B6A7-FD19F9CE61A6}"
+              DTS:From="Package\Extract data from queue\For Loop Container\Generate file extract on secondary replica"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 1"
+              DTS:To="Package\Extract data from queue\For Loop Container\LogFileExtract" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract data from queue\Get data extract information"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:DelayValidation="True"
+          DTS:Description="Process Queue Job"
+          DTS:DTSID="{1929FDB1-1958-4B6B-BE79-42E07A9013A3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Get data extract information"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:EventHandlers>
+            <DTS:EventHandler
+              DTS:refId="Package\Extract data from queue\Get data extract information.EventHandlers[OnPreExecute]"
+              DTS:CreationName="OnPreExecute"
+              DTS:DTSID="{5744E7F8-FD32-42C7-AF14-8A099D1AF87D}"
+              DTS:EventID="0"
+              DTS:EventName="OnPreExecute"
+              DTS:LocaleID="-1">
+              <DTS:Variables>
+                <DTS:Variable
+                  DTS:CreationName=""
+                  DTS:Description="The propagate property of the event"
+                  DTS:DTSID="{F1D4B810-930A-4A02-98CF-AC3B9A3EB17A}"
+                  DTS:IncludeInDebugDump="6789"
+                  DTS:Namespace="System"
+                  DTS:ObjectName="Propagate">
+                  <DTS:VariableValue
+                    DTS:DataType="11">-1</DTS:VariableValue>
+                </DTS:Variable>
+              </DTS:Variables>
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Extract data from queue\Get data extract information.EventHandlers[OnPreExecute]\ResetTotalAffectedRecords"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{94e177cf-50c7-46aa-865d-43c4d568ae27}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="ResetTotalAffectedRecords">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+                      SQLTask:SqlStatementSource="SELECT  0"
+                      SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ResultBinding
+                        SQLTask:ResultName="0"
+                        SQLTask:DtsVariableName="User::TotalProcessedRecords" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+            </DTS:EventHandler>
+          </DTS:EventHandlers>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+              SQLTask:SqlStatementSource="EXEC rpt.GetDataExtractInformation&#xA;&#x9;@ProcessAuditId = ?"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::ProcessStepAuditId" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="1"
+                SQLTask:DtsVariableName="User::SourceQuery" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="2"
+                SQLTask:DtsVariableName="User::FileExtension" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="3"
+                SQLTask:DtsVariableName="User::NextStatus" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="4"
+                SQLTask:DtsVariableName="User::DBSnapshotServer" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="5"
+                SQLTask:DtsVariableName="User::DBSnapshotName" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="6"
+                SQLTask:DtsVariableName="User::FileColumnDelimiter" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="7"
+                SQLTask:DtsVariableName="User::ProcessStepId" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="8"
+                SQLTask:DtsVariableName="User::OutputPath" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="9"
+                SQLTask:DtsVariableName="User::DataExtractTypeId" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::ProcessAuditId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract data from queue\Get ProcessAuditId from queue"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:DelayValidation="True"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{025A837E-42EA-4419-8452-0E2B750F179C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Get ProcessAuditId from queue"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+              SQLTask:SqlStatementSource="EXEC rpt.GetProcessAuditIdFromQueue&#xA;&#x9;@PostingGroupAuditId = ?"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::ProcessAuditId" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PostingGroupAuditId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract data from queue\GetBatchingInformation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{47D27FC9-6540-401C-85D2-E269A9D6E425}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="GetBatchingInformation"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+              SQLTask:SqlStatementSource="DECLARE  @DataExtractTypeId INT = ?&#xA;&#x9;&#x9;,@DBSnapshotName VARCHAR(100) = ?&#xA;&#x9;&#x9;,@FileSize INT = ?&#xA;&#x9;&#x9;,@ProcessAuditId INT = ?&#xA;&#xA;EXEC rpt.GetBatchingInformation @DataExtractTypeId,@DBSnapshotName,@FileSize,@ProcessAuditId"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::NumberOfBatches" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="1"
+                SQLTask:DtsVariableName="User::BatchColumnName" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="2"
+                SQLTask:DtsVariableName="User::BatchColumnType" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::DataExtractTypeId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::DBSnapshotName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="$Package::FileSize"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::ProcessAuditId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract data from queue\Update job status with success"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:DelayValidation="True"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{E1DDABFC-016B-47C1-B7FD-D41CD231896D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Update job status with success"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+              SQLTask:SqlStatementSource="EXEC rpt.UpdateJobStatus&#xA; @ProcessAuditId = ? ,&#xA; @Status = ? ,&#xA; @ProcessStepAuditId = ? ,&#xA; @TotalRowsAffected = ? ,&#xA; @TotalRowCount = ?,&#xA; @NumberOfFiles = ?&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::ProcessAuditId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::NextStatus"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::ProcessStepAuditId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::TotalProcessedRecords"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="User::TotalRowCount"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="User::LastFileNumber"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Extract data from queue.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{7D21EAF5-A74C-4020-B44A-289EDA589390}"
+          DTS:From="Package\Extract data from queue\Get data extract information"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Extract data from queue\Create Folder If Not Exists" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Extract data from queue.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{525FB43B-DE75-4AD1-85FF-E6A7982D5F8F}"
+          DTS:From="Package\Extract data from queue\GetBatchingInformation"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Extract data from queue\For Loop Container" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Extract data from queue.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{57C18655-CAB2-425C-967C-8A17D5228072}"
+          DTS:From="Package\Extract data from queue\Create Folder If Not Exists"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Extract data from queue\GetBatchingInformation" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Extract data from queue.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{831F21FC-2C4A-4E72-BCCF-1FA3EB28D592}"
+          DTS:From="Package\Extract data from queue\Update job status with success"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Extract data from queue\Get ProcessAuditId from queue" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Extract data from queue.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{0245CE0F-41F5-4B18-BE52-8E98280AEEA2}"
+          DTS:From="Package\Extract data from queue\For Loop Container"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Extract data from queue\Update job status with success" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Generate control file"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DelayValidation="True"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3D0744C9-00E5-457C-9625-BB31316D343F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Generate control file"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Generate control file.EventHandlers[OnPostValidate]"
+          DTS:CreationName="OnPostValidate"
+          DTS:DTSID="{FA3BFEE7-FFB4-4FBB-8640-D37DEE770F4E}"
+          DTS:EventID="5439580"
+          DTS:EventName="OnPostValidate"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{91AD15CD-95D6-434A-8E7F-07A7D8C7B0D1}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Generate control file.EventHandlers[OnPostValidate]\Drop Snapshot on secondary server"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{47c62be8-409f-441f-a4dc-bd10de751d3a}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Drop Snapshot on secondary server"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+                  SQLTask:SqlStatementSource="EXEC rpt.DropDatabaseSnapshot &#xA; @DBSnapshotName = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::DBSnapshotName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Generate control file.EventHandlers[OnPostValidate]\Is snapshot still in use?"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{7d1133a6-7885-4242-b666-0588e3e355bb}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Is snapshot still in use?"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:PropertyExpression
+                DTS:Name="Disable">@[User::ControlFileStatus]==1</DTS:PropertyExpression>
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+                  SQLTask:SqlStatementSource="EXEC rpt.IsSnapshotStillInUse&#xA; @PostingGroupAuditId = ?&#xA;"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::DropSnapshot" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::PostingGroupAuditId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Generate control file.EventHandlers[OnPostValidate].PrecedenceConstraints[Constraint 9]"
+              DTS:CreationName=""
+              DTS:DTSID="{2c27fc9a-cb75-4c4e-ba2e-8361a4ba2dc7}"
+              DTS:EvalOp="3"
+              DTS:Expression="@[User::DropSnapshot]==1"
+              DTS:From="Package\Generate control file.EventHandlers[OnPostValidate]\Is snapshot still in use?"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 9"
+              DTS:To="Package\Generate control file.EventHandlers[OnPostValidate]\Drop Snapshot on secondary server" />
+          </DTS:PrecedenceConstraints>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+          SQLTask:SqlStatementSource="DECLARE @PostingGroupAuditId INT= ?, &#xA;&#x9;  @SourceDatabase VARCHAR(100)= ?,&#xA;&#x9;  @returnvalue INT=?;&#xA;&#xA;EXEC rpt.GenerateControlFile @PostingGroupAuditId = @PostingGroupAuditId, @SourceDatabase = @SourceDatabase, @returnvalue = @returnvalue OUTPUT;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PostingGroupAuditId"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::SourceDatabase"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::ControlFileStatus"
+            SQLTask:ParameterDirection="Output"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get ProcessAuditId from queue"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DelayValidation="True"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EA1369B2-71EE-4D59-B641-BE464A65C611}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get ProcessAuditId from queue"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{6BAD0DD9-75E9-4DE1-8E29-F97E2E084469}"
+          DTS:EventID="0"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{81527804-2782-454A-ABD0-BFDACE0681EF}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Check for queued posting group records"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{b96ae574-819c-4a0d-81ab-7104e37cc82a}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Check for queued posting group records"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+                  SQLTask:SqlStatementSource="EXEC rpt.CheckForQueuedPostingGroupRecords  @PostingGroupId = ?, @SourceServer = ?, @SourceDatabase = ?;&#xA;"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::PostingGroupAuditId" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::PostingGroupId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::SourceServer"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="2"
+                    SQLTask:DtsVariableName="User::SourceDatabase"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Create database snapshot on secondary replica"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{4e2a8d12-54bc-406f-a333-c94935a063b0}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Create database snapshot on secondary replica"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{47230C28-3463-4901-8A25-7AE283FC4127}"
+                  SQLTask:SqlStatementSource="EXEC rpt.CreateDatabaseSnapshot &#xA; @DatabaseName = ?"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::DBSnapshotName" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="1"
+                    SQLTask:DtsVariableName="User::CurrentCTVersion" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="2"
+                    SQLTask:DtsVariableName="User::DPAppVersion" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="3"
+                    SQLTask:DtsVariableName="User::SnapshotCreateDate" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="4"
+                    SQLTask:DtsVariableName="User::DBSnapshotServer" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="5"
+                    SQLTask:DtsVariableName="User::DPAppVersionId" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="6"
+                    SQLTask:DtsVariableName="User::MMedStaticDataVersionId" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="7"
+                    SQLTask:DtsVariableName="User::DMAppVersion" />
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="8"
+                    SQLTask:DtsVariableName="User::DMAppVersionId" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::SourceDatabase"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Get server name of secondary replica"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{e6bd2b10-6f5d-48c5-926a-ed61c6e9af5c}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get server name of secondary replica"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+                  SQLTask:SqlStatementSource="EXEC rpt.GetReplicaServerName &#xA; @DatabaseName = ?"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::DBSnapshotServer" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::SourceDatabase"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\LoadReconciliationFile"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{7504BD54-D335-4D34-A130-9FDCF6215E44}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="LoadReconciliationFile">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+                  SQLTask:SqlStatementSource=" DECLARE @CustomerDatabase VARCHAR(20) = ?&#xA;&#x9;&#x9;,@OutputPath VARCHAR(100)&#xA;&#x9;&#x9;,@ControlFileName VARCHAR(255)&#xA;&#x9;&#x9;,@SQLQuery VARCHAR(1000);&#xA; &#xA; SELECT @OutputPath = OutputPath&#xA; FROM rpt.TargetPlatformDropLocation&#xA; WHERE TargetPlatform = 'MSSQL';&#xA;&#xA;&#xA; IF SUBSTRING(REVERSE(@OutputPath), 1, 1) &lt;&gt; '\'&#xA;        SET @OutputPath = @OutputPath + '\';&#xA;&#xA; SET  @ControlFileName = @OutputPath + @CustomerDatabase +'\'+ @CustomerDatabase +'_'+ 'Reconcilation_file.rcln';&#xA;&#xA; SET @SQLQuery =  'TRUNCATE TABLE '+@CustomerDatabase+'.rpt.CustomerReconciliation; &#xA;&#x9;&#x9;&#x9;&#x9;   BULK INSERT '+@CustomerDatabase+'.rpt.CustomerReconciliation FROM '''+@ControlFileName+''' WITH (FieldTerminator = '','', RowTerminator = ''\n'')';&#xA;&#xA;BEGIN TRY &#xA;&#x9;EXEC(@SQLQuery);&#xA;&#x9;SELECT @@ROWCOUNT AS TotalNumberofProcesses;&#xA;END TRY&#xA;BEGIN CATCH&#xA;&#x9;PRINT 'Could Not Load Reconcilaition File... Please check that file exists.'&#xA;&#x9;SELECT 0&#xA;END CATCH"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::NumberProcessesNeedReconciliation" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::SourceDatabase"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Queue new posting group"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:DelayValidation="True"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{b853bc28-5893-4b88-83a6-18fb39e3c197}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Queue new posting group"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+                  SQLTask:SqlStatementSource="EXEC rpt.QueuePostingGroup&#xA; @PostingGroupId = ? ,&#xA; @CurrentCTVersion = ? ,&#xA; @DBSnapshotName = ?  ,&#xA; @DBSnapshotServer = ? ,&#xA; @DPAppVersion = ? ,&#xA; @SnapshotCreateDate = ? ,&#xA;       @CurrentDPAppVersionId = ? ,&#xA;       @CurrentMmedStaticDataVersionId = ? ,&#xA; @DMAppVersion = ? ,&#xA; @CurrentDMAppVersionId = ? ,&#xA; @DataExtractTypeId = ?,&#xA;@NumberOfProcessesNeedReconciliation=? &#xA;"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::PostingGroupAuditId" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::PostingGroupId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::CurrentCTVersion"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="20"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="2"
+                    SQLTask:DtsVariableName="User::DBSnapshotName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="3"
+                    SQLTask:DtsVariableName="User::DBSnapshotServer"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="4"
+                    SQLTask:DtsVariableName="User::DPAppVersion"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="5"
+                    SQLTask:DtsVariableName="User::SnapshotCreateDate"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="6"
+                    SQLTask:DtsVariableName="User::DPAppVersionId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="7"
+                    SQLTask:DtsVariableName="User::MMedStaticDataVersionId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="8"
+                    SQLTask:DtsVariableName="User::DMAppVersion"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="9"
+                    SQLTask:DtsVariableName="User::DMAppVersionId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="10"
+                    SQLTask:DtsVariableName="User::DataExtractTypeId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="2"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="11"
+                    SQLTask:DtsVariableName="User::NumberProcessesNeedReconciliation"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{73261CC6-A356-41BD-87E6-A952BCD01EBE}"
+              DTS:EvalOp="3"
+              DTS:Expression="@[User::PostingGroupAuditId] == -1"
+              DTS:From="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Check for queued posting group records"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\LoadReconciliationFile" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{126bc4b6-4d21-4eac-87d3-253ef6ae2631}"
+              DTS:From="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Create database snapshot on secondary replica"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 1"
+              DTS:To="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Queue new posting group" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint 2]"
+              DTS:CreationName=""
+              DTS:DTSID="{B4133163-C1C0-4DF1-BC23-FBA7B6F02763}"
+              DTS:From="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\LoadReconciliationFile"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 2"
+              DTS:To="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Create database snapshot on secondary replica" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint 5]"
+              DTS:CreationName=""
+              DTS:DTSID="{78a984fe-8ed5-4d03-895c-ebd3f8ebaeb7}"
+              DTS:From="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Get server name of secondary replica"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 5"
+              DTS:To="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Check for queued posting group records" />
+          </DTS:PrecedenceConstraints>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3CC91754-A5D6-4599-8EBA-2B3D86F0F287}"
+          SQLTask:SqlStatementSource="EXEC rpt.GetProcessAuditIdFromQueue&#xA;&#x9;@PostingGroupAuditId = ?"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::ProcessAuditId" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PostingGroupAuditId"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{552ED2D2-CC42-495A-9B7B-F3378FF96897}"
+      DTS:From="Package\Get ProcessAuditId from queue"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Extract data from queue" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{D4A3EC57-E224-4ED6-9EB8-7528E1D58AC9}"
+      DTS:From="Package\Extract data from queue"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Generate control file" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Extract data from queue\Create Folder If Not Exists"
+          TopLeft="304,78.5" />
+        <NodeLayout
+          Size="277,42"
+          Id="Package\Extract data from queue\For Loop Container\Generate file extract on secondary replica"
+          TopLeft="22.888888888889,15.222222222222" />
+        <NodeLayout
+          Size="273,42"
+          Id="Package\Extract data from queue\For Loop Container\LogFileExtract"
+          TopLeft="23,83" />
+        <EdgeLayout
+          Id="Package\Extract data from queue\For Loop Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="160.444444444445,57.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.777777777778"
+              Start="0,0"
+              End="0,18.277777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.277777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="316,143"
+          Size="316,186"
+          Id="Package\Extract data from queue\For Loop Container"
+          TopLeft="196.5,217.5" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Extract data from queue\Get data extract information"
+          TopLeft="56.5,5.5" />
+        <NodeLayout
+          Size="232,42"
+          Id="Package\Extract data from queue\Get ProcessAuditId from queue"
+          TopLeft="269.5,504.5" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Extract data from queue\GetBatchingInformation"
+          TopLeft="56,142.5" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Extract data from queue\Update job status with success"
+          TopLeft="41.5000000000001,438.5" />
+        <EdgeLayout
+          Id="Package\Extract data from queue.PrecedenceConstraints[Constraint]"
+          TopLeft="163.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="243,31"
+              Start="0,0"
+              End="243,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="239,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="239,15.5"
+                    Point2="243,15.5"
+                    Point3="243,19.5" />
+                  <mssgle:LineSegment
+                    End="243,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract data from queue.PrecedenceConstraints[Constraint 1]"
+          TopLeft="153.5,184.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="201,33"
+              Start="0,0"
+              End="201,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="4,16.5" />
+                  <mssgle:LineSegment
+                    End="197,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="197,16.5"
+                    Point2="201,16.5"
+                    Point3="201,20.5" />
+                  <mssgle:LineSegment
+                    End="201,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract data from queue.PrecedenceConstraints[Constraint 2]"
+          TopLeft="304,99.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-53,64"
+              Start="0,0"
+              End="-45.5,64">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-22.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,0"
+                    Point2="-26.5,0"
+                    Point3="-26.5,4" />
+                  <mssgle:LineSegment
+                    End="-26.5,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.5,60"
+                    Point2="-26.5,64"
+                    Point3="-30.5,64" />
+                  <mssgle:LineSegment
+                    End="-45.5,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract data from queue.PrecedenceConstraints[Constraint 3]"
+          TopLeft="156.5,480.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="229,24"
+              Start="0,0"
+              End="229,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="4,12" />
+                  <mssgle:LineSegment
+                    End="225,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="225,12"
+                    Point2="229,12"
+                    Point3="229,16" />
+                  <mssgle:LineSegment
+                    End="229,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract data from queue.PrecedenceConstraints[Constraint 4]"
+          TopLeft="354.5,403.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-198,35"
+              Start="0,0"
+              End="-198,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-194,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-194,17.5"
+                    Point2="-198,17.5"
+                    Point3="-198,21.5" />
+                  <mssgle:LineSegment
+                    End="-198,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="594,615"
+          Size="594,658"
+          Id="Package\Extract data from queue"
+          TopLeft="223,135.500000000002" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Generate control file"
+          TopLeft="889.77777777778,729.33333333334" />
+        <NodeLayout
+          Size="166,69"
+          Id="Package\Get ProcessAuditId from queue"
+          TopLeft="19.8690476190473,140.226190476191" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="185.869047619047,174.726190476191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.1309523809527,289.773809523811"
+              Start="0,0"
+              End="29.6309523809527,289.773809523811">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="14.5654761904764,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5654761904764,0"
+                    Point2="18.5654761904764,0"
+                    Point3="18.5654761904764,4" />
+                  <mssgle:LineSegment
+                    End="18.5654761904764,285.773809523811" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5654761904764,285.773809523811"
+                    Point2="18.5654761904764,289.773809523811"
+                    Point3="22.5654761904764,289.773809523811" />
+                  <mssgle:LineSegment
+                    End="29.6309523809527,289.773809523811" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="817,464.500000000002">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.7777777777801,285.833333333338"
+              Start="0,0"
+              End="65.2777777777801,285.833333333338">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.3888888888901,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.3888888888901,0"
+                    Point2="36.3888888888901,0"
+                    Point3="36.3888888888901,4" />
+                  <mssgle:LineSegment
+                    End="36.3888888888901,281.833333333338" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.3888888888901,281.833333333338"
+                    Point2="36.3888888888901,285.833333333338"
+                    Point3="40.3888888888901,285.833333333338" />
+                  <mssgle:LineSegment
+                    End="65.2777777777801,285.833333333338" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package\Extract data from queue\For Loop Container\LogFileExtract.EventHandlers[OnPostExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Extract data from queue\For Loop Container\LogFileExtract.EventHandlers[OnPostExecute]\CummulativeRowCount"
+          TopLeft="27,28" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Extract data from queue\Get data extract information.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Extract data from queue\Get data extract information.EventHandlers[OnPreExecute]\ResetTotalAffectedRecords"
+          TopLeft="29,37" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Generate control file.EventHandlers[OnPostValidate]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Generate control file.EventHandlers[OnPostValidate]\Drop Snapshot on secondary server"
+          TopLeft="42.333333333337,152.33333333333" />
+        <NodeLayout
+          Size="165,49"
+          Id="Package\Generate control file.EventHandlers[OnPostValidate]\Is snapshot still in use?"
+          TopLeft="39,63" />
+        <EdgeLayout
+          Id="Package\Generate control file.EventHandlers[OnPostValidate].PrecedenceConstraints[Constraint 9]"
+          TopLeft="121.5,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.8333333333371,40.33333333333"
+              Start="0,0"
+              End="35.8333333333371,32.83333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.166666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.166666666665"
+                    Point2="0,20.166666666665"
+                    Point3="4,20.166666666665" />
+                  <mssgle:LineSegment
+                    End="31.8333333333371,20.166666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.8333333333371,20.166666666665"
+                    Point2="35.8333333333371,20.166666666665"
+                    Point3="35.8333333333371,24.166666666665" />
+                  <mssgle:LineSegment
+                    End="35.8333333333371,32.83333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.91666666666856,25.166666666665,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="207,65"
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Check for queued posting group records"
+          TopLeft="61.2222222222221,135.55555555556" />
+        <NodeLayout
+          Size="312,42"
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Create database snapshot on secondary replica"
+          TopLeft="49.2222222222219,304.55555555556" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Get server name of secondary replica"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\LoadReconciliationFile"
+          TopLeft="485,244" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute]\Queue new posting group"
+          TopLeft="57.222222222222,489.55555555556" />
+        <EdgeLayout
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint]"
+          TopLeft="164.722222222222,200.55555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="415.277777777778,43.44444444444"
+              Start="0,0"
+              End="415.277777777778,35.94444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.72222222222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.72222222222"
+                    Point2="0,21.72222222222"
+                    Point3="4,21.72222222222" />
+                  <mssgle:LineSegment
+                    End="411.277777777778,21.72222222222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="411.277777777778,21.72222222222"
+                    Point2="415.277777777778,21.72222222222"
+                    Point3="415.277777777778,25.72222222222" />
+                  <mssgle:LineSegment
+                    End="415.277777777778,35.94444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="199.638888888889,26.72222222222,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint 1]"
+          TopLeft="205.222222222222,346.55555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46.4999999999999,143"
+              Start="0,0"
+              End="-46.4999999999999,135.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,67.5"
+                    Point2="0,71.5"
+                    Point3="-4,71.5" />
+                  <mssgle:LineSegment
+                    End="-42.4999999999999,71.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.4999999999999,71.5"
+                    Point2="-46.4999999999999,71.5"
+                    Point3="-46.4999999999999,75.5" />
+                  <mssgle:LineSegment
+                    End="-46.4999999999999,135.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint 2]"
+          TopLeft="485,265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-123.777777777778,60.55555555556"
+              Start="0,0"
+              End="-116.277777777778,60.55555555556">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-57.8888888888891,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-57.8888888888891,0"
+                    Point2="-61.8888888888891,0"
+                    Point3="-61.8888888888891,4" />
+                  <mssgle:LineSegment
+                    End="-61.8888888888891,56.55555555556" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61.8888888888891,56.55555555556"
+                    Point2="-61.8888888888891,60.55555555556"
+                    Point3="-65.8888888888891,60.55555555556" />
+                  <mssgle:LineSegment
+                    End="-116.277777777778,60.55555555556" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get ProcessAuditId from queue.EventHandlers[OnPreExecute].PrecedenceConstraints[Constraint 5]"
+          TopLeft="176.5,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.7777777777779,33.55555555556"
+              Start="0,0"
+              End="-11.7777777777779,26.05555555556">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.77777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.77777777778"
+                    Point2="0,16.77777777778"
+                    Point3="-4,16.77777777778" />
+                  <mssgle:LineSegment
+                    End="-7.77777777777789,16.77777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.77777777777789,16.77777777778"
+                    Point2="-11.7777777777779,16.77777777778"
+                    Point3="-11.7777777777779,20.77777777778" />
+                  <mssgle:LineSegment
+                    End="-11.7777777777779,26.05555555556" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

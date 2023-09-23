@@ -1,0 +1,8 @@
+11.0
+5
+1       SQLCHAR             0       12      "|"      1     ProvidedLinkId                   ""
+2       SQLCHAR             0       100     "|"      2     Title                            SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       150     "|"      3     URL                              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       5       "|"      4     OrderIndex                       ""
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                     SQL_Latin1_General_CP1_CI_AS
+

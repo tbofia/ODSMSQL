@@ -1,0 +1,10 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     CodeTypeID                                   ""
+2       SQLCHAR             0       50      "|"      2     CodeType                                     SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       50      "|"      3     Code                                         SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       10      "|"      4     FormType                                     SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       30      "|"      5     MaxChargedPerUnit                            ""
+6       SQLCHAR             0       30      "|"      6     MaxUnitsPerEncounter                         ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                                 SQL_Latin1_General_CP1_CI_AS
+

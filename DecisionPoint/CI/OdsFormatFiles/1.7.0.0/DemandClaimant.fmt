@@ -1,0 +1,14 @@
+11.0
+12
+1       SQLCHAR             0       12      "|"      1     DemandClaimantId                               ""
+2       SQLCHAR             0       12      "|"      2     ExternalClaimantId                             ""
+3       SQLCHAR             0       200     "|"      3     OrganizationId                                 SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       7       "|"      4     HeightInInches                                 ""
+5       SQLCHAR             0       7       "|"      5     Weight                                         ""
+6       SQLCHAR             0       50      "|"      6     Occupation                                     SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       7       "|"      7     BiReportStatus                                 ""
+8       SQLCHAR             0       12      "|"      8     HasDemandPackage                               ""
+9       SQLCHAR             0       250     "|"      9     FactsOfLoss                                    SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       100     "|"      10    PreExistingConditions                          SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       1       "|"      11    Archived                                       ""
+12      SQLCHAR             0       1       "\r\n"   12    DmlOperation                                   SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,19 @@
+IF OBJECT_ID('stg.cpt_DX_DICT', 'U') IS NOT NULL
+DROP TABLE stg.cpt_DX_DICT
+BEGIN
+	CREATE TABLE stg.cpt_DX_DICT (
+		ICD9 VARCHAR(6) NULL
+		,StartDate DATETIME NULL
+		,EndDate DATETIME NULL
+		,Flags SMALLINT NULL
+		,NonSpecific VARCHAR(1) NULL
+		,AdditionalDigits VARCHAR(1) NULL
+		,Traumatic VARCHAR(1) NULL
+		,DX_DESC VARCHAR(max) NULL
+		,Duration SMALLINT NULL
+		,Colossus SMALLINT NULL
+		,DiagnosisFamilyId TINYINT NULL
+		,DmlOperation CHAR(1) NOT NULL
+		)
+END
+GO

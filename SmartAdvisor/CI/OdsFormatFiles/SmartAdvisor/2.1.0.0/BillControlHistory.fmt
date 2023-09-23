@@ -1,0 +1,15 @@
+11.0
+13
+1       SQLNCHAR            0       42      "|\0"        1     BillControlHistorySeq                          ""
+2       SQLNCHAR            0       8       "|\0"        2     ClientCode                                     SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       24      "|\0"        3     BillSeq                                        ""
+4       SQLNCHAR            0       14      "|\0"        4     BillControlSeq                                 ""
+5       SQLNCHAR            0       48      "|\0"        5     CreateDate                                     ""
+6       SQLNCHAR            0       2       "|\0"        6     Control                                        SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       100     "|\0"        7     ExternalID                                     SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       42      "|\0"        8     EDIBatchLogSeq                                 ""
+9       SQLNCHAR            0       2       "|\0"        9     Deleted                                        ""
+10      SQLNCHAR            0       4       "|\0"        10    ModUserID                                      SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       100     "|\0"        11    ExternalID2                                    SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       1000    "|\0"        12    Message                                        SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       2       "\r\0\n\0"   13    DmlOperation                                   SQL_Latin1_General_CP1_CI_AS

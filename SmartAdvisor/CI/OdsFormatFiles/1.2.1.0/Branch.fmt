@@ -1,0 +1,30 @@
+11.0
+27
+1       SQLNCHAR            0       8       "|\0"        1     ClaimSysSubSet                     SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     BranchSeq                          ""
+3       SQLNCHAR            0       120     "|\0"        3     Name                               SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       40      "|\0"        4     ExternalID                         SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       40      "|\0"        5     BranchID                           SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       20      "|\0"        6     LocationCode                       SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       80      "|\0"        7     AdminKey                           SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       60      "|\0"        8     Address1                           SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       60      "|\0"        9     Address2                           SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       40      "|\0"        10    City                               SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       4       "|\0"        11    State                              SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       18      "|\0"        12    Zip                                SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       40      "|\0"        13    PhoneNum                           SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       40      "|\0"        14    FaxNum                             SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       60      "|\0"        15    ContactName                        SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       18      "|\0"        16    TIN                                SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       60      "|\0"        17    StateTaxID                         SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       40      "|\0"        18    DIRNum                             SQL_Latin1_General_CP1_CI_AS
+19      SQLNCHAR            0       4       "|\0"        19    ModUserID                          SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       48      "|\0"        20    ModDate                            ""
+21      SQLNCHAR            0       8       "|\0"        21    RuleFire                           SQL_Latin1_General_CP1_CI_AS
+22      SQLNCHAR            0       8       "|\0"        22    FeeRateCntrlEx                     SQL_Latin1_General_CP1_CI_AS
+23      SQLNCHAR            0       8       "|\0"        23    FeeRateCntrlIn                     SQL_Latin1_General_CP1_CI_AS
+24      SQLNCHAR            0       2       "|\0"        24    SalesTaxExempt                     SQL_Latin1_General_CP1_CI_AS
+25      SQLNCHAR            0       48      "|\0"        25    EffectiveDate                      ""
+26      SQLNCHAR            0       48      "|\0"        26    TerminationDate                    ""
+27      SQLNCHAR            0       2       "\r\0\n\0"   27    DmlOperation                       SQL_Latin1_General_CP1_CI_AS
+

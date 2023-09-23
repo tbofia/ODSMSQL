@@ -1,0 +1,8 @@
+11.0
+6
+1       SQLNCHAR            0       24      "|\0"        1     ICDDiagnosisID                   ""
+2       SQLNCHAR            0       16      "|\0"        2     Code                             SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       120     "|\0"        3     ShortDesc                        SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       600     "|\0"        4     Description                      SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       2       "|\0"        5     Detailed                         ""
+6       SQLNCHAR            0       2       "\r\0\n\0"   6     DmlOperation                     SQL_Latin1_General_CP1_CI_AS

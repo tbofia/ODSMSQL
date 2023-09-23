@@ -1,0 +1,11 @@
+11.0
+9
+1       SQLCHAR             0       8       "|"      1     DiagnosisCode                          SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       24      "|"      2     StartDate                              ""
+3       SQLCHAR             0       24      "|"      3     EndDate                                ""
+4       SQLCHAR             0       1       "|"      4     NonSpecific                            ""
+5       SQLCHAR             0       1       "|"      5     Traumatic                              ""
+6       SQLCHAR             0       7       "|"      6     Duration                               ""
+7       SQLCHAR             0       0       "|"      7     Description                            SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       5       "|"      8     DiagnosisFamilyId                      ""
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                           SQL_Latin1_General_CP1_CI_AS

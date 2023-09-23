@@ -1,0 +1,19 @@
+11.0
+17
+1       SQLNCHAR            0       8       "|\0"        1     ClientCode                           SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     BillSeq                              ""
+3       SQLNCHAR            0       14      "|\0"        3     LineSeq                              ""
+4       SQLNCHAR            0       14      "|\0"        4     ModSeq                               ""
+5       SQLNCHAR            0       2       "|\0"        5     UserEntered                          SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       6       "|\0"        6     ModSiteCode                          SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       12      "|\0"        7     Modifier                             SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       14      "|\0"        8     ReductionCode                        ""
+9       SQLNCHAR            0       4       "|\0"        9     ModSubset                            SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       4       "|\0"        10    ModUserID                            SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       48      "|\0"        11    ModDate                              ""
+12      SQLNCHAR            0       8       "|\0"        12    ReasonClientCode                     SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       24      "|\0"        13    ReasonBillSeq                        ""
+14      SQLNCHAR            0       14      "|\0"        14    ReasonLineSeq                        ""
+15      SQLNCHAR            0       2       "|\0"        15    ReasonType                           SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       60      "|\0"        16    ReasonValue                          SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       2       "\r\0\n\0"   17    DmlOperation                         SQL_Latin1_General_CP1_CI_AS

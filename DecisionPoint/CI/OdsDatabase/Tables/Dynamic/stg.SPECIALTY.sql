@@ -1,0 +1,15 @@
+IF OBJECT_ID('stg.SPECIALTY', 'U') IS NOT NULL 
+	DROP TABLE stg.SPECIALTY  
+BEGIN
+	CREATE TABLE stg.SPECIALTY
+		(
+		  SpcIdNo INT NULL,
+		  Code VARCHAR (50) NULL,
+		  Description VARCHAR (70) NULL,
+		  PayeeSubTypeID INT NULL,
+		  TieredTypeID SMALLINT NULL,
+		  DmlOperation CHAR(1) NOT NULL 
+		 )
+END 
+GO
+

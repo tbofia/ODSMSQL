@@ -1,0 +1,5 @@
+102	Extract data for CustomerBillExclusion	CustomerBillExclusion	0	txt	0	DecisionPoint	|
+103	Extract data for BillExclusionLookUpTable	BillExclusionLookUpTable	0	txt	0	DecisionPoint	|
+104	Extract data for ProviderSpecialtyToProvType	ProviderSpecialtyToProvType	0	txt	0	DecisionPoint	|
+137	Extract data for VPNActivityFlag	VPNActivityFlag	0	txt	0	DecisionPoint	|
+151	Extract data for MedicalCodeCutOffs	MedicalCodeCutOffs	0	txt	0	DecisionPoint	|

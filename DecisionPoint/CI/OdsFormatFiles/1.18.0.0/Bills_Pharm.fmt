@@ -1,0 +1,35 @@
+11.0
+32
+1       SQLCHAR             0       12      "|"      1     BillIdNo                                           ""
+2       SQLCHAR             0       7       "|"      2     Line_No                                            ""
+3       SQLCHAR             0       7       "|"      3     LINE_NO_DISP                                       ""
+4       SQLCHAR             0       24      "|"      4     DateOfService                                      ""
+5       SQLCHAR             0       13      "|"      5     NDC                                                SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       2       "|"      6     PriceTypeCode                                      SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       30      "|"      7     Units                                              ""
+8       SQLCHAR             0       30      "|"      8     Charged                                            ""
+9       SQLCHAR             0       30      "|"      9     Allowed                                            ""
+10      SQLCHAR             0       20      "|"      10    EndNote                                            SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       7       "|"      11    Override                                           ""
+12      SQLCHAR             0       10      "|"      12    Override_Rsn                                       SQL_Latin1_General_CP1_CI_AS
+13      SQLCHAR             0       30      "|"      13    Analyzed                                           ""
+14      SQLCHAR             0       30      "|"      14    CTGPenalty                                         ""
+15      SQLCHAR             0       30      "|"      15    PrePPOAllowed                                      ""
+16      SQLCHAR             0       24      "|"      16    PPODate                                            ""
+17      SQLCHAR             0       4       "|"      17    POS_RevCode                                        SQL_Latin1_General_CP1_CI_AS
+18      SQLCHAR             0       30      "|"      18    DPAllowed                                          ""
+19      SQLCHAR             0       30      "|"      19    HCRA_Surcharge                                     ""
+20      SQLCHAR             0       24      "|"      20    EndDateOfService                                   ""
+21      SQLCHAR             0       13      "|"      21    RepackagedNdc                                      SQL_Latin1_General_CP1_CI_AS
+22      SQLCHAR             0       13      "|"      22    OriginalNdc                                        SQL_Latin1_General_CP1_CI_AS
+23      SQLCHAR             0       5       "|"      23    UnitOfMeasureId                                    ""
+24      SQLCHAR             0       2       "|"      24    PackageTypeOriginalNdc                             SQL_Latin1_General_CP1_CI_AS
+25      SQLCHAR             0       41      "|"      25    PpoCtgPenalty                                      ""
+26      SQLCHAR             0       25      "|"      26    ServiceCode                                        SQL_Latin1_General_CP1_CI_AS
+27      SQLCHAR             0       41      "|"      27    PreApportionedAmount                               ""
+28      SQLCHAR             0       41      "|"      28    DeductibleApplied                                  ""
+29      SQLCHAR             0       41      "|"      29    BillReviewResults                                  ""
+30      SQLCHAR             0       41      "|"      30    PreOverriddenDeductible                            ""
+31      SQLCHAR             0       41      "|"      31    RemainingBalance                                   ""
+32      SQLCHAR             0       1       "\r\n"   32    DmlOperation                                       SQL_Latin1_General_CP1_CI_AS
+

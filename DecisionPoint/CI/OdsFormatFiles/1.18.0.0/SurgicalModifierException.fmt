@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLCHAR             0       2       "|"      1     Modifier                     SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       2       "|"      2     State                        SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       2       "|"      3     CoverageType                 SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       30      "|"      4     StartDate                    ""
+5       SQLCHAR             0       30      "|"      5     EndDate                      ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

@@ -1,0 +1,8 @@
+11.0
+5
+1       SQLCHAR             0       12      "|"      1     CMT_HDR_IDNo                   ""
+2       SQLCHAR             0       12      "|"      2     CmtIDNo                        ""
+3       SQLCHAR             0       12      "|"      3     PvdIDNo                        ""
+4       SQLCHAR             0       24      "|"      4     LastChangedOn                  ""
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                   SQL_Latin1_General_CP1_CI_AS
+

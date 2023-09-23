@@ -1,0 +1,6 @@
+11.0
+4
+1       SQLCHAR             0       12      "|"      1     StatusId                               ""
+2       SQLCHAR             0       50      "|"      2     StatusName                             SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       300     "|"      3     StatusDescription                      SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       1       "\r\n"   4     DmlOperation                           SQL_Latin1_General_CP1_CI_AS

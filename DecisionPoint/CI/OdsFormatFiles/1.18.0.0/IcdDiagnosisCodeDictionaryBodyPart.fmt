@@ -1,0 +1,8 @@
+11.0
+5
+1       SQLCHAR             0       8       "|"      1     DiagnosisCode                    SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       5       "|"      2     IcdVersion                       ""
+3       SQLCHAR             0       30      "|"      3     StartDate                        ""
+4       SQLCHAR             0       5       "|"      4     NcciBodyPartId                   ""
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                     SQL_Latin1_General_CP1_CI_AS
+

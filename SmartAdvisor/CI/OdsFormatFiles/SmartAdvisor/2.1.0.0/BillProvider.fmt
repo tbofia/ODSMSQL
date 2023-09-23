@@ -1,0 +1,14 @@
+11.0
+12
+1       SQLNCHAR            0       8       "|\0"        1     ClientCode                         SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     BillSeq                            ""
+3       SQLNCHAR            0       24      "|\0"        3     BillProviderSeq                    ""
+4       SQLNCHAR            0       4       "|\0"        4     Qualifier                          SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       80      "|\0"        5     LastName                           SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       60      "|\0"        6     FirstName                          SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       50      "|\0"        7     MiddleName                         SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       20      "|\0"        8     Suffix                             SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       20      "|\0"        9     NPI                                SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       60      "|\0"        10    LicenseNum                         SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       18      "|\0"        11    DEANum                             SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "\r\0\n\0"   12    DmlOperation                       SQL_Latin1_General_CP1_CI_AS

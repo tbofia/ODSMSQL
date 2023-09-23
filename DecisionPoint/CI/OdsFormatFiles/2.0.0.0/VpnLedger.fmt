@@ -1,0 +1,25 @@
+11.0
+22
+1       SQLCHAR             0       21      "|"      1     TransactionID                          ""
+2       SQLCHAR             0       12      "|"      2     TransactionTypeID                      ""
+3       SQLCHAR             0       12      "|"      3     BillIdNo                               ""
+4       SQLCHAR             0       7       "|"      4     Line_No                                ""
+5       SQLCHAR             0       30      "|"      5     Charged                                ""
+6       SQLCHAR             0       30      "|"      6     DPAllowed                              ""
+7       SQLCHAR             0       30      "|"      7     VPNAllowed                             ""
+8       SQLCHAR             0       30      "|"      8     Savings                                ""
+9       SQLCHAR             0       30      "|"      9     Credits                                ""
+10      SQLCHAR             0       1       "|"      10    HasOverride                            ""
+11      SQLCHAR             0       400     "|"      11    EndNotes                               SQL_Latin1_General_CP1_CI_AS
+12      SQLCHAR             0       12      "|"      12    NetworkIdNo                            ""
+13      SQLCHAR             0       7       "|"      13    ProcessFlag                            ""
+14      SQLCHAR             0       12      "|"      14    LineType                               ""
+15      SQLCHAR             0       24      "|"      15    DateTimeStamp                          ""
+16      SQLCHAR             0       12      "|"      16    SeqNo                                  ""
+17      SQLCHAR             0       7       "|"      17    VPN_Ref_Line_No                        ""
+18      SQLCHAR             0       1       "|"      18    SpecialProcessing                      ""
+19      SQLCHAR             0       30      "|"      19    CreateDate                             ""
+20      SQLCHAR             0       30      "|"      20    LastChangedOn                          ""
+21      SQLCHAR             0       41      "|"      21    AdjustedCharged                        ""
+22      SQLCHAR             0       1       "\r\n"   22    DmlOperation                           SQL_Latin1_General_CP1_CI_AS
+

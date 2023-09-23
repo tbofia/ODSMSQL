@@ -1,0 +1,3 @@
+01	Init	Initialize PostingGroupAudit/ProcessAudit
+Er	Error	Indicates Incompleted PostingGroupAudit Due to error. Check Error Table for More Details
+FI	Finish	Indicated Successful Completion of PostingGroupAudit/ProcessAudit

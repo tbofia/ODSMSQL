@@ -1,0 +1,19 @@
+11.0
+16
+1       SQLNCHAR            0       8       "|\0"        1     TableCode                    SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       8       "|\0"        2     TypeCode                     SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       24      "|\0"        3     Code                         SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       6       "|\0"        4     SiteCode                     SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       24      "|\0"        5     OldCode                      SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       80      "|\0"        6     ShortDesc                    SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       2       "|\0"        7     Source                       SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       14      "|\0"        8     Priority                     ""
+9       SQLNCHAR            0       12000   "|\0"        9     LongDesc                     SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       2       "|\0"        10    OwnerApp                     SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "|\0"        11    RecordStatus                 SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       48      "|\0"        12    CreateDate                   ""
+13      SQLNCHAR            0       4       "|\0"        13    CreateUserID                 SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       48      "|\0"        14    ModDate                      ""
+15      SQLNCHAR            0       4       "|\0"        15    ModUserID                    SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       2       "\r\0\n\0"   16    DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

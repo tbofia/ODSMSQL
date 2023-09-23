@@ -1,0 +1,761 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/13/2019 10:49:25 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HL108950-D"
+  DTS:CreatorName="CORP\HL108950"
+  DTS:DTSID="{1664D175-878A-4B61-BBCD-0B751645DCCB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{6D788712-6A30-47A0-8F47-46787DB41686}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+      DTS:ObjectName="SourceConnection">
+      <DTS:PropertyExpression
+        DTS:Name="InitialCatalog">@[$Package::SourceDatabase]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="ServerName">@[$Package::SourceServer]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Retain="True"
+          DTS:ConnectionString="Data Source=;Initial Catalog=WcsOds;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{8AB831C6-CC39-45CE-9CCD-79027B1BFE3E}"
+      DTS:ObjectName="ExtractFileExtension">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">txt</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:Description="Comma seperated list of customers"
+      DTS:DTSID="{04AD4AE2-0331-4A48-8B79-0DA1460B2F5E}"
+      DTS:ObjectName="ListOfCustomers">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">V40FP1PROD,SASENPROD</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{C8A75F85-3A87-4DD4-81A6-434E7E2F5193}"
+      DTS:ObjectName="OutputPath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">\\PSANAS25\WcsFileExtracts\AdHoc\</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{39C90E82-7152-488A-9C17-6B8067CB2CA9}"
+      DTS:ObjectName="SourceDatabase">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">WcsOds</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B5B567FE-2190-4100-A7D8-C3E0F10E7DEE}"
+      DTS:ObjectName="SourceServer">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7CDE0987-DA2A-430E-8BC0-330CEA279940}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CustomerName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{26EDB408-FF21-4C45-BD5E-10D0BB9E18A7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Datetime_Timestamp">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C42C6F0B-2EFD-4D39-BEC7-35D0DEDB2318}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::OutputPath] + @[User::CustomerName]  + &quot;\\&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DestinationFolderPath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\PSANAS25\WcsFileExtracts\AdHoc\\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9EB7B472-20EB-49E0-B977-2826A6B1471A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExtractFileColumnDelimiter">
+      <DTS:VariableValue
+        DTS:DataType="8">|</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A063622C-F3E3-41D1-95F6-462E0F8F819F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IsSnapshot">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{69079849-2555-4FD3-9DEC-83D0A0F63D20}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Object_ListOfCustomer">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{40AEF973-DC93-46ED-A385-845C9530F81C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Object_ListOfTables">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5B122F86-C82F-4528-B5D5-6C12EE2277E6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ProcessId">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{36FBCC93-AC87-4786-A2BC-FD0CF617FD7B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QueryForControlFile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8EDC5CFE-9669-4ED9-8521-99021176DB04}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceViewName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Dump Data for Each Customer"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{C3858750-4170-495C-B420-013FD0BC0FFB}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Dump Data for Each Customer">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{7777B565-B8AA-42E9-BB57-42E3E903DCDC}"
+        DTS:ObjectName="{7777B565-B8AA-42E9-BB57-42E3E903DCDC}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::Object_ListOfCustomer" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Dump Data for Each Customer\Create Folders in NAS if not Exists"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{B57587AB-DE63-44C7-A260-49D71945DDD1}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Folders in NAS if not Exists"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::DestinationFolderPath"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dump Data for Each Customer\EST - Build Query for Control File"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1B85DBCA-1058-4867-95E4-027A9079C95F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST - Build Query for Control File"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+              SQLTask:SqlStatementSource="DECLARE @CustomerDatabase VARCHAR(100) = ?, @DT_Timestamp VARCHAR(100) = ?&#xA;&#xA;SELECT 'DECLARE @CustomerDatabase VARCHAR(100) = '''+@CustomerDatabase+''', @DT_Timestamp datetime = '''+@DT_Timestamp+'''&#xA;&#xA;DECLARE @Timestamp VARCHAR(20) = CONVERT(VARCHAR(8), @DT_Timestamp, 112) + RIGHT(''0'' + CAST(DATEPART(hh, @DT_Timestamp) AS VARCHAR(2)), 2) + RIGHT(''0'' + CAST(DATEPART(mi, @DT_Timestamp) AS VARCHAR(2)), 2) + RIGHT(''0'' + CAST(DATEPART(ss, @DT_Timestamp) AS VARCHAR(2)), 2)&#xA;&#xA;IF OBJECT_ID(''tempdb..#viewProfile'',''U'') IS NOT NULL DROP TABLE #viewProfile;&#xA;&#xA;CREATE TABLE #viewProfile&#xA;(&#xA;      ProcessId&#x9;  INT NOT NULL, &#xA;&#x9;  Name        VARCHAR(100) NOT NULL,&#xA;      Row_Count   INT NOT NULL &#xA;)&#xA;&#xA;DECLARE     @SQL VARCHAR(MAX)&#xA;SET         @SQL = ''''&#xA;SELECT @SQL = @SQL + ''INSERT INTO #viewProfile SELECT ''+CAST(ap.ProcessId AS VARCHAR(10))+'', '''''' +&#xA;            name + '''''', COUNT(1) FROM '' + '' ##'' + name +&#xA;            CHAR(13) &#xA;&#x9;&#x9;&#x9;FROM sys.objects o&#xA;&#x9;&#x9;&#x9;JOIN adm.process ap &#xA;&#x9;&#x9;&#x9;&#x9;ON o.name = ap.TargetTableName&#xA;&#x9;&#x9;&#x9;&#x9;AND o.type = ''V''&#xA;&#x9;&#x9;&#x9;&#x9;--AND SCHEMA_NAME(o.schema_id) = ''dbo''&#xA;&#xA;EXEC (@SQL)&#xA;&#xA;SELECT &#xA;&#x9;@CustomerDatabase + ''_'' + @Timestamp + ''_0000000001_FULL.ctl'' AS ControlFileName,&#xA;&#x9;1 AS PostingGroupAuditId,&#xA;&#x9;1 AS CoreDBSiteInfoHistory,&#xA;&#x9;CONVERT(VARCHAR(50),@DT_Timestamp,120) + ''.0000000'' AS SnapshotCreateDate,&#xA;&#x9;@CustomerDatabase + ''_'' + @Timestamp + ''_'' + o.name +''.txt'' AS ExtractFileName,&#xA;&#x9;o.name AS BaseFileName,&#xA;&#x9;vp.Row_Count AS TotalRowsAffected,&#xA;&#x9;vp.Row_Count AS TotalRowCount,&#xA;&#x9;(SELECT TOP (1) appversion FROM adm.appversion ORDER BY 1 DESC) AS ODSVersion&#xA;FROM sys.objects o&#xA;INNER JOIN #viewProfile vp&#xA;&#x9;ON o.name = vp.name&#xA;&#x9;AND o.type = ''V''&#xA;WHERE 1=1&#xA;&#x9; AND SCHEMA_NAME(o.schema_id) = ''dbo''&#xA;ORDER BY &#xA;   vp.ProcessId ASC; '"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::QueryForControlFile" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::CustomerName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::Datetime_Timestamp"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dump Data for Each Customer\EST - Get Timestamp"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2D08DD7A-8F7C-44AB-9546-C3F02EBFC4BC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST - Get Timestamp"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+              SQLTask:SqlStatementSource="SELECT REPLACE(CONVERT(VARCHAR(50),GETDATE(),121),'-','')"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::Datetime_Timestamp" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dump Data for Each Customer\Generate Control File"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8128919E-938B-47DE-B10C-C18E5C73D499}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Generate Control File"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+              SQLTask:SqlStatementSource="DECLARE @CustomerDatabase VARCHAR(100) = ?,&#xA;&#x9;@ProcessId INT  = NULL,&#xA;&#x9;@Timestamp VARCHAR(50) = ?,&#xA;&#x9;@ExtractQuery VARCHAR(MAX) = ?,&#xA;&#x9;@OutputPath VARCHAR(100) = ?,&#xA;&#x9;@FileExtension VARCHAR(4) = NULL,&#xA;&#x9;@FileColumnDelimiter VARCHAR(2) = ',';&#xA;&#xA;SET NOCOUNT ON&#xA;DECLARE  @TargetTableName VARCHAR(255)&#xA;&#x9;,@TargetSchemaName VARCHAR(50)&#xA;&#x9;,@FileName VARCHAR(MAX)&#xA;&#x9;,@String_Timestamp VARCHAR(50)&#xA;&#x9;,@TableSQL VARCHAR(MAX) = ''&#xA;&#x9;,@CustomerId INT;&#xA;&#xA;SET @TargetTableName  = (SELECT TargetTableName FROM adm.Process WHERE ProcessId = @ProcessId)&#xA;SET @TargetSchemaName  = (SELECT TargetSchemaName FROM adm.Process WHERE ProcessId = @ProcessId)&#xA;SET @String_Timestamp = CONVERT(VARCHAR(8), @Timestamp, 112) + RIGHT('0' + CAST(DATEPART(hh, @Timestamp) AS VARCHAR(2)), 2) + RIGHT('0' + CAST(DATEPART(mi, @Timestamp) AS VARCHAR(2)), 2) + RIGHT('0' + CAST(DATEPART(ss, @Timestamp) AS VARCHAR(2)), 2);&#xA;&#xA;SET @FileName = REPLACE(@CustomerDatabase+'_'+@String_Timestamp+'_'+@TargetTableName,'\','')&#xA;SET @CustomerId = (SELECT CustomerId FROM adm.Customer WHERE CustomerDatabase = @CustomerDatabase)&#xA;&#xA;DECLARE @BcpCommand VARCHAR(8000) , -- xp_cmdshell limitation!&#xA;&#x9;@TotalRowsAffected INT = 0,&#xA;&#x9;@SQLScriptSP NVARCHAR(MAX) = '',&#xA;&#x9;@CoreSiteCode VARCHAR(3);&#xA;&#xA;IF OBJECT_ID('tempdb..#CommandPromptOutput') IS NOT NULL DROP TABLE #CommandPromptOutput&#xA;    CREATE TABLE #CommandPromptOutput(&#xA;          CommandPromptOutputId INT IDENTITY(1, 1) PRIMARY KEY CLUSTERED ,&#xA;          ResultText VARCHAR(MAX));&#xA;&#xA;IF OBJECT_ID('tempdb..#ErrorWhiteList') IS NOT NULL DROP TABLE #ErrorWhiteList&#xA;    CREATE TABLE #ErrorWhiteList(&#xA;          CommandPromptOutputId INT);&#xA;&#xA;-- Let's add a backslash if we don't have one.&#xA;IF SUBSTRING(REVERSE(@OutputPath), 1, 1) &lt;&gt; '\'&#xA;    SET @OutputPath = @OutputPath + '\';&#xA;&#xA;SET @TargetTableName = 'ExtractFromQuery';&#xA;&#x9;&#x9;&#xA;IF OBJECT_ID('tempdb..##ExtractFromQuery','U') IS NOT NULL DROP TABLE ##ExtractFromQuery;&#xA;&#xA;CREATE TABLE ##ExtractFromQuery(&#xA;&#x9;ControlFileName VARCHAR(500) NOT NULL,&#xA;&#x9;PostingGroupAuditId INT NOT NULL,&#xA;&#x9;CoreDBSiteInfoHistory INT NOT NULL,&#xA;&#x9;SnapshotCreateDate VARCHAR(100) NOT NULL,&#xA;&#x9;ExtractFileName VARCHAR(1000) NOT NULL,&#xA;&#x9;BaseFileName VARCHAR(500) NOT NULL,&#xA;&#x9;TotalRowsAffected INT NULL,&#xA;&#x9;TotalRowCount INT NULL,&#xA;&#x9;OdsVersion VARCHAR(50) NOT NULL );&#xA;&#x9;&#x9;&#xA;INSERT ##ExtractFromQuery&#xA;EXEC(@ExtractQuery);&#xA;&#xA;SELECT TOP (1) @FileName = ControlFileName&#xA;FROM ##ExtractFromQuery;&#xA;&#xA;SET @BcpCommand = 'bcp ##'+@TargetTableName+' out ' + @OutputPath + @FileName + ' -c -w -t &quot;' + @FileColumnDelimiter + '&quot; -S ' + @@SERVERNAME + ' -T';&#xA;&#xA;BEGIN TRY&#xA;        INSERT  INTO #CommandPromptOutput&#xA;                EXEC master.sys.xp_cmdshell @BcpCommand;&#xA;&#xA;-- MSSQL 2012 is throwing an error when it encounters certain warnings, which is throwing off our error&#xA;-- handling below.  Let's remove these if we run into them.&#xA;-- First, let's collect the lines that have the warnings we want to suppress&#xA;        INSERT  INTO #ErrorWhiteList&#xA;                ( CommandPromptOutputId&#xA;                )&#xA;                SELECT  CommandPromptOutputId&#xA;                FROM    #CommandPromptOutput&#xA;                WHERE   ResultText LIKE 'Error%Warning: BCP import with a format file will convert empty strings in delimited columns to NULL%'&#xA;&#xA;-- Now remove them from our command prompt output; we have to also remove the previous lines (which contain the error number)&#xA;        DELETE  FROM a&#xA;        FROM    #CommandPromptOutput a&#xA;                INNER JOIN ( SELECT CommandPromptOutputId - 1 AS CommandPromptOutputId -- Previous line (containing error number)&#xA;                             FROM   #ErrorWhiteList&#xA;                             UNION ALL&#xA;                             SELECT CommandPromptOutputId -- Error description&#xA;                             FROM   #ErrorWhiteList ) b ON a.CommandPromptOutputId = b.CommandPromptOutputId;&#xA;&#xA;-- Did we run into any issues on the bcp?&#xA;        IF EXISTS ( SELECT  1&#xA;                    FROM    #CommandPromptOutput&#xA;                    WHERE   ResultText LIKE '%Error%' )&#xA;            BEGIN&#xA;                RAISERROR ('There is a problem with our bcp command!', 16, 1)&#xA;            END&#xA;&#xA;        SELECT  @TotalRowsAffected = CAST(ISNULL(SUBSTRING(ResultText, 1, PATINDEX('%rows copied.%', ResultText) - 1), '0') AS INT)&#xA;        FROM    #CommandPromptOutput&#xA;        WHERE   ResultText LIKE '%rows copied.%';&#xA;&#xA;        SELECT  @TotalRowsAffected AS TotalRowsAffected;&#xA;&#xA;&#xA;END TRY&#xA;&#xA;BEGIN CATCH&#xA;        IF XACT_STATE() &lt;&gt; 0&#xA;            ROLLBACK TRANSACTION&#xA;&#xA;        DECLARE @ErrMsg NVARCHAR(4000) ,&#xA;            @ErrSeverity INT&#xA;&#xA;        SELECT  @ErrMsg = ERROR_MESSAGE() ,&#xA;                @ErrSeverity = ERROR_SEVERITY()&#xA;&#xA;        SELECT  @ErrMsg += '; ' + ResultText&#xA;        FROM    #CommandPromptOutput&#xA;        WHERE   ResultText LIKE '%Error%'&#xA;        ORDER BY CommandPromptOutputId;&#xA;&#xA;        RAISERROR (@ErrMsg, @ErrSeverity, 1) WITH LOG&#xA;&#xA;        RETURN&#xA;END CATCH&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::CustomerName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::Datetime_Timestamp"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::QueryForControlFile"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::DestinationFolderPath"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dump Data for Each Customer\Generate Data Extract for Each Table"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{AF1C7BE0-D058-4D0B-906C-DFE171CE96A7}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Generate Data Extract for Each Table">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.ForEachADOEnumerator"
+            DTS:DTSID="{726C181B-ABFD-4707-AD6A-F22897462557}"
+            DTS:ObjectName="{726C181B-ABFD-4707-AD6A-F22897462557}">
+            <DTS:ObjectData>
+              <FEEADO
+                EnumType="EnumerateRowsInFirstTable"
+                VarName="User::Object_ListOfTables" />
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Dump Data for Each Customer\Generate Data Extract for Each Table\Extract"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{D16C19B4-D8D8-45A8-AC7B-DA7935A8253E}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Extract"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+                  SQLTask:SqlStatementSource="DECLARE @CustomerDatabase VARCHAR(100) = ?,&#xA;&#x9;@ProcessId INT  = ?,&#xA;&#x9;@Timestamp VARCHAR(50) = ?,&#xA;&#x9;@ExtractQuery VARCHAR(MAX) = NULL,&#xA;&#x9;@OutputPath VARCHAR(100) = ?,&#xA;&#x9;@FileExtension VARCHAR(4) = ?,&#xA;&#x9;@FileColumnDelimiter VARCHAR(2) = ?,&#xA;&#x9;@IsSnapshot INT = ?;&#xA;&#xA;SET NOCOUNT ON&#xA;DECLARE  @TargetTableName VARCHAR(255)&#xA;&#x9;,@TargetSchemaName VARCHAR(50)&#xA;&#x9;,@FileName VARCHAR(MAX)&#xA;&#x9;,@String_Timestamp VARCHAR(50)&#xA;&#x9;,@TableSQL VARCHAR(MAX) = ''&#xA;&#x9;,@CustomerId INT;&#xA;&#xA;SET @TargetTableName  = (SELECT TargetTableName FROM adm.Process WHERE ProcessId = @ProcessId)&#xA;SET @TargetSchemaName  = (SELECT TargetSchemaName FROM adm.Process WHERE ProcessId = @ProcessId)&#xA;SET @String_Timestamp = CONVERT(VARCHAR(8), @Timestamp, 112) + RIGHT('0' + CAST(DATEPART(hh, @Timestamp) AS VARCHAR(2)), 2) + RIGHT('0' + CAST(DATEPART(mi, @Timestamp) AS VARCHAR(2)), 2) + RIGHT('0' + CAST(DATEPART(ss, @Timestamp) AS VARCHAR(2)), 2);&#xA;&#xA;SET @FileName = REPLACE(@CustomerDatabase+'_'+@String_Timestamp+'_'+@TargetTableName,'\','')&#xA;SET @CustomerId = (SELECT CustomerId FROM adm.Customer WHERE CustomerDatabase = @CustomerDatabase)&#xA;&#xA;DECLARE @BcpCommand VARCHAR(8000) , -- xp_cmdshell limitation!&#xA;&#x9;@TotalRowsAffected INT = 0,&#xA;&#x9;@SQLScriptSP NVARCHAR(MAX) = '',&#xA;&#x9;@CoreSiteCode VARCHAR(3);&#xA;&#xA;IF OBJECT_ID('tempdb..#CommandPromptOutput') IS NOT NULL DROP TABLE #CommandPromptOutput&#xA;    CREATE TABLE #CommandPromptOutput(&#xA;          CommandPromptOutputId INT IDENTITY(1, 1) PRIMARY KEY CLUSTERED ,&#xA;          ResultText VARCHAR(MAX));&#xA;&#xA;IF OBJECT_ID('tempdb..#ErrorWhiteList') IS NOT NULL DROP TABLE #ErrorWhiteList&#xA;    CREATE TABLE #ErrorWhiteList(&#xA;          CommandPromptOutputId INT);&#xA;&#xA;-- Let's add a backslash if we don't have one.&#xA;IF SUBSTRING(REVERSE(@OutputPath), 1, 1) &lt;&gt; '\'&#xA;    SET @OutputPath = @OutputPath + '\';&#xA;&#xA;--build the query, stripping out the first 7 auditing columns&#xA;SELECT @TableSQL = 'IF OBJECT_ID(''tempdb..##'+@TargetTableName+''',''U'') IS NOT NULL DROP TABLE ##'+@TargetTableName+'; SELECT ';&#xA;&#xA;SELECT @TableSQL += CASE&#xA;&#x9;&#x9;&#x9;WHEN (@TargetTableName = 'Bill' AND name IN ('AdmitDate','DischargeDate'))&#xA;&#x9;&#x9;&#x9;OR (@TargetTableName = 'Claim' AND name IN ('PatientSSN','PatientFirstName','PatientLastName','PatientMInitial','PatientStreet1','PatientStreet2','PatientCity','PatientPrimaryPhone'))&#xA;&#x9;&#x9;&#x9;OR (@TargetTableName = 'ClaimInsurer' AND name IN ('ExternalPolicyNumber','PolicyEffectiveDate'))&#xA;&#x9;&#x9;&#x9;&#x9;THEN ' NULL AS ' + QUOTENAME(name) &#xA;&#x9;&#x9;&#x9;WHEN @TargetTableName = 'Claim' AND name = 'PatientDOB' &#xA;&#x9;&#x9;&#x9;&#x9;THEN ' YEAR(a.PatientDOB) AS [PatientDOB]'&#xA;&#x9;&#x9;&#x9;WHEN @TargetTableName = 'Claim' AND name = 'PatientZip' &#xA;&#x9;&#x9;&#x9;&#x9;THEN ' LEFT(a.PatientZip,3) AS [PatientZip]'&#xA;&#x9;&#x9;&#x9;ELSE 'a.' + QUOTENAME(name)&#xA;&#x9;&#x9;         END + ','&#xA;FROM sys.columns &#xA;WHERE object_id = OBJECT_ID(@TargetSchemaName+'.' + @TargetTableName,'U') &#xA;&#x9;AND column_id &gt; 7&#xA;ORDER BY column_id ASC;&#xA;&#xA;SELECT @TableSQL += ' ''I'' AS DmlOperation '&#xA;&#x9;&#x9;+ ' INTO ##' + @TargetTableName &#xA;&#x9;&#x9;+ CASE WHEN @IsSnapshot = 0 &#xA;&#x9;&#x9;&#x9;&#x9;THEN ' FROM dbo.'+@TargetTableName + ' a '&#xA;&#x9;&#x9;&#x9;&#x9;   + ' WHERE a.OdsCustomerId = ' + CAST(@CustomerId AS VARCHAR(10)) + ';'&#xA;&#x9;&#x9;             WHEN @IsSnapshot = 1&#xA;&#x9;&#x9;&#x9;&#x9;THEN ' FROM dbo.'+@TargetTableName + ' a &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   JOIN adm.PostingGroupAudit pga &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;ON a.OdsPostingGroupAuditId = pga.PostingGroupAuditId &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   JOIN adm.Customer c1 &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;ON c1.CustomerId = pga.CustomerId &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   JOIN adm.Customer c2 &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;ON c2.CustomerId = '  + CAST(@CustomerId AS VARCHAR(10)) + ' &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AND c1.ServerName = c2.ServerName ;'&#xA;&#x9;&#x9;              ELSE ''&#xA;&#x9;&#x9;END&#xA;&#xA;EXEC(@TableSQL);&#xA;&#xA;SET @BcpCommand = 'bcp ##'+@TargetTableName+' out ' + @OutputPath + @FileName + '.' + @FileExtension + ' -c -w -t &quot;' + @FileColumnDelimiter + '&quot; -S ' + @@SERVERNAME + ' -T';&#xA;&#xA;BEGIN TRY&#xA;        INSERT  INTO #CommandPromptOutput&#xA;                EXEC master.sys.xp_cmdshell @BcpCommand;&#xA;&#xA;-- MSSQL 2012 is throwing an error when it encounters certain warnings, which is throwing off our error&#xA;-- handling below.  Let's remove these if we run into them.&#xA;-- First, let's collect the lines that have the warnings we want to suppress&#xA;        INSERT  INTO #ErrorWhiteList&#xA;                ( CommandPromptOutputId&#xA;                )&#xA;                SELECT  CommandPromptOutputId&#xA;                FROM    #CommandPromptOutput&#xA;                WHERE   ResultText LIKE 'Error%Warning: BCP import with a format file will convert empty strings in delimited columns to NULL%'&#xA;&#xA;-- Now remove them from our command prompt output; we have to also remove the previous lines (which contain the error number)&#xA;        DELETE  FROM a&#xA;        FROM    #CommandPromptOutput a&#xA;                INNER JOIN ( SELECT CommandPromptOutputId - 1 AS CommandPromptOutputId -- Previous line (containing error number)&#xA;                             FROM   #ErrorWhiteList&#xA;                             UNION ALL&#xA;                             SELECT CommandPromptOutputId -- Error description&#xA;                             FROM   #ErrorWhiteList ) b ON a.CommandPromptOutputId = b.CommandPromptOutputId;&#xA;&#xA;-- Did we run into any issues on the bcp?&#xA;        IF EXISTS ( SELECT  1&#xA;                    FROM    #CommandPromptOutput&#xA;                    WHERE   ResultText LIKE '%Error%' )&#xA;            BEGIN&#xA;                RAISERROR ('There is a problem with our bcp command!', 16, 1)&#xA;            END&#xA;&#xA;        SELECT  @TotalRowsAffected = CAST(ISNULL(SUBSTRING(ResultText, 1, PATINDEX('%rows copied.%', ResultText) - 1), '0') AS INT)&#xA;        FROM    #CommandPromptOutput&#xA;        WHERE   ResultText LIKE '%rows copied.%';&#xA;&#xA;        SELECT  @TotalRowsAffected AS TotalRowsAffected;&#xA;&#xA;&#xA;END TRY&#xA;&#xA;BEGIN CATCH&#xA;        IF XACT_STATE() &lt;&gt; 0&#xA;            ROLLBACK TRANSACTION&#xA;&#xA;        DECLARE @ErrMsg NVARCHAR(4000) ,&#xA;            @ErrSeverity INT&#xA;&#xA;        SELECT  @ErrMsg = ERROR_MESSAGE() ,&#xA;                @ErrSeverity = ERROR_SEVERITY()&#xA;&#xA;        SELECT  @ErrMsg += '; ' + ResultText&#xA;        FROM    #CommandPromptOutput&#xA;        WHERE   ResultText LIKE '%Error%'&#xA;        ORDER BY CommandPromptOutputId;&#xA;&#xA;        RAISERROR (@ErrMsg, @ErrSeverity, 1) WITH LOG&#xA;&#xA;        RETURN&#xA;END CATCH" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::CustomerName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::ProcessId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="3"
+                    SQLTask:DtsVariableName="User::DestinationFolderPath"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="4"
+                    SQLTask:DtsVariableName="$Package::ExtractFileExtension"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="5"
+                    SQLTask:DtsVariableName="User::ExtractFileColumnDelimiter"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="2"
+                    SQLTask:DtsVariableName="User::Datetime_Timestamp"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="6"
+                    SQLTask:DtsVariableName="User::IsSnapshot"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{8AE76239-A0D7-4F08-96D1-FEE988F54314}"
+              DTS:ObjectName="{8AE76239-A0D7-4F08-96D1-FEE988F54314}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::ProcessId" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{D076A81D-5785-4144-AA08-53B9504E7A22}"
+              DTS:ObjectName="{D076A81D-5785-4144-AA08-53B9504E7A22}"
+              DTS:ValueIndex="1"
+              DTS:VariableName="User::SourceViewName" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{F7E5614E-3775-4DE5-BC86-5562C741B6B1}"
+              DTS:ObjectName="{F7E5614E-3775-4DE5-BC86-5562C741B6B1}"
+              DTS:ValueIndex="2"
+              DTS:VariableName="User::ExtractFileColumnDelimiter" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{5ADC8100-8C39-4ECA-96EA-6CC50E0207CF}"
+              DTS:ObjectName="{5ADC8100-8C39-4ECA-96EA-6CC50E0207CF}"
+              DTS:ValueIndex="3"
+              DTS:VariableName="User::IsSnapshot" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{28F64879-99A6-4498-9681-577573D00930}"
+          DTS:From="Package\Dump Data for Each Customer\Create Folders in NAS if not Exists"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Dump Data for Each Customer\EST - Get Timestamp" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{59B682CF-4BD7-4FF5-BD57-FF0440123E81}"
+          DTS:From="Package\Dump Data for Each Customer\Generate Data Extract for Each Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Dump Data for Each Customer\EST - Build Query for Control File" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{DAC7476C-502A-4677-BCDB-71B57E88A88D}"
+          DTS:From="Package\Dump Data for Each Customer\EST - Get Timestamp"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Dump Data for Each Customer\Generate Data Extract for Each Table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{0B49415E-0C46-4869-A7F0-B80056BB0B7C}"
+          DTS:From="Package\Dump Data for Each Customer\EST - Build Query for Control File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Dump Data for Each Customer\Generate Control File" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{036218E4-7AD6-4FC6-854C-3FFE451B9DC1}"
+          DTS:ObjectName="{036218E4-7AD6-4FC6-854C-3FFE451B9DC1}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::CustomerName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - Generate the List of Customers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9CB108C2-5227-4EC1-AF20-F3F09FC9977A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - Generate the List of Customers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+          SQLTask:SqlStatementSource="SELECT * FROM STRING_SPLIT(?,',')"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::Object_ListOfCustomer" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="$Package::ListOfCustomers"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - Get the List of Tables to Be Loaded"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9069A246-0343-4A57-BD8D-489763E16999}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - Get the List of Tables to Be Loaded"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{63DD4665-94BF-48FF-A474-533CC7C2EB28}"
+          SQLTask:SqlStatementSource="SELECT DISTINCT &#xA; ProcessId, &#xA; TargetTableName,&#xA; FileColumnDelimiter,&#xA; cast(IsSnapshot as int) as IsSnapshot &#xA;FROM adm.Process&#xA;ORDER BY 1 ASC "
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::Object_ListOfTables" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{4CB5129B-2316-4C21-A435-EC88D3E0717B}"
+      DTS:From="Package\EST - Generate the List of Customers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\EST - Get the List of Tables to Be Loaded" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{08550FF8-F584-436E-AB72-74B895B116B0}"
+      DTS:From="Package\EST - Get the List of Tables to Be Loaded"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Dump Data for Each Customer" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="248,42"
+          Id="Package\Dump Data for Each Customer\Create Folders in NAS if not Exists"
+          TopLeft="212,25" />
+        <NodeLayout
+          Size="242,42"
+          Id="Package\Dump Data for Each Customer\EST - Build Query for Control File"
+          TopLeft="210,410" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Dump Data for Each Customer\EST - Get Timestamp"
+          TopLeft="241,102" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Dump Data for Each Customer\Generate Control File"
+          TopLeft="239.636363636364,494.181818181818" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Dump Data for Each Customer\Generate Data Extract for Each Table\Extract"
+          TopLeft="143,37" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="401,135"
+          Size="401,178"
+          Id="Package\Dump Data for Each Customer\Generate Data Extract for Each Table"
+          TopLeft="129.727272727273,200.636363636364" />
+        <EdgeLayout
+          Id="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint]"
+          TopLeft="334.75,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint 1]"
+          TopLeft="330.613636363636,378.636363636364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.363636363636"
+              Start="0,0"
+              End="0,23.863636363636">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.863636363636" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint 3]"
+          TopLeft="331.863636363636,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.636363636364"
+              Start="0,0"
+              End="0,49.136363636364">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.136363636364" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dump Data for Each Customer.PrecedenceConstraints[Constraint 4]"
+          TopLeft="331.318181818182,452">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.181818181818"
+              Start="0,0"
+              End="0,34.681818181818">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.681818181818" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="654,591"
+          Size="654,634"
+          Id="Package\Dump Data for Each Customer"
+          TopLeft="385.111111111111,651" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\EST - Generate the List of Customers"
+          TopLeft="37.2222222222222,701.222222222222" />
+        <NodeLayout
+          Size="282,42"
+          Id="Package\EST - Get the List of Tables to Be Loaded"
+          TopLeft="32.5555555555557,900.888888888889" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="170.888888888889,743.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,157.666666666667"
+              Start="0,0"
+              End="0,150.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,150.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="314.555555555556,921.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.5555555555553,46.111111111111"
+              Start="0,0"
+              End="63.0555555555553,46.111111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="31.2777777777776,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.2777777777776,0"
+                    Point2="35.2777777777776,0"
+                    Point3="35.2777777777776,4" />
+                  <mssgle:LineSegment
+                    End="35.2777777777776,42.111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.2777777777776,42.111111111111"
+                    Point2="35.2777777777776,46.111111111111"
+                    Point3="39.2777777777776,46.111111111111" />
+                  <mssgle:LineSegment
+                    End="63.0555555555553,46.111111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

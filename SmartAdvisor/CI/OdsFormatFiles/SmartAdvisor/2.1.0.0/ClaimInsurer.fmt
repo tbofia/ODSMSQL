@@ -1,0 +1,15 @@
+11.0
+13
+1       SQLNCHAR            0       8       "|\0"        1     ClaimSysSubset                               SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     ClaimSeq                                     ""
+3       SQLNCHAR            0       2       "|\0"        3     InsurerType                                  SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       48      "|\0"        4     EffectiveDate                                ""
+5       SQLNCHAR            0       24      "|\0"        5     InsurerSeq                                   ""
+6       SQLNCHAR            0       48      "|\0"        6     TerminationDate                              ""
+7       SQLNCHAR            0       60      "|\0"        7     ExternalPolicyNumber                         SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       70      "|\0"        8     UnitStatClaimID                              SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       60      "|\0"        9     UnitStatPolicyID                             SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       48      "|\0"        10    PolicyEffectiveDate                          ""
+11      SQLNCHAR            0       2       "|\0"        11    SelfInsured                                  SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       70      "|\0"        12    ClaimAdminClaimNum                           SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       2       "\r\0\n\0"   13    DmlOperation                                 SQL_Latin1_General_CP1_CI_AS

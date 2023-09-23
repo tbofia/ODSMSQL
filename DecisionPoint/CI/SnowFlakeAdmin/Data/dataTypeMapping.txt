@@ -1,0 +1,34 @@
+bigint	Number
+binary	Binary
+bit	Boolean
+char	varchar
+date	date
+datetime	timestamp_Ntz
+datetime2	timestamp_Ntz
+datetimeoffset	timestamp_Ltz
+decimal	Number
+float	float
+geography	
+geometry	
+hierarchyid	
+image	Binary
+int	Number
+money	Number
+nchar	varchar
+ntext	varchar
+numeric	Number
+nvarchar	varchar
+real	float
+smalldatetime	timestamp_Ntz
+smallint	Number
+smallmoney	Number
+sql_variant	variant
+sysname	
+text	varchar
+time	time
+timestamp	timestamp_Ntz
+tinyint	Number
+uniqueidentifier	
+varbinary	Binary
+varchar	varchar
+xml	

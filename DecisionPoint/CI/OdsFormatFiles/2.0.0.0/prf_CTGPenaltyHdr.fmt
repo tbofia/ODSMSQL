@@ -1,0 +1,12 @@
+11.0
+9
+1       SQLCHAR             0       12      "|"      1     CTGPenHdrID                                      ""
+2       SQLCHAR             0       12      "|"      2     ProfileId                                        ""
+3       SQLCHAR             0       7       "|"      3     PenaltyType                                      ""
+4       SQLCHAR             0       7       "|"      4     PayNegRate                                       ""
+5       SQLCHAR             0       7       "|"      5     PayPPORate                                       ""
+6       SQLCHAR             0       7       "|"      6     DatesBasedOn                                     ""
+7       SQLCHAR             0       1       "|"      7     ApplyPenaltyToPharmacy                           ""
+8       SQLCHAR             0       1       "|"      8     ApplyPenaltyCondition                            ""
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                                     SQL_Latin1_General_CP1_CI_AS
+

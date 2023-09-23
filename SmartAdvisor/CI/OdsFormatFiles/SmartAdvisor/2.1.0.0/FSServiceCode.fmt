@@ -1,0 +1,11 @@
+11.0
+9
+1       SQLNCHAR            0       4       "|\0"        1     Jurisdiction                   SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       60      "|\0"        2     ServiceCode                    SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       24      "|\0"        3     GeoAreaCode                    SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       48      "|\0"        4     EffectiveDate                  ""
+5       SQLNCHAR            0       510     "|\0"        5     Description                    SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       48      "|\0"        6     TermDate                       ""
+7       SQLNCHAR            0       12      "|\0"        7     CodeSource                     SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       24      "|\0"        8     CodeGroup                      SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       2       "\r\0\n\0"   9     DmlOperation                   SQL_Latin1_General_CP1_CI_AS

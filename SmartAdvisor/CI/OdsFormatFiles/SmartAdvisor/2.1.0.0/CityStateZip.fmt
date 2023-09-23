@@ -1,0 +1,20 @@
+11.0
+18
+1       SQLNCHAR            0       10      "|\0"        1     ZipCode                      SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       12      "|\0"        2     CtyStKey                     SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       2       "|\0"        3     CpyDtlCode                   SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "|\0"        4     ZipClsCode                   SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       56      "|\0"        5     CtyStName                    SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       26      "|\0"        6     CtyStNameAbv                 SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       2       "|\0"        7     CtyStFacCode                 SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       2       "|\0"        8     CtyStMailInd                 SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       12      "|\0"        9     PreLstCtyKey                 SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       56      "|\0"        10    PreLstCtyNme                 SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "|\0"        11    CtyDlvInd                    SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "|\0"        12    AutZoneInd                   SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       2       "|\0"        13    UnqZipInd                    SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       12      "|\0"        14    FinanceNum                   SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       4       "|\0"        15    StateAbbrv                   SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       6       "|\0"        16    CountyNum                    SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       50      "|\0"        17    CountyName                   SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       2       "\r\0\n\0"   18    DmlOperation                 SQL_Latin1_General_CP1_CI_AS

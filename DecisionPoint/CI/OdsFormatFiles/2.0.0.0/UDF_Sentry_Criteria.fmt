@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLCHAR             0       12      "^|"     1     UdfIdNo                              ""
+2       SQLCHAR             0       12      "^|"     2     CriteriaID                           ""
+3       SQLCHAR             0       50      "^|"     3     ParentName                           SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       50      "^|"     4     Name                                 SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       1000    "^|"     5     Description                          SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       50      "^|"     6     Operators                            SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       0       "^|"     7     PredefinedValues                     SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       50      "^|"     8     ValueDataType                        SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       50      "^|"     9     ValueFormat                          SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                         SQL_Latin1_General_CP1_CI_AS
+

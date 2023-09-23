@@ -1,0 +1,9 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     PvdIDNo                          ""
+2       SQLCHAR             0       55      "|"      2     RenderingAddr1                   SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       55      "|"      3     RenderingAddr2                   SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       30      "|"      4     RenderingCity                    SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       2       "|"      5     RenderingState                   SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       12      "|"      6     RenderingZip                     SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                     SQL_Latin1_General_CP1_CI_AS

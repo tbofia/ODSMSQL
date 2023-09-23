@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLNCHAR            0       24      "|\0"        1     WFlowSeq                         ""
+2       SQLNCHAR            0       100     "|\0"        2     Description                      SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       2       "|\0"        3     RecordStatus                     SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       4       "|\0"        4     EntityTypeCode                   SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       4       "|\0"        5     CreateUserID                     SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       48      "|\0"        6     CreateDate                       ""
+7       SQLNCHAR            0       4       "|\0"        7     ModUserID                        SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       48      "|\0"        8     ModDate                          ""
+9       SQLNCHAR            0       24      "|\0"        9     InitialTaskSeq                   ""
+10      SQLNCHAR            0       2       "\r\0\n\0"   10    DmlOperation                     SQL_Latin1_General_CP1_CI_AS
+

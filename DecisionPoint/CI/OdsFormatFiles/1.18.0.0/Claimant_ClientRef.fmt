@@ -1,0 +1,7 @@
+11.0
+4
+1       SQLCHAR             0       12      "|"      1     CmtIdNo                      ""
+2       SQLCHAR             0       50      "|"      2     CmtSuffix                    SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       12      "|"      3     ClaimIdNo                    ""
+4       SQLCHAR             0       1       "\r\n"   4     DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

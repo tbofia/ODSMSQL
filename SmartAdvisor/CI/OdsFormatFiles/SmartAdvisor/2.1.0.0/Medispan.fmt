@@ -1,0 +1,31 @@
+11.0
+29
+1       SQLNCHAR            0       22      "|\0"        1     NDC                              SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       10      "|\0"        2     DEA                              SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       50      "|\0"        3     Name1                            SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       8       "|\0"        4     Name2                            SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       22      "|\0"        5     Name3                            SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       24      "|\0"        6     Strength                         ""
+7       SQLNCHAR            0       24      "|\0"        7     Unit                             ""
+8       SQLNCHAR            0       4       "|\0"        8     Pkg                              SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       14      "|\0"        9     Factor                           ""
+10      SQLNCHAR            0       2       "|\0"        10    GenericDrug                      SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "|\0"        11    Desicode                         SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "|\0"        12    Rxotc                            SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       28      "|\0"        13    GPI                              SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       24      "|\0"        14    Awp1                             ""
+15      SQLNCHAR            0       24      "|\0"        15    Awp0                             ""
+16      SQLNCHAR            0       24      "|\0"        16    Awp2                             ""
+17      SQLNCHAR            0       48      "|\0"        17    EffectiveDt2                     ""
+18      SQLNCHAR            0       48      "|\0"        18    EffectiveDt1                     ""
+19      SQLNCHAR            0       48      "|\0"        19    EffectiveDt0                     ""
+20      SQLNCHAR            0       6       "|\0"        20    FDAEquivalence                   SQL_Latin1_General_CP1_CI_AS
+21      SQLNCHAR            0       2       "|\0"        21    NDCFormat                        SQL_Latin1_General_CP1_CI_AS
+22      SQLNCHAR            0       2       "|\0"        22    RestrictDrugs                    SQL_Latin1_General_CP1_CI_AS
+23      SQLNCHAR            0       16      "|\0"        23    GPPC                             SQL_Latin1_General_CP1_CI_AS
+24      SQLNCHAR            0       2       "|\0"        24    Status                           SQL_Latin1_General_CP1_CI_AS
+25      SQLNCHAR            0       48      "|\0"        25    UpdateDate                       ""
+26      SQLNCHAR            0       24      "|\0"        26    AAWP                             ""
+27      SQLNCHAR            0       24      "|\0"        27    GAWP                             ""
+28      SQLNCHAR            0       4       "|\0"        28    RepackagedCode                   SQL_Latin1_General_CP1_CI_AS
+29      SQLNCHAR            0       2       "\r\0\n\0"   29    DmlOperation                     SQL_Latin1_General_CP1_CI_AS

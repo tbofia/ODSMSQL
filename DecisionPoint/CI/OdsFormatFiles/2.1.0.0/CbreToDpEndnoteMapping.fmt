@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     Endnote                            ""
+2       SQLCHAR             0       5       "|"      2     EndnoteTypeId                      ""
+3       SQLCHAR             0       7       "|"      3     CbreEndnote                        ""
+4       SQLCHAR             0       2       "|"      4     PricingState                       SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       5       "|"      5     PricingMethodId                    ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                       SQL_Latin1_General_CP1_CI_AS
+

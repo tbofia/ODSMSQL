@@ -1,0 +1,13 @@
+11.0
+11
+1       SQLNCHAR            0       60      "|\0"        1     BillReevalReasonCode                                       SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       6       "|\0"        2     SiteCode                                                   SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       24      "|\0"        3     BillReevalReasonCategorySeq                                ""
+4       SQLNCHAR            0       80      "|\0"        4     ShortDescription                                           SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       510     "|\0"        5     LongDescription                                            SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       2       "|\0"        6     Active                                                     ""
+7       SQLNCHAR            0       48      "|\0"        7     CreateDate                                                 ""
+8       SQLNCHAR            0       4       "|\0"        8     CreateUserID                                               SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       48      "|\0"        9     ModDate                                                    ""
+10      SQLNCHAR            0       4       "|\0"        10    ModUserID                                                  SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "\r\0\n\0"   11    DmlOperation                                               SQL_Latin1_General_CP1_CI_AS

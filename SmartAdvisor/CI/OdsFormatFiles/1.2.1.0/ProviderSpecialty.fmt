@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLNCHAR            0       74      "|\0"        1     Id                                       ""
+2       SQLNCHAR            0       0       "|\0"        2     Description                              SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       48      "|\0"        3     ImplementationDate                       ""
+4       SQLNCHAR            0       48      "|\0"        4     DeactivationDate                         ""
+5       SQLNCHAR            0       74      "|\0"        5     DataSource                               ""
+6       SQLNCHAR            0       32      "|\0"        6     Creator                                  SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       48      "|\0"        7     CreateDate                               ""
+8       SQLNCHAR            0       32      "|\0"        8     LastUpdater                              SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       48      "|\0"        9     LastUpdateDate                           ""
+10      SQLNCHAR            0       2       "\r\0\n\0"   10    DmlOperation                             SQL_Latin1_General_CP1_CI_AS
+

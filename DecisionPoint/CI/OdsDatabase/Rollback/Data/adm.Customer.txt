@@ -1,0 +1,98 @@
+0	All	N/A			0	0	0	0	1	1
+1	AAAFL	Mmedical_AAAFL		PSQL101V\MEDPROD1	1	0	1	1	1	1
+2	AAA Michigan	MMedical_AAAMI	AM	PSQL103V\MEDPROD3	1	0	1	1	1	1
+3	Farmers Business	MMedical_FarmersBusiness		PSQL104V\MEDPROD4	1	0	1	1	1	1
+4	Aequicap	MMedical_Aequicap	KK	PSQL107V\MEDPROD7	1	0	1	1	1	1
+5	Affirmative	MMedical_Affirmative	NM		0	0	1	1	1	1
+6	NYCM	MMedical_NYCM	MU	PSQL106V\MEDPROD6	1	0	1	1	1	1
+7	AIG	MMedical_AIG			0	0	1	1	0	0
+8	AIICO	MMedical_AIICO	IX		0	0	1	1	1	1
+9	CONNECT	MMedical_Ameriprise	ID	PSQL107V\MEDPROD7	1	0	1	1	1	1
+10	FCCI	Mmedical_FCCI		PSQL107V\MEDPROD7	1	0	1	1	1	1
+11	AmFam2	MMedical_AmFam2			0	0	1	1	1	1
+12	Amica	MMedical_Amica	AN	PSQL107V\MEDPROD7	1	0	1	1	1	1
+13	Church Mutual	MMedical_ChurchMutual		PSQL106V\MEDPROD6	1	0	1	1	1	1
+14	Mountain West	Mmedical_MountainWest		PSQL108V\MEDPROD8	1	0	1	1	1	1
+15	CalCasualty	MMedical_CalCasualty	CK	PSQL107V\MEDPROD7	1	0	1	1	1	1
+16	Cooperativa	MMedical_Cooperativa	CV	PSQL107V\MEDPROD7	1	0	1	1	1	1
+17	DirectG	MMedical_DirectG	DT	PSQL107V\MEDPROD7	1	0	1	1	1	1
+18	Elco	MMedical_Elco	EB	PSQL107V\MEDPROD7	1	0	1	1	1	1
+19	Esurance	MMedical_Esurance	EE	PSQL107V\MEDPROD7	1	0	1	1	1	1
+20	Explorer	MMedical_Explorer	ED	PSQL107V\MEDPROD7	1	0	1	1	1	1
+21	Zventus	MMedical_Zventus		PSQL108V\MEDPROD8	1	0	1	1	1	1
+22	FBFS	MMedical_FBFS	FF		0	0	1	1	1	1
+23	Foremost	MMedical_Foremost	FR		0	0	1	1	0	0
+24	NGIC	Mmedical_GMAC	GC	PSQL102V\MEDPROD2	1	0	1	1	1	1
+25	Grange	Mmedical_Grange	GW	PSQL101V\MEDPROD1	1	0	1	1	1	1
+26	Hallmark	MMedical_Hallmark	HB		1	0	1	1	1	1
+27	Hamilton	MMedical_Hamilton	HL	PSQL106V\MEDPROD6	1	0	1	1	1	1
+28	Amtrust	MMedical_Amtrust		PSQL107V\MEDPROD7	1	0	1	1	1	1
+29	Kemper	MMedical_Kemper	UI	PSQL107V\MEDPROD7	1	0	1	1	1	1
+30	National Interstate	MMedical_NationalInterstate			1	0	1	1	1	1
+31	Mendota	MMedical_Mendota	MO	PSQL101V\MEDPROD1	1	0	1	1	1	1
+32	Mercury Insurance Group	MMedical_Mercury	MY	PSQL101V\MEDPROD1	1	0	1	1	1	1
+33	Met Life	MMedical_Metlife	ME	PSQL102V\MEDPROD2	1	0	1	1	1	1
+34	Countrywide	MMedical_CountryWide		PSQL108V\MEDPROD8	1	0	1	1	1	1
+35	Grange Mutual 3rd Party	MMedical_Grange3P		PSQL101V\MEDPROD1	1	0	1	1	1	1
+36	MitchellProviderAnalytics	MitchellProviderAnalytics			0	0	1	1	1	1
+37	Occidental	MMedical_Occidental	DE	PSQL106V\MEDPROD6	1	0	1	1	1	1
+38	OneBeacon	MMedical_OneBeacon	CU	PSQL107V\MEDPROD7	1	0	1	1	1	1
+39	Plymouth Rock	MMedical_Palisades	PS	PSQL102V\MEDPROD2	1	0	1	1	1	1
+40	Anchor General	MMedical_AnchorGeneral		PSQL108V\MEDPROD8	1	0	1	1	1	1
+41	Permanent	Mmedical_Permanent	PE	PSQL107V\MEDPROD7	1	0	1	1	1	1
+42	ProcuraCTG	MMedical_ProcuraCTG	PT	PSQL102V\MEDPROD2	0	0	1	1	1	1
+43	Progressive	MMedical_Progressive	IF	PSQL109V\MEDPRODIF	1	1	1	0	1	1
+44	Safeco	Mmedical_Safeco	SC	PSQL101V\MEDPROD1	1	0	1	1	1	1
+45	Acceptance	MMedical_FirstAcceptance		PSQL108V\MEDPROD8	1	0	1	1	1	1
+46	Safeway	MMedical_Safeway	SY	PSQL107V\MEDPROD7	1	0	1	1	1	1
+47	Sentry	MMedical_Sentry	SN	PSQL103V\MEDPROD3	1	0	1	1	1	1
+48	StateFarm	MMedical_StateFarm	SF	PSQL30V\MEDPRODSF	1	0	1	1	1	1
+49	Texas Farm Bureau	MMedical_TexasFarmBureau		PSQL103V\MEDPROD3	1	0	1	1	1	1
+50	James River	MMedical_JamesRiver		PSQL103V\MEDPROD3	1	0	1	1	1	1
+51	Travelers	MMedical_Travelers	TV	PSQL105V\MEDPROD5	1	0	1	1	1	1
+52	Michigan Farm Bureau	MMedical_MichiganFarmBureau		PSQL102V\MEDPROD2	1	0	1	1	1	1
+53	UnitrinDirect	MMedical_UnitrinDirect	UA	PSQL101V\MEDPROD1	1	0	1	1	1	1
+54	NYCComptroller	MMedical_NYCComptroller		PSQL107V\MEDPROD7	1	0	1	1	1	1
+55	Assurant	MMedical_Assurant		PSQL101V\MEDPROD1	1	0	1	1	1	1
+56	Liberty Mutual	MMedical_LibertyMutual	LM	PSQL102V\MEDPROD2	1	0	1	1	1	1
+57	Tower	MMedical_Tower	TW		0	0	1	1	1	1
+58	Westfield	MMedical_Westfield	WC	PSQL102V\MEDPROD2	1	0	1	1	1	1
+59	CNA	MMedical_CNA	CX	PSQL106V\MEDPROD6	1	0	1	1	1	1
+60	Elephant	MMedical_Elephant	EH	PSQL102V\MEDPROD2	1	0	1	1	1	1
+61	Imperial	MMedical_Imperial	IP	PSQL106V\MEDPROD6	1	0	1	1	1	1
+62	AmFamDP	MMedical_AmFamDP	AF	PSQL103V\MEDPROD3	1	0	1	1	1	1
+63	Texas Farm Bureau	MMedical_TexasFarmBureau		PSQL103V\MEDPROD3	1	0	1	1	1	1
+65	Hartford	MMedical_Hartford	HT	PSQL108V\MEDPROD8	1	0	1	1	1	1
+66	CSAA Insurance Group	MMedical_CSAA	OA	PSQL108V\MEDPROD8	1	0	1	1	1	1
+67	AlfaVision	MMedical_AlfaVision	VA	PSQL107V\MEDPROD7	1	0	1	1	1	1
+68	Germania	MMedical_Germania	GD	PSQL102V\MEDPROD2	1	0	1	1	1	1
+69	GIA	MMedical_GIA	5N	PSQL102V\MEDPROD2	1	0	1	1	1	1
+70	Farmers Insurance Group	Mmedical_Farmers	FI	PSQL104V\MEDPROD4	1	0	1	1	1	1
+71	BristolWest	Mmedical_BristolWest	RR	PSQL104V\MEDPROD4	1	0	1	1	1	1
+72	Allstate	MMedical_Allstate	PZ	PSQL02C	1	0	1	1	1	1
+73	AllstateV3	MMedical_AllstateNJ		PSQL02C	1	0	1	1	1	1
+74	Ace	MMedical_Ace	AE	PSQL103V\MEDPROD3	1	0	1	1	1	1
+75	AutoOne	MMedical_AutoOne	ON	PSQL107V\MEDPROD7	1	0	1	1	1	1
+76	FredLoya	MMedical_FredLoya	QL	PSQL103V\MEDPROD3	1	0	1	1	1	1
+77	Responsive	MMedical_Responsive	5R	PSQL103V\MEDPROD3	1	0	1	1	1	1
+78	UAIC	MMedical_UAIC	4U	PSQL108V\MEDPROD8	1	0	1	1	1	1
+79	Knight	MMedical_Knight	KT	PSQL108V\MEDPROD8	1	0	1	1	1	1
+80	SafeAuto	MMedical_SafeAuto	5E	PSQL108V\MEDPROD8	1	0	1	1	1	1
+81	Northland	MMedical_Northland	NL	PSQL105V\MEDPROD5	1	0	1	1	1	1
+82	QBE	MMedical_QBE	QB	PSQL103V\MEDPROD3	1	0	1	1	1	1
+83	USA	MMedical_USA	UC	PSQL107V\MEDPROD7	1	0	1	1	1	1
+84	Sedgwick	MMedical_Sedgwick	SW	PSQL102V\MEDPROD2	1	0	1	1	1	1
+85	Alfa Mutual	MMedical_Alfa	AL		0	0	1	1	1	1
+86	Wawanesa	MMedical_Wawanesa	WN	PSQL102V\MEDPROD2	1	0	1	1	1	1
+87	SCS	MMedical_SCS	SZ	PSQL108V\MEDPROD8	1	0	1	1	1	1
+88	Gainsco	MMedical_Gainsco	GF	PSQL108V\MEDPROD8	1	0	1	1	1	1
+89	Geico	MMedical_Geico	GE	PSQL108V\MEDPROD8	1	0	1	1	1	0
+90	NJM	Mmedical_NJM	MA	PSQL106V\MEDPROD6	1	0	1	1	1	1
+91	Zurich	MMedical_Zurich	4H	PSQL102V\MEDPROD2	1	0	1	1	1	1
+93	Canal	Mmedical_Canal		PSQL108V\MEDPROD8	1	0	1	1	1	1
+94	PRMA	MMedical_PRMA		PSQL102V\MEDPROD2	1	0	1	1	1	1
+95	StateFarm CIQ	MMedical_StateFarmCIQ		PSQL30V\MEDPRODSF	1	0	1	1	1	1
+96	MitchellReporting	VPNAnalytics			0	0	0	1	0	0
+97	Finance	Finance			1	0	0	0	0	0
+98	MetroMile	MMedical_MetroMile	MR	PSQL108V\MEDPROD8	1	0	1	1	1	1
+99	Key	MMedical_Key	KY	PSQL106V\MEDPROD6	1	0	1	1	1	1

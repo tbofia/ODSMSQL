@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     ListValueIdNo                  ""
+2       SQLCHAR             0       12      "|"      2     UDFIdNo                        ""
+3       SQLCHAR             0       7       "|"      3     SeqNo                          ""
+4       SQLCHAR             0       50      "|"      4     ListValue                      SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       7       "|"      5     DefaultValue                   ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                   SQL_Latin1_General_CP1_CI_AS
+

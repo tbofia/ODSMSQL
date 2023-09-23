@@ -1,0 +1,15 @@
+11.0
+13
+1       SQLCHAR             0       12      "|"      1     BillIdNo                                 ""
+2       SQLCHAR             0       12      "|"      2     SeqNo                                    ""
+3       SQLCHAR             0       24      "|"      3     DateCommitted                            ""
+4       SQLCHAR             0       30      "|"      4     AmtCommitted                             ""
+5       SQLCHAR             0       15      "|"      5     UserId                                   SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       30      "|"      6     AmtCoPay                                 ""
+7       SQLCHAR             0       30      "|"      7     AmtDeductible                            ""
+8       SQLCHAR             0       12      "|"      8     Flags                                    ""
+9       SQLCHAR             0       30      "|"      9     AmtSalesTax                              ""
+10      SQLCHAR             0       30      "|"      10    AmtOtherTax                              ""
+11      SQLCHAR             0       1       "|"      11    DeductibleOverride                       ""
+12		SQLCHAR				0		0		""		 0	   PricingState								""
+13      SQLCHAR             0       1       "\r\n"   13    DmlOperation                             SQL_Latin1_General_CP1_CI_AS

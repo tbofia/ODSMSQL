@@ -1,0 +1,9 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     DemandPackageId                            ""
+2       SQLCHAR             0       12      "|"      2     DemandClaimantId                           ""
+3       SQLCHAR             0       15      "|"      3     RequestedByUserName                        SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       37      "|"      4     DateTimeReceived                           ""
+5       SQLCHAR             0       36      "|"      5     CorrelationId                              SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       7       "|"      6     PageCount                                  ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                               SQL_Latin1_General_CP1_CI_AS

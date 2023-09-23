@@ -1,0 +1,13 @@
+11.0
+11
+1       SQLCHAR             0       12      "|"      1     BillsTaxId                         ""
+2       SQLCHAR             0       7       "|"      2     TableType                          ""
+3       SQLCHAR             0       12      "|"      3     BillIdNo                           ""
+4       SQLCHAR             0       7       "|"      4     Line_No                            ""
+5       SQLCHAR             0       7       "|"      5     SeqNo                              ""
+6       SQLCHAR             0       7       "|"      6     TaxTypeId                          ""
+7       SQLCHAR             0       41      "|"      7     ImportTaxRate                      ""
+8       SQLCHAR             0       30      "|"      8     Tax                                ""
+9       SQLCHAR             0       30      "|"      9     OverridenTax                       ""
+10      SQLCHAR             0       30      "|"      10    ImportTaxAmount                    ""
+11      SQLCHAR             0       1       "\r\n"   11    DmlOperation                       SQL_Latin1_General_CP1_CI_AS

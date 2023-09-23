@@ -1,0 +1,10 @@
+11.0
+7
+1       SQLCHAR             0       21      "|"      1     BillLineAdjustmentId                         ""
+2       SQLCHAR             0       12      "|"      2     BillIdNo                                     ""
+3       SQLCHAR             0       12      "|"      3     LineNumber                                   ""
+4       SQLCHAR             0       30      "|"      4     Adjustment                                   ""
+5       SQLCHAR             0       12      "|"      5     EndNote                                      ""
+6       SQLCHAR             0       12      "|"      6     EndNoteTypeId                                ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                                 SQL_Latin1_General_CP1_CI_AS
+

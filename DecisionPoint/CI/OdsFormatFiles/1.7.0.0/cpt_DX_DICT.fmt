@@ -1,0 +1,14 @@
+11.0
+12
+1       SQLCHAR             0       6       "|"      1     ICD9                                   SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       24      "|"      2     StartDate                              ""
+3       SQLCHAR             0       24      "|"      3     EndDate                                ""
+4       SQLCHAR             0       7       "|"      4     Flags                                  ""
+5       SQLCHAR             0       1       "|"      5     NonSpecific                            SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       1       "|"      6     AdditionalDigits                       SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       1       "|"      7     Traumatic                              SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       0       "|"      8     DX_DESC                                SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       7       "|"      9     Duration                               ""
+10      SQLCHAR             0       7       "|"      10    Colossus                               ""
+11      SQLCHAR             0       5       "|"      11    DiagnosisFamilyId                      ""
+12      SQLCHAR             0       1       "\r\n"   12    DmlOperation                           SQL_Latin1_General_CP1_CI_AS

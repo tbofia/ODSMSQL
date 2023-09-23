@@ -1,0 +1,18 @@
+11.0
+15
+1       SQLCHAR             0       12      "|"      1     UserId                                   ""
+2       SQLCHAR             0       15      "|"      2     LoginName                                SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       30      "|"      3     Password                                 SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       50      "|"      4     CreatedBy                                SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       24      "|"      5     CreatedDate                              ""
+6       SQLCHAR             0       12      "|"      6     UserStatus                               ""
+7       SQLCHAR             0       20      "|"      7     FirstName                                SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       20      "|"      8     LastName                                 SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       7       "|"      9     AccountLocked                            ""
+10      SQLCHAR             0       7       "|"      10    LockedCounter                            ""
+11      SQLCHAR             0       24      "|"      11    PasswordCreateDate                       ""
+12      SQLCHAR             0       7       "|"      12    PasswordCaseFlag                         ""
+13      SQLCHAR             0       30      "|"      13    ePassword                                SQL_Latin1_General_CP1_CI_AS
+14      SQLCHAR             0       0       "|"      14    CurrentSettings                          SQL_Latin1_General_CP1_CI_AS
+15      SQLCHAR             0       1       "\r\n"   15    DmlOperation                             SQL_Latin1_General_CP1_CI_AS
+

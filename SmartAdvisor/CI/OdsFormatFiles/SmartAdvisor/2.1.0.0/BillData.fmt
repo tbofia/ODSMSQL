@@ -1,0 +1,14 @@
+11.0
+12
+1       SQLNCHAR            0       8       "|\0"        1     ClientCode                   SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     BillSeq                      ""
+3       SQLNCHAR            0       12      "|\0"        3     TypeCode                     SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       24      "|\0"        4     SubType                      SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       14      "|\0"        5     SubSeq                       ""
+6       SQLNCHAR            0       82      "|\0"        6     NumData                      ""
+7       SQLNCHAR            0       12000   "|\0"        7     TextData                     SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       48      "|\0"        8     ModDate                      ""
+9       SQLNCHAR            0       4       "|\0"        9     ModUserID                    SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       48      "|\0"        10    CreateDate                   ""
+11      SQLNCHAR            0       4       "|\0"        11    CreateUserID                 SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "\r\0\n\0"   12    DmlOperation                 SQL_Latin1_General_CP1_CI_AS

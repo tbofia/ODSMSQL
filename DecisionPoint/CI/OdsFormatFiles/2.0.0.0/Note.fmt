@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLCHAR             0       12      "|"      1     NoteId                               ""
+2       SQLCHAR             0       37      "|"      2     DateCreated                          ""
+3       SQLCHAR             0       37      "|"      3     DateModified                         ""
+4       SQLCHAR             0       15      "|"      4     CreatedBy                            SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       15      "|"      5     ModifiedBy                           SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       5       "|"      6     Flag                                 ""
+7       SQLCHAR             0       250     "|"      7     Content                              SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       7       "|"      8     NoteContext                          ""
+9       SQLCHAR             0       12      "|"      9     DemandClaimantId                     ""
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                         SQL_Latin1_General_CP1_CI_AS
+

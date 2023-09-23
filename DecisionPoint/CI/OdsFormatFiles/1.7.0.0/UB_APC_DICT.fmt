@@ -1,0 +1,7 @@
+11.0
+5
+1       SQLCHAR             0       24      "|"      1     StartDate                    ""
+2       SQLCHAR             0       24      "|"      2     EndDate                      ""
+3       SQLCHAR             0       5       "|"      3     APC                          SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       255     "|"      4     Description                  SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                 SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,12 @@
+10.0
+10
+1       SQLCHAR             0       12      "|"      1     ReasonNumber                           ""
+2       SQLCHAR             0       2       "|"      2     CV_Type                                SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       45      "|"      3     ShortDesc                              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       0       "|"      4     LongDesc                               SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     CategoryIdNo                           ""
+6       SQLCHAR             0       7       "|"      6     COAIndex                               ""
+7       SQLCHAR             0       12      "|"      7     OverrideEndnote                        ""
+8       SQLCHAR             0       7       "|"      8     HardEdit                               ""
+9       SQLCHAR             0       3       "|"      9     SpecialProcessing                      ""
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                           SQL_Latin1_General_CP1_CI_AS

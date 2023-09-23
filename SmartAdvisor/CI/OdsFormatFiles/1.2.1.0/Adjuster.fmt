@@ -1,0 +1,23 @@
+11.0
+20
+1       SQLNCHAR            0       8       "|\0"        1     ClaimSysSubSet                   SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       50      "|\0"        2     Adjuster                         SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       40      "|\0"        3     FirstName                        SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       40      "|\0"        4     LastName                         SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       2       "|\0"        5     MInitial                         SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       40      "|\0"        6     Title                            SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       60      "|\0"        7     Address1                         SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       60      "|\0"        8     Address2                         SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       40      "|\0"        9     City                             SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       4       "|\0"        10    State                            SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       18      "|\0"        11    Zip                              SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       40      "|\0"        12    PhoneNum                         SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       20      "|\0"        13    PhoneNumExt                      SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       40      "|\0"        14    FaxNum                           SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       256     "|\0"        15    Email                            SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       48      "|\0"        16    CreateDate                       ""
+17      SQLNCHAR            0       4       "|\0"        17    CreateUserID                     SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       48      "|\0"        18    ModDate                          ""
+19      SQLNCHAR            0       4       "|\0"        19    ModUserID                        SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       2       "\r\0\n\0"   20    DmlOperation                     SQL_Latin1_General_CP1_CI_AS
+

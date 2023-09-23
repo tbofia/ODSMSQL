@@ -1,0 +1,8 @@
+11.0
+5
+1       SQLCHAR             0       5       "|"      1     ScriptAdvisorSettingsId                              ""
+2       SQLCHAR             0       1       "|"      2     IsPharmacyEligible                                   ""
+3       SQLCHAR             0       1       "|"      3     EnableSendCardToClaimant                             ""
+4       SQLCHAR             0       1       "|"      4     EnableBillSource                                     ""
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                                         SQL_Latin1_General_CP1_CI_AS
+

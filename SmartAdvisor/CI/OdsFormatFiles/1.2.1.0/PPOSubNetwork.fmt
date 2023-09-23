@@ -1,0 +1,23 @@
+11.0
+20
+1       SQLNCHAR            0       4       "|\0"        1     PPONetworkID                 SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       6       "|\0"        2     GroupCode                    SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       80      "|\0"        3     GroupName                    SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       60      "|\0"        4     ExternalID                   SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       6       "|\0"        5     SiteCode                     SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       48      "|\0"        6     CreateDate                   ""
+7       SQLNCHAR            0       4       "|\0"        7     CreateUserID                 SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       48      "|\0"        8     ModDate                      ""
+9       SQLNCHAR            0       4       "|\0"        9     ModUserID                    SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       60      "|\0"        10    Street1                      SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       60      "|\0"        11    Street2                      SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       30      "|\0"        12    City                         SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       4       "|\0"        13    State                        SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       20      "|\0"        14    Zip                          SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       40      "|\0"        15    PhoneNum                     SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       510     "|\0"        16    EmailAddress                 SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       510     "|\0"        17    WebSite                      SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       18      "|\0"        18    TIN                          SQL_Latin1_General_CP1_CI_AS
+19      SQLNCHAR            0       8000    "|\0"        19    Comment                      SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       2       "\r\0\n\0"   20    DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

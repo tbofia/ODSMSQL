@@ -1,0 +1,12 @@
+11.0
+9
+1       SQLCHAR             0       12      "^|"     1     RuleID                             ""
+2       SQLCHAR             0       50      "^|"     2     Name                               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       0       "^|"     3     Description                        SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       50      "^|"     4     CreatedBy                          SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       24      "^|"     5     CreationDate                       ""
+6       SQLCHAR             0       0       "^|"     6     PostFixNotation                    SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       12      "^|"     7     Priority                           ""
+8       SQLCHAR             0       7       "^|"     8     RuleTypeID                         ""
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                       SQL_Latin1_General_CP1_CI_AS
+

@@ -1,0 +1,10 @@
+11.0
+7
+1       SQLCHAR             0       13      "|"      1     NDCCode                      SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       24      "|"      2     StartDate                    ""
+3       SQLCHAR             0       24      "|"      3     EndDate                      ""
+4       SQLCHAR             0       125     "|"      4     Description                  SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       30      "|"      5     Fee                          ""
+6       SQLCHAR             0       7       "|"      6     TypeOfDrug                   ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

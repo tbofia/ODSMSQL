@@ -1,0 +1,20 @@
+97010	97010	ModalityType	Supervised	UnTimed
+97012	97012	ModalityType	Supervised	UnTimed
+97014	97014	ModalityType	Supervised	UnTimed
+97016	97016	ModalityType	Supervised	UnTimed
+97018	97018	ModalityType	Supervised	UnTimed
+97022	97022	ModalityType	Supervised	UnTimed
+97024	97024	ModalityType	Supervised	UnTimed
+97026	97026	ModalityType	Supervised	UnTimed
+97028	97028	ModalityType	Supervised	UnTimed
+97032	97039	ModalityType	Constant Attendance	Timed
+97110	97123	ModalityType	Therapeutic Procedures	Timed
+97124	97124	ModalityType	Soft Tissue/Muscle Work	Timed
+97125	97139	ModalityType	Therapeutic Procedures	Timed
+97140	97140	ModalityType	Soft Tissue/Muscle Work	Timed
+97141	97149	ModalityType	Therapeutic Procedures	Timed
+97150	97150	ModalityType	Group Therapeutic Procedures	UnTimed
+97151	97546	ModalityType	Therapeutic Procedures	Timed
+98940	98942	VisitType	Chiropractic Manipulative Treatment	
+99201	99205	VisitType	New Patient Office Visit	
+99211	99215	VisitType	Established Patient Office Visit	

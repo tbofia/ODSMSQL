@@ -1,0 +1,14 @@
+11.0
+11
+1       SQLCHAR             0       12      "|"      1     ManualProviderId                     ""
+2       SQLCHAR             0       15      "|"      2     TIN                                  SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       60      "|"      3     LastName                             SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       35      "|"      4     FirstName                            SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       60      "|"      5     GroupName                            SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       55      "|"      6     Address1                             SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       55      "|"      7     Address2                             SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       30      "|"      8     City                                 SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       2       "|"      9     State                                SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       12      "|"      10    Zip                                  SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       1       "\r\n"   11    DmlOperation                         SQL_Latin1_General_CP1_CI_AS
+

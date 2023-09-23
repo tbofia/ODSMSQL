@@ -1,0 +1,14 @@
+11.0
+12
+1       SQLNCHAR            0       8       "|\0"        1     DrugCode                             SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       40      "|\0"        2     DrugsDescription                     SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       40      "|\0"        3     Disp                                 SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "|\0"        4     DrugType                             SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       2       "|\0"        5     Cat                                  SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       2       "|\0"        6     UpdateFlag                           SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       24      "|\0"        7     Uv                                   ""
+8       SQLNCHAR            0       48      "|\0"        8     CreateDate                           ""
+9       SQLNCHAR            0       4       "|\0"        9     CreateUserID                         SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       48      "|\0"        10    ModDate                              ""
+11      SQLNCHAR            0       4       "|\0"        11    ModUserID                            SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "\r\0\n\0"   12    DmlOperation                         SQL_Latin1_General_CP1_CI_AS

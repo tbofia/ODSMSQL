@@ -1,0 +1,8 @@
+11.0
+5
+1       SQLCHAR             0       12      "|"      1     RuleID                       ""
+2       SQLCHAR             0       12      "|"      2     LineNumber                   ""
+3       SQLCHAR             0       12      "|"      3     ActionID                     ""
+4       SQLCHAR             0       1000    "|"      4     ActionValue                  SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       1       "\r\n"   5     DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

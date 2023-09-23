@@ -1,0 +1,17 @@
+11.0
+15
+1       SQLNCHAR            0       24      "|\0"        1     ICDDiagnosisID                               ""
+2       SQLNCHAR            0       60      "|\0"        2     ProcedureCode                                SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       600     "|\0"        3     ICDDescription                               SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       1600    "|\0"        4     ProcedureDescription                         SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       60      "|\0"        5     IncidenceRate                                ""
+6       SQLNCHAR            0       60      "|\0"        6     ProcedureFrequency                           ""
+7       SQLNCHAR            0       14      "|\0"        7     Visits25Perc                                 ""
+8       SQLNCHAR            0       14      "|\0"        8     Visits50Perc                                 ""
+9       SQLNCHAR            0       14      "|\0"        9     Visits75Perc                                 ""
+10      SQLNCHAR            0       60      "|\0"        10    VisitsMean                                   ""
+11      SQLNCHAR            0       60      "|\0"        11    CostsMean                                    ""
+12      SQLNCHAR            0       10      "|\0"        12    AutoApprovalCode                             SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       14      "|\0"        13    PaymentFlag                                  ""
+14      SQLNCHAR            0       60      "|\0"        14    CostPerVisit                                 ""
+15      SQLNCHAR            0       2       "\r\0\n\0"   15    DmlOperation                                 SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,23 @@
+11.0
+20
+1       SQLNCHAR            0       6       "|\0"        1     PPOProfileSiteCode                                 SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     PPOProfileID                                       ""
+3       SQLNCHAR            0       6       "|\0"        3     ProfileRegionSiteCode                              SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       24      "|\0"        4     ProfileRegionID                                    ""
+5       SQLNCHAR            0       14      "|\0"        5     NetworkOrder                                       ""
+6       SQLNCHAR            0       4       "|\0"        6     PPONetworkID                                       SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       2       "|\0"        7     SearchLogic                                        SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       2       "|\0"        8     Verification                                       SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       48      "|\0"        9     EffectiveDate                                      ""
+10      SQLNCHAR            0       48      "|\0"        10    TerminationDate                                    ""
+11      SQLNCHAR            0       2       "|\0"        11    JurisdictionInd                                    SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       24      "|\0"        12    JurisdictionInsurerSeq                             ""
+13      SQLNCHAR            0       2       "|\0"        13    JurisdictionUseOnly                                SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       2       "|\0"        14    PPOSSTinReq                                        SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       2       "|\0"        15    PPOSSLicReq                                        SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       14      "|\0"        16    DefaultExtendedSearches                            ""
+17      SQLNCHAR            0       14      "|\0"        17    DefaultExtendedFilters                             ""
+18      SQLNCHAR            0       2       "|\0"        18    SeveredTies                                        SQL_Latin1_General_CP1_CI_AS
+19      SQLNCHAR            0       1000    "|\0"        19    POS                                                SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       2       "\r\0\n\0"   20    DmlOperation                                       SQL_Latin1_General_CP1_CI_AS
+

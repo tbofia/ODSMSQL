@@ -1,0 +1,35 @@
+11.0
+33
+1       SQLNCHAR            0       6       "|\0"        1     SiteCode                                       SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       2       "|\0"        2     EDIPortType                                    SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       24      "|\0"        3     EDIMapToolID                                   ""
+4       SQLNCHAR            0       4       "|\0"        4     EDISourceID                                    SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       100     "|\0"        5     EDIMapToolName                                 SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       8       "|\0"        6     EDIMapToolType                                 SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       100     "|\0"        7     EDIMapToolDesc                                 SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       24      "|\0"        8     EDIObjectID                                    ""
+9       SQLNCHAR            0       100     "|\0"        9     MenuTitle                                      SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       24      "|\0"        10    SecurityLevel                                  ""
+11      SQLNCHAR            0       100     "|\0"        11    EDIInputFileName                               SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       100     "|\0"        12    EDIOutputFileName                              SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       2       "|\0"        13    EDIMultiFiles                                  SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       14      "|\0"        14    EDIReportType                                  ""
+15      SQLNCHAR            0       0       "|\0"        15    FormProperties                                 SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       4       "|\0"        16    Jurisdiction                                   SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       2       "|\0"        17    EDIType                                        SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       6       "|\0"        18    EDIPartnerID                                   SQL_Latin1_General_CP1_CI_AS
+19      SQLNCHAR            0       8       "|\0"        19    BillControlTableCode                           SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       2       "|\0"        20    EDIControlFlag                                 SQL_Latin1_General_CP1_CI_AS
+21      SQLNCHAR            0       14      "|\0"        21    BillControlSeq                                 ""
+22      SQLNCHAR            0       6       "|\0"        22    EDIObjectSiteCode                              SQL_Latin1_General_CP1_CI_AS
+23      SQLNCHAR            0       2       "|\0"        23    PermitUndefinedRecIDs                          SQL_Latin1_General_CP1_CI_AS
+24      SQLNCHAR            0       510     "|\0"        24    SelectionQuery                                 SQL_Latin1_General_CP1_CI_AS
+25      SQLNCHAR            0       510     "|\0"        25    ReportSelectionQuery                           SQL_Latin1_General_CP1_CI_AS
+26      SQLNCHAR            0       8       "|\0"        26    Class                                          SQL_Latin1_General_CP1_CI_AS
+27      SQLNCHAR            0       510     "|\0"        27    LineSelectionQuery                             SQL_Latin1_General_CP1_CI_AS
+28      SQLNCHAR            0       0       "|\0"        28    PortProperties                                 SQL_Latin1_General_CP1_CI_AS
+29      SQLNCHAR            0       6       "|\0"        29    EDIFileConfigSiteCode                          SQL_Latin1_General_CP1_CI_AS
+30      SQLNCHAR            0       24      "|\0"        30    EDIFileConfigSeq                               ""
+31      SQLNCHAR            0       8       "|\0"        31    LZControlTableCode                             SQL_Latin1_General_CP1_CI_AS
+32      SQLNCHAR            0       14      "|\0"        32    LZControlSeq                                   ""
+33      SQLNCHAR            0       2       "\r\0\n\0"   33    DmlOperation                                   SQL_Latin1_General_CP1_CI_AS

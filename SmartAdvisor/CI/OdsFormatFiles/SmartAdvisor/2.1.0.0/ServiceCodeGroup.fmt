@@ -1,0 +1,22 @@
+11.0
+20
+1       SQLNCHAR            0       6       "|\0"        1     SiteCode                             SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       16      "|\0"        2     GroupType                            SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       16      "|\0"        3     Family                               SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       8       "|\0"        4     Revision                             SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       16      "|\0"        5     GroupCode                            SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       24      "|\0"        6     CodeOrder                            ""
+7       SQLNCHAR            0       24      "|\0"        7     ServiceCode                          SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       16      "|\0"        8     ServiceCodeType                      SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       16      "|\0"        9     LinkGroupType                        SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       16      "|\0"        10    LinkGroupFamily                      SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       14      "|\0"        11    CodeLevel                            ""
+12      SQLNCHAR            0       24      "|\0"        12    GlobalPriority                       ""
+13      SQLNCHAR            0       2       "|\0"        13    Active                               SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       4000    "|\0"        14    Comment                              SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       8000    "|\0"        15    CustomParameters                     SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       48      "|\0"        16    CreateDate                           ""
+17      SQLNCHAR            0       4       "|\0"        17    CreateUserID                         SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       48      "|\0"        18    ModDate                              ""
+19      SQLNCHAR            0       4       "|\0"        19    ModUserID                            SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       2       "\r\0\n\0"   20    DmlOperation                         SQL_Latin1_General_CP1_CI_AS

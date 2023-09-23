@@ -1,0 +1,8 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     DemandPackageUploadedFileId                                ""
+2       SQLCHAR             0       12      "|"      2     DemandPackageId                                            ""
+3       SQLCHAR             0       255     "|"      3     FileName                                                   SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       12      "|"      4     Size                                                       ""
+5       SQLCHAR             0       50      "|"      5     DocStoreId                                                 SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                                               SQL_Latin1_General_CP1_CI_AS

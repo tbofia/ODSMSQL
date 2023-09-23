@@ -1,0 +1,80 @@
+IF OBJECT_ID('src.EDIXmitBill', 'U') IS NULL 
+	BEGIN
+		CREATE TABLE src.EDIXmitBill
+			(
+			  OdsPostingGroupAuditId INT NOT NULL ,  
+			  OdsCustomerId INT NOT NULL , 
+			  OdsCreateDate DATETIME2(7) NOT NULL ,
+			  OdsSnapshotDate DATETIME2(7) NOT NULL , 
+			  OdsRowIsCurrent BIT NOT NULL ,
+			  OdsHashbytesValue VARBINARY(8000) NULL ,
+			  DmlOperation CHAR(1) NOT NULL ,  
+			  EDIXmitBillSeq INT NOT NULL ,
+			  EDIXmitSeq INT NULL ,
+			  EDIHistoryProviderSeq INT NULL ,
+			  EDIHistoryClaimSeq INT NULL ,
+			  EDIHistoryInsurerSeq INT NULL ,
+			  EDIControlSeq INT NULL ,
+			  ClientCode CHAR (4) NULL ,
+			  BillSeq INT NULL ,
+			  Jurisdiction CHAR (2) NULL ,
+			  TOB CHAR (1) NULL ,
+			  UB92TOB CHAR (10) NULL ,
+			  BillSeqOrgRev INT NULL ,
+			  TotalCharge MONEY NULL ,
+			  BillableLines INT NULL ,
+			  PaidDate DATETIME NULL ,
+			  PaidAmount MONEY NULL ,
+			  DRG CHAR (3) NULL ,
+			  PatientStatus CHAR (2) NULL ,
+			  PostDate DATETIME NULL ,
+			  DocCtrlID VARCHAR (50) NULL ,
+			  DOSFirst DATETIME NULL ,
+			  DOSLast DATETIME NULL ,
+			  PPONetworkID CHAR (2) NULL ,
+			  PPOContractID VARCHAR (30) NULL ,
+			  Adjuster VARCHAR (25) NULL ,
+			  CarrierSeqNew VARCHAR (30) NULL ,
+			  ProvInvoice VARCHAR (14) NULL ,
+			  ProvSpecialty1 VARCHAR (10) NULL ,
+			  ClientTOB VARCHAR (5) NULL ,
+			  SubProductCode CHAR (1) NULL ,
+			  DupClientCode CHAR (4) NULL ,
+			  DupBillSeq INT NULL ,
+			  ConsultDate DATETIME NULL ,
+			  AdmitDate DATETIME NULL ,
+			  DischargeDate DATETIME NULL ,
+			  SubmitDate DATETIME NULL ,
+			  RcvdDate DATETIME NULL ,
+			  RcvdBrDate DATETIME NULL ,
+			  ReviewDate DATETIME NULL ,
+			  DueDate DATETIME NULL ,
+			  PmtAuth VARCHAR (4) NULL ,
+			  ForcePay CHAR (1) NULL ,
+			  ProvLicenseNum VARCHAR (30) NULL ,
+			  CreateUserID VARCHAR (2) NULL ,
+			  ModUserID VARCHAR (2) NULL ,
+			  PatientAccount VARCHAR (20) NULL ,
+			  RefProvName VARCHAR (40) NULL ,
+			  ProvType CHAR (3) NULL ,
+			  DOI DATETIME NULL ,
+			  GeoState CHAR (2) NULL ,
+			  ManualReductionMode SMALLINT NULL ,
+			  PPONetworkJurisdictionInd CHAR (1) NULL ,
+			  PPONetworkJurisdictionInsurerSeq INT NULL ,
+			  WFQueueParameter1 VARCHAR (35) NULL ,
+			  CheckNum VARCHAR (30) NULL ,
+			  ExternalID VARCHAR (50) NULL ,
+			  EDITestIndicator CHAR (1) NULL ,
+			  ICDVersion SMALLINT NULL ,
+ ) ON DP_Ods_PartitionScheme(OdsCustomerId) 
+ WITH (
+       DATA_COMPRESSION = PAGE); 
+
+     ALTER TABLE src.EDIXmitBill ADD 
+     CONSTRAINT PK_EDIXmitBill PRIMARY KEY CLUSTERED (OdsPostingGroupAuditId, OdsCustomerId, EDIXmitBillSeq) WITH (DATA_COMPRESSION = PAGE) ON
+     DP_Ods_PartitionScheme(OdsCustomerId);
+
+     ALTER INDEX PK_EDIXmitBill ON src.EDIXmitBill   REBUILD WITH(STATISTICS_INCREMENTAL = ON); 
+ END 
+ GO

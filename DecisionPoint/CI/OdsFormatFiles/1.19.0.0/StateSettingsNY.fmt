@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLCHAR             0       12      "|"      1     StateSettingsNYID                                                              ""
+2       SQLCHAR             0       1       "|"      2     NF10PrintDate                                                                  ""
+3       SQLCHAR             0       1       "|"      3     NF10CheckBox1                                                                  ""
+4       SQLCHAR             0       1       "|"      4     NF10CheckBox18                                                                 ""
+5       SQLCHAR             0       1       "|"      5     NF10UseUnderwritingCompany                                                     ""
+6       SQLCHAR             0       12      "|"      6     UnderwritingCompanyUdfId                                                       ""
+7       SQLCHAR             0       12      "|"      7     NaicUdfId                                                                      ""
+8       SQLCHAR             0       1       "|"      8     DisplayNYPrintOptionsWhenZosOrSojIsNY                                          ""
+9       SQLCHAR             0       1       "|"      9     NF10DuplicatePrint                                                             ""
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                                                                   SQL_Latin1_General_CP1_CI_AS
+

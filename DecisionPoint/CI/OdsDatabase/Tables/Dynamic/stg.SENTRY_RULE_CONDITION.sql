@@ -1,0 +1,18 @@
+IF OBJECT_ID('stg.SENTRY_RULE_CONDITION', 'U') IS NOT NULL 
+	DROP TABLE stg.SENTRY_RULE_CONDITION  
+BEGIN
+	CREATE TABLE stg.SENTRY_RULE_CONDITION
+		(
+		  RuleID INT NULL,
+		  LineNumber INT NULL,
+		  GroupFlag VARCHAR (50) NULL,
+		  CriteriaID INT NULL,
+		  Operator VARCHAR (50) NULL,
+		  ConditionValue VARCHAR (60) NULL,
+		  AndOr VARCHAR (50) NULL,
+		  UdfConditionId INT NULL,
+		  DmlOperation CHAR(1) NOT NULL 
+		 )
+END 
+GO
+

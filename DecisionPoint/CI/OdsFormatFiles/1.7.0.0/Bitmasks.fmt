@@ -1,0 +1,10 @@
+11.0
+8
+1       SQLCHAR             0       50      "|"      1     TableProgramUsed                     SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       50      "|"      2     AttributeUsed                        SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       21      "|"      3     DECIMAL                              ""
+4       SQLCHAR             0       50      "|"      4     ConstantName                         SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       50      "|"      5     BIT                                  SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       20      "|"      6     Hex                                  SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       250     "|"      7     Description                          SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       1       "\r\n"   8     DmlOperation                         SQL_Latin1_General_CP1_CI_AS

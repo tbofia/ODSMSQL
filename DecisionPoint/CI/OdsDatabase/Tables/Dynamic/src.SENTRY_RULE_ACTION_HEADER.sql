@@ -1,0 +1,25 @@
+IF OBJECT_ID('src.SENTRY_RULE_ACTION_HEADER', 'U') IS NULL 
+	BEGIN
+		CREATE TABLE src.SENTRY_RULE_ACTION_HEADER
+			(
+			  OdsPostingGroupAuditId INT NOT NULL ,  
+			  OdsCustomerId INT NOT NULL , 
+			  OdsCreateDate DATETIME2(7) NOT NULL ,
+			  OdsSnapshotDate DATETIME2(7) NOT NULL , 
+			  OdsRowIsCurrent BIT NOT NULL ,
+			  OdsHashbytesValue VARBINARY(8000) NULL ,
+			  DmlOperation CHAR(1) NOT NULL ,  
+			  RuleID INT NOT NULL ,
+			  EndnoteShort VARCHAR (50) NULL ,
+			  EndnoteLong VARCHAR (MAX) NULL ,
+ ) ON DP_Ods_PartitionScheme(OdsCustomerId) 
+ WITH (
+       DATA_COMPRESSION = PAGE); 
+
+     ALTER TABLE src.SENTRY_RULE_ACTION_HEADER ADD 
+     CONSTRAINT PK_SENTRY_RULE_ACTION_HEADER PRIMARY KEY CLUSTERED (OdsPostingGroupAuditId, OdsCustomerId, RuleID) WITH (DATA_COMPRESSION = PAGE) ON
+     DP_Ods_PartitionScheme(OdsCustomerId);
+
+     ALTER INDEX PK_SENTRY_RULE_ACTION_HEADER ON src.SENTRY_RULE_ACTION_HEADER   REBUILD WITH(STATISTICS_INCREMENTAL = ON); 
+ END 
+ GO

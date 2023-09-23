@@ -1,0 +1,28 @@
+11.0
+25
+1       SQLCHAR             0       12      "|"      1     ClaimIDNo                                ""
+2       SQLCHAR             0       0       "|"      2     ClaimNo                                  SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       24      "|"      3     DateLoss                                 ""
+4       SQLCHAR             0       2       "|"      4     CV_Code                                  SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     DiaryIndex                               ""
+6       SQLCHAR             0       24      "|"      6     LastSaved                                ""
+7       SQLCHAR             0       50      "|"      7     PolicyNumber                             SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       30      "|"      8     PolicyHoldersName                        SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       30      "|"      9     PaidDeductible                           ""
+10      SQLCHAR             0       1       "|"      10    STATUS                                   SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       100     "|"      11    InUse                                    SQL_Latin1_General_CP1_CI_AS
+12      SQLCHAR             0       12      "|"      12    CompanyID                                ""
+13      SQLCHAR             0       12      "|"      13    OfficeIndex                              ""
+14      SQLCHAR             0       12      "|"      14    AdjIdNo                                  ""
+15      SQLCHAR             0       30      "|"      15    PaidCoPay                                ""
+16      SQLCHAR             0       15      "|"      16    AssignedUser                             SQL_Latin1_General_CP1_CI_AS
+17      SQLCHAR             0       7       "|"      17    Privatized                               ""
+18      SQLCHAR             0       24      "|"      18    PolicyEffDate                            ""
+19      SQLCHAR             0       30      "|"      19    Deductible                               ""
+20      SQLCHAR             0       2       "|"      20    LossState                                SQL_Latin1_General_CP1_CI_AS
+21      SQLCHAR             0       12      "|"      21    AssignedGroup                            ""
+22      SQLCHAR             0       24      "|"      22    CreateDate                               ""
+23      SQLCHAR             0       24      "|"      23    LastChangedOn                            ""
+24      SQLCHAR             0       1       "|"      24    AllowMultiCoverage                       ""
+25      SQLCHAR             0       1       "\r\n"   25    DmlOperation                             SQL_Latin1_General_CP1_CI_AS
+

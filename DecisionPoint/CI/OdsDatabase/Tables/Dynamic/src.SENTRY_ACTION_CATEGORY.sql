@@ -1,0 +1,24 @@
+IF OBJECT_ID('src.SENTRY_ACTION_CATEGORY', 'U') IS NULL 
+	BEGIN
+		CREATE TABLE src.SENTRY_ACTION_CATEGORY
+			(
+			  OdsPostingGroupAuditId INT NOT NULL ,  
+			  OdsCustomerId INT NOT NULL , 
+			  OdsCreateDate DATETIME2(7) NOT NULL ,
+			  OdsSnapshotDate DATETIME2(7) NOT NULL , 
+			  OdsRowIsCurrent BIT NOT NULL ,
+			  OdsHashbytesValue VARBINARY(8000) NULL ,
+			  DmlOperation CHAR(1) NOT NULL ,  
+			  ActionCategoryIDNo INT NOT NULL ,
+			  Description VARCHAR (60) NULL ,
+ ) ON DP_Ods_PartitionScheme(OdsCustomerId) 
+ WITH (
+       DATA_COMPRESSION = PAGE); 
+
+     ALTER TABLE src.SENTRY_ACTION_CATEGORY ADD 
+     CONSTRAINT PK_SENTRY_ACTION_CATEGORY PRIMARY KEY CLUSTERED (OdsPostingGroupAuditId, OdsCustomerId, ActionCategoryIDNo) WITH (DATA_COMPRESSION = PAGE) ON
+     DP_Ods_PartitionScheme(OdsCustomerId);
+
+     ALTER INDEX PK_SENTRY_ACTION_CATEGORY ON src.SENTRY_ACTION_CATEGORY   REBUILD WITH(STATISTICS_INCREMENTAL = ON); 
+ END 
+ GO

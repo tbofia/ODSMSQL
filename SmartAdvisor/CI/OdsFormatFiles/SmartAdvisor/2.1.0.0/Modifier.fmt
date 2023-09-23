@@ -1,0 +1,27 @@
+11.0
+25
+1       SQLNCHAR            0       4       "|\0"        1     Jurisdiction                         SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       12      "|\0"        2     Code                                 SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       6       "|\0"        3     SiteCode                             SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "|\0"        4     Func                                 SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       6       "|\0"        5     Val                                  SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       2       "|\0"        6     ModType                              SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       4       "|\0"        7     GroupCode                            SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       60      "|\0"        8     ModDescription                       SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       140     "|\0"        9     ModComment1                          SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       140     "|\0"        10    ModComment2                          SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       48      "|\0"        11    CreateDate                           ""
+12      SQLNCHAR            0       4       "|\0"        12    CreateUserID                         SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       48      "|\0"        13    ModDate                              ""
+14      SQLNCHAR            0       4       "|\0"        14    ModUserID                            SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       60      "|\0"        15    Statute                              SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       12      "|\0"        16    Remark1                              SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       4       "|\0"        17    RemarkQualifier1                     SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       12      "|\0"        18    Remark2                              SQL_Latin1_General_CP1_CI_AS
+19      SQLNCHAR            0       4       "|\0"        19    RemarkQualifier2                     SQL_Latin1_General_CP1_CI_AS
+20      SQLNCHAR            0       12      "|\0"        20    Remark3                              SQL_Latin1_General_CP1_CI_AS
+21      SQLNCHAR            0       4       "|\0"        21    RemarkQualifier3                     SQL_Latin1_General_CP1_CI_AS
+22      SQLNCHAR            0       12      "|\0"        22    Remark4                              SQL_Latin1_General_CP1_CI_AS
+23      SQLNCHAR            0       4       "|\0"        23    RemarkQualifier4                     SQL_Latin1_General_CP1_CI_AS
+24      SQLNCHAR            0       24      "|\0"        24    CBREReasonID                         ""
+25      SQLNCHAR            0       2       "\r\0\n\0"   25    DmlOperation                         SQL_Latin1_General_CP1_CI_AS

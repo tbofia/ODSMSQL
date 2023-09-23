@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLNCHAR            0       8       "|\0"        1     ClientCode                         SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       2       "|\0"        2     InsurerType                        SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       48      "|\0"        3     EffectiveDate                      ""
+4       SQLNCHAR            0       24      "|\0"        4     InsurerSeq                         ""
+5       SQLNCHAR            0       48      "|\0"        5     TerminationDate                    ""
+6       SQLNCHAR            0       2       "\r\0\n\0"   6     DmlOperation                       SQL_Latin1_General_CP1_CI_AS
+

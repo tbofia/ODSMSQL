@@ -1,0 +1,24 @@
+IF OBJECT_ID('stg.cpt_PRC_DICT', 'U') IS NOT NULL
+DROP TABLE stg.cpt_PRC_DICT
+BEGIN
+	CREATE TABLE stg.cpt_PRC_DICT (
+		PRC_CD VARCHAR(7) NULL
+		,StartDate DATETIME NULL
+		,EndDate DATETIME NULL
+		,PRC_DESC VARCHAR(max) NULL
+		,Flags INT NULL
+		,Vague VARCHAR(1) NULL
+		,PerVisit SMALLINT NULL
+		,PerClaimant SMALLINT NULL
+		,PerProvider SMALLINT NULL
+		,BodyFlags INT NULL
+		,Colossus SMALLINT NULL
+		,CMS_Status VARCHAR(1) NULL
+		,DrugFlag SMALLINT NULL
+		,CurativeFlag SMALLINT NULL
+		,ExclPolicyLimit SMALLINT NULL
+		,SpecNetFlag SMALLINT NULL
+		,DmlOperation CHAR(1) NOT NULL
+		)
+END
+GO

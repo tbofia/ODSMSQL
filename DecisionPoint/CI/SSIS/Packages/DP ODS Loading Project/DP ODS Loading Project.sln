@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DP ODS Loading Project", "Source\DP ODS Loading Project\DP ODS Loading Project.dtproj", "{A4834C52-2A73-4AE0-AA93-EF634953F592}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs:8080/tfs/mitchellprojects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DP\u0020ODS\u0020Loading\u0020Project\\DP\u0020ODS\u0020Loading\u0020Project.dtproj
+		SccProjectName1 = DP\u0020ODS\u0020Loading\u0020Project
+		SccLocalPath1 = DP\u0020ODS\u0020Loading\u0020Project
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4834C52-2A73-4AE0-AA93-EF634953F592}.Development|Default.ActiveCfg = Development
+		{A4834C52-2A73-4AE0-AA93-EF634953F592}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+10.0
+8
+1       SQLCHAR             0       12      "|"      1     lkp_SpcId                    ""
+2       SQLCHAR             0       50      "|"      2     LongName                     SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       4       "|"      3     ShortName                    SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       30      "|"      4     Mult                         ""
+5       SQLCHAR             0       7       "|"      5     NCD92                        ""
+6       SQLCHAR             0       7       "|"      6     NCD93                        ""
+7       SQLCHAR             0       7       "|"      7     PlusFour                     ""
+8       SQLCHAR             0       1       "\r\n"   8     DmlOperation                 SQL_Latin1_General_CP1_CI_AS

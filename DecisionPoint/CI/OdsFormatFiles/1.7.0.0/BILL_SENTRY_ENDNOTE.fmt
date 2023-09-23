@@ -1,0 +1,8 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     BillID                             ""
+2       SQLCHAR             0       12      "|"      2     Line                               ""
+3       SQLCHAR             0       12      "|"      3     RuleID                             ""
+4       SQLCHAR             0       30      "|"      4     PercentDiscount                    ""
+5       SQLCHAR             0       7       "|"      5     ActionId                           ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                       SQL_Latin1_General_CP1_CI_AS

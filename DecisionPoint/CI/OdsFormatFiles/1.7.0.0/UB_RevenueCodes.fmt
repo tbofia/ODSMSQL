@@ -1,0 +1,16 @@
+11.0
+14
+1       SQLCHAR             0       4       "|"      1     RevenueCode                                          SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       24      "|"      2     StartDate                                            ""
+3       SQLCHAR             0       24      "|"      3     EndDate                                              ""
+4       SQLCHAR             0       0       "|"      4     PRC_DESC                                             SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     Flags                                                ""
+6       SQLCHAR             0       1       "|"      6     Vague                                                SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       7       "|"      7     PerVisit                                             ""
+8       SQLCHAR             0       7       "|"      8     PerClaimant                                          ""
+9       SQLCHAR             0       7       "|"      9     PerProvider                                          ""
+10      SQLCHAR             0       12      "|"      10    BodyFlags                                            ""
+11      SQLCHAR             0       7       "|"      11    DrugFlag                                             ""
+12      SQLCHAR             0       7       "|"      12    CurativeFlag                                         ""
+13      SQLCHAR             0       5       "|"      13    RevenueCodeSubCategoryId                             ""
+14      SQLCHAR             0       1       "\r\n"   14    DmlOperation                                         SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,24 @@
+11.0
+22
+1       SQLNCHAR            0       4       "|\0"        1     Jurisdiction                           SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       6       "|\0"        2     Extension                              SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       12      "|\0"        3     ProcedureCode                          SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       48      "|\0"        4     EffectiveDate                          ""
+5       SQLNCHAR            0       48      "|\0"        5     TerminationDate                        ""
+6       SQLNCHAR            0       48      "|\0"        6     FSProcDescription                      SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       2       "|\0"        7     Sv                                     SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       2       "|\0"        8     Star                                   SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       2       "|\0"        9     Panel                                  SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       2       "|\0"        10    Ip                                     SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       2       "|\0"        11    Mult                                   SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "|\0"        12    AsstSurgeon                            SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       2       "|\0"        13    SectionFlag                            SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       6       "|\0"        14    Fup                                    SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       14      "|\0"        15    Bav                                    ""
+16      SQLNCHAR            0       8       "|\0"        16    ProcGroup                              SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       14      "|\0"        17    ViewType                               ""
+18      SQLNCHAR            0       60      "|\0"        18    UnitValue                              ""
+19      SQLNCHAR            0       60      "|\0"        19    ProUnitValue                           ""
+20      SQLNCHAR            0       60      "|\0"        20    TechUnitValue                          ""
+21      SQLNCHAR            0       6       "|\0"        21    SiteCode                               SQL_Latin1_General_CP1_CI_AS
+22      SQLNCHAR            0       2       "\r\0\n\0"   22    DmlOperation                           SQL_Latin1_General_CP1_CI_AS

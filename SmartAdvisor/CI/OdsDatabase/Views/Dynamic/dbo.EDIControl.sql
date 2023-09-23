@@ -1,0 +1,135 @@
+IF OBJECT_ID('dbo.EDIControl', 'V') IS NOT NULL
+    DROP VIEW dbo.EDIControl;
+GO
+
+CREATE VIEW dbo.EDIControl
+AS
+
+SELECT 
+	 OdsPostingGroupAuditId
+	,OdsCustomerId
+	,OdsCreateDate
+	,OdsSnapshotDate
+	,OdsRowIsCurrent
+	,OdsHashbytesValue
+	,DmlOperation
+	,EDIControlSeq
+	,EDIMapToolSiteCode
+	,EDIPortType
+	,EDIMapToolID
+	,Name
+	,LastTapeDate
+	,LastStartDate
+	,LastEndDate
+	,DayCounter
+	,TotalCounter
+	,VendorNum
+	,VendorContact
+	,VendorPhone
+	,AccountNum
+	,OfficeNum
+	,EDISenderQualifier
+	,EDISenderIdentifier
+	,EDIReceiverQualifier
+	,EDIReceiverIdentifier
+	,EDIAcknowledgement
+	,EDITestIndicator
+	,ExportCredits
+	,ExportNegatives
+	,CreateEORs
+	,SpecialProcessFlag
+	,ARCompany
+	,ARContact
+	,ARAddr1
+	,ARAddr2
+	,ARCity
+	,ARState
+	,ARZip
+	,ARPhone
+	,EDISenderZIP
+	,EDIReceiverZIP
+	,CreateDate
+	,CreateUserID
+	,ModDate
+	,ModUserID
+	,PendUserGroup
+	,DayBillCount
+	,TotalBillCount
+	,ExportZeroAllowBills
+	,CreateNF10s
+	,PrintNF10Identifier
+	,NF10FileFormat
+	,EORFileFormat
+	,PrintEORIdentifier
+	,CreateEORWithNF10
+	,ExcludeAdjuster
+	,ExcludeAttorney
+	,ExcludeBranch
+	,ExcludeClaim
+	,ExcludeInsurer
+	,ExcludePolicy
+	,DaysPast
+	,EmailNotificationList
+	,WFValidationFlag
+	,PrintNF10ProvBillingAddr
+	,BatchAckSLA
+	,DetailAckSLA
+	,ExportOtherBillingProvider
+	,FormatRevenueCodes
+	,CreateC8s
+	,PrintC8Identifier
+	,CreateEORWithC8
+	,NYProviderC81
+	,NYProviderC84
+	,NYProviderC8Identifier
+	,NYProviderC8EOR
+	,NYBoardC81
+	,NYBoardC84
+	,NYBoardC8Identifier
+	,NYBoardC8EOR
+	,NYClaimantC81
+	,NYClaimantC8Identifier
+	,NYClaimantC8EOR
+	,NYClaimantC8EORCover
+	,NYAttorneyC81
+	,NYAttorneyC8Identifier
+	,NYAttorneyC8EOR
+	,NYAttorneyC8EORCover
+	,NYProviderFormat
+	,NYBoardFormat
+	,NYClaimantFormat
+	,NYAttorneyFormat
+	,ExportPPOBillComment
+	,IncludeNetwork
+	,IncludeClaimUDF
+	,IncludeProviderUDF
+	,IncludeBillUDF
+	,NetReevalFees
+	,ExportCARCs
+	,ExtendedHeader
+	,ExtendedTrailer
+	,SubmissionReasonCode
+	,IncludeBillAttachment
+	,UseExtendedLayout
+	,ExcludeBillAttachment
+	,ExportDiaryNotes
+	,UpdateZABillControltoAccepted
+	,UpdateZAPaidDateToPostDate
+	,SetZAPaidDateToPostDateDays
+	,IncludeAdjusterUDF
+	,IncludePolicyUDF
+	,ExportZeroAllowReevals
+	,UpdateREVALBillControlToAccepted
+	,UpdateREVALPaidDateToPostDate
+	,SetREVALPaidDateToPostDateDays
+	,ReductionsPerEORProfile
+	,IncludeBillImage
+	,NYClaimantC84
+	,NYAttorneyC84
+	,EDIJurisdiction
+FROM src.EDIControl
+WHERE   OdsRowIsCurrent = 1
+	AND DmlOperation <> 'D';
+GO
+
+

@@ -1,0 +1,3 @@
+DecisionPoint	Decision Point	dbo
+DemandManager	DemandManager	aw
+AcsOds	AcsOds	rpt

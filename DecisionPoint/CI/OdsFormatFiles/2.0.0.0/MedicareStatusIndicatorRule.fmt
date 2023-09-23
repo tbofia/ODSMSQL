@@ -1,0 +1,12 @@
+11.0
+9
+1       SQLCHAR             0       12      "|"      1     MedicareStatusIndicatorRuleId                                      ""
+2       SQLCHAR             0       50      "|"      2     MedicareStatusIndicatorRuleName                                    SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       500     "|"      3     StatusIndicator                                                    SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       30      "|"      4     StartDate                                                          ""
+5       SQLCHAR             0       30      "|"      5     EndDate                                                            ""
+6       SQLCHAR             0       12      "|"      6     Endnote                                                            ""
+7       SQLCHAR             0       5       "|"      7     EditActionId                                                       ""
+8       SQLCHAR             0       1000    "|"      8     Comments                                                           SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                                                       SQL_Latin1_General_CP1_CI_AS
+

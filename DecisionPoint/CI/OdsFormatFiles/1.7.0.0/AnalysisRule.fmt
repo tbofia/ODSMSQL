@@ -1,0 +1,13 @@
+11.0
+11
+1       SQLCHAR             0       12      "^|"     1     AnalysisRuleId                                 ""
+2       SQLCHAR             0       200     "^|"     2     Title                                          SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       200     "^|"     3     AssemblyQualifiedName                          SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       50      "^|"     4     MethodToInvoke                                 SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       400     "^|"     5     DisplayMessage                                 SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       12      "^|"     6     DisplayOrder                                   ""
+7       SQLCHAR             0       1       "^|"     7     IsActive                                       ""
+8       SQLCHAR             0       37      "^|"     8     CreateDate                                     ""
+9       SQLCHAR             0       37      "^|"     9     LastChangedOn                                  ""
+10      SQLCHAR             0       400     "^|"     10    MessageToken                                   SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       1       "\r\n"   11    DmlOperation                                   SQL_Latin1_General_CP1_CI_AS

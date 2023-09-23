@@ -1,0 +1,33 @@
+11.0
+30
+1       SQLCHAR             0       50      "|"      1     Customer                                         SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       21      "|"      2     TransactionID                                    ""
+3       SQLCHAR             0       24      "|"      3     Period                                           ""
+4       SQLCHAR             0       1       "|"      4     ActivityFlag                                     SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       1       "|"      5     BillableFlag                                     SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       4       "|"      6     Void                                             SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       10      "|"      7     CreditType                                       SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       50      "|"      8     Network                                          SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       12      "|"      9     BillIdNo                                         ""
+10      SQLCHAR             0       7       "|"      10    Line_No                                          ""
+11      SQLCHAR             0       24      "|"      11    TransactionDate                                  ""
+12      SQLCHAR             0       24      "|"      12    RepriceDate                                      ""
+13      SQLCHAR             0       50      "|"      13    ClaimNo                                          SQL_Latin1_General_CP1_CI_AS
+14      SQLCHAR             0       30      "|"      14    ProviderCharges                                  ""
+15      SQLCHAR             0       30      "|"      15    DPAllowed                                        ""
+16      SQLCHAR             0       30      "|"      16    VPNAllowed                                       ""
+17      SQLCHAR             0       30      "|"      17    Savings                                          ""
+18      SQLCHAR             0       30      "|"      18    Credits                                          ""
+19      SQLCHAR             0       30      "|"      19    NetSavings                                       ""
+20      SQLCHAR             0       2       "|"      20    SOJ                                              SQL_Latin1_General_CP1_CI_AS
+21      SQLCHAR             0       12      "|"      21    seqno                                            ""
+22      SQLCHAR             0       10      "|"      22    CompanyCode                                      SQL_Latin1_General_CP1_CI_AS
+23      SQLCHAR             0       7       "|"      23    VpnId                                            ""
+24      SQLCHAR             0       7       "|"      24    ProcessFlag                                      ""
+25      SQLCHAR             0       12      "|"      25    SK                                               ""
+26      SQLCHAR             0       100     "|"      26    DATABASE_NAME                                    SQL_Latin1_General_CP1_CI_AS
+27      SQLCHAR             0       1       "|"      27    SubmittedToFinance                               ""
+28      SQLCHAR             0       1       "|"      28    IsInitialLoad                                    ""
+29      SQLCHAR             0       1       "|"      29    VpnBillingCategoryCode                           SQL_Latin1_General_CP1_CI_AS
+30      SQLCHAR             0       1       "\r\n"   30    DmlOperation                                     SQL_Latin1_General_CP1_CI_AS
+

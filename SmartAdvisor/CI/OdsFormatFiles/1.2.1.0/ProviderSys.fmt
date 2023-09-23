@@ -1,0 +1,11 @@
+11.0
+8
+1       SQLNCHAR            0       8       "|\0"        1     ProviderSubset                                           SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       60      "|\0"        2     ProviderSubSetDesc                                       SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       2       "|\0"        3     ProviderAccess                                           SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "|\0"        4     TaxAddrRequired                                          SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       2       "|\0"        5     AllowDummyProviders                                      SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       2       "|\0"        6     CascadeUpdatesOnImport                                   SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       2       "|\0"        7     RootExtIDOverrideDelimiter                               SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       2       "\r\0\n\0"   8     DmlOperation                                             SQL_Latin1_General_CP1_CI_AS
+

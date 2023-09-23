@@ -1,0 +1,8 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     EventLogDetailId                     ""
+2       SQLCHAR             0       12      "|"      2     EventLogId                           ""
+3       SQLCHAR             0       50      "|"      3     PropertyName                         SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       0       "|"      4     OldValue                             SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       0       "|"      5     NewValue                             SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                         SQL_Latin1_General_CP1_CI_AS

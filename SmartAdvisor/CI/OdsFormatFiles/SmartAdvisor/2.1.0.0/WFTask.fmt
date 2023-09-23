@@ -1,0 +1,20 @@
+11.0
+18
+1       SQLNCHAR            0       24      "|\0"        1     WFTaskSeq                              ""
+2       SQLNCHAR            0       24      "|\0"        2     WFLowSeq                               ""
+3       SQLNCHAR            0       24      "|\0"        3     WFTaskRegistrySeq                      ""
+4       SQLNCHAR            0       70      "|\0"        4     Name                                   SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       70      "|\0"        5     Parameter1                             SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       2       "|\0"        6     RecordStatus                           SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       82      "|\0"        7     NodeLeft                               ""
+8       SQLNCHAR            0       82      "|\0"        8     NodeTop                                ""
+9       SQLNCHAR            0       4       "|\0"        9     CreateUserID                           SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       48      "|\0"        10    CreateDate                             ""
+11      SQLNCHAR            0       4       "|\0"        11    ModUserID                              SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       48      "|\0"        12    ModDate                                ""
+13      SQLNCHAR            0       2       "|\0"        13    NoPrior                                SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       2       "|\0"        14    NoRestart                              SQL_Latin1_General_CP1_CI_AS
+15      SQLNCHAR            0       4000    "|\0"        15    ParameterX                             SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       24      "|\0"        16    DefaultPendGroup                       SQL_Latin1_General_CP1_CI_AS
+17      SQLNCHAR            0       4000    "|\0"        17    Configuration                          SQL_Latin1_General_CP1_CI_AS
+18      SQLNCHAR            0       2       "\r\0\n\0"   18    DmlOperation                           SQL_Latin1_General_CP1_CI_AS

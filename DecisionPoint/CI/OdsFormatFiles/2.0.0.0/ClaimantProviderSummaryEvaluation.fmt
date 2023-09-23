@@ -1,0 +1,10 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     ClaimantProviderSummaryEvaluationId                                        ""
+2       SQLCHAR             0       12      "|"      2     ClaimantHeaderId                                                           ""
+3       SQLCHAR             0       41      "|"      3     EvaluatedAmount                                                            ""
+4       SQLCHAR             0       41      "|"      4     MinimumEvaluatedAmount                                                     ""
+5       SQLCHAR             0       41      "|"      5     MaximumEvaluatedAmount                                                     ""
+6       SQLCHAR             0       255     "|"      6     Comments                                                                   SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                                                               SQL_Latin1_General_CP1_CI_AS
+

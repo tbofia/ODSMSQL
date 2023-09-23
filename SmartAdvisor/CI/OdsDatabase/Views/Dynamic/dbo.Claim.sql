@@ -1,0 +1,113 @@
+IF OBJECT_ID('dbo.Claim', 'V') IS NOT NULL
+    DROP VIEW dbo.Claim;
+GO
+
+CREATE VIEW dbo.Claim
+AS
+
+SELECT 
+	 OdsPostingGroupAuditId
+	,OdsCustomerId
+	,OdsCreateDate
+	,OdsSnapshotDate
+	,OdsRowIsCurrent
+	,OdsHashbytesValue
+	,DmlOperation
+	,ClaimSysSubSet
+	,ClaimSeq
+	,ClaimID
+	,DOI
+	,PatientSSN
+	,PatientFirstName
+	,PatientLastName
+	,PatientMInitial
+	,ExternalClaimID
+	,PolicyCoPayAmount
+	,PolicyCoPayPct
+	,PolicyDeductible
+	,Status
+	,PolicyLimit
+	,PolicyID
+	,PolicyTimeLimit
+	,Adjuster
+	,PolicyLimitWarningPct
+	,FirstDOS
+	,LastDOS
+	,LoadDate
+	,ModDate
+	,ModUserID
+	,PatientSex
+	,PatientCity
+	,PatientDOB
+	,PatientStreet2
+	,PatientState
+	,PatientZip
+	,PatientStreet1
+	,MMIDate
+	,BodyPart1
+	,BodyPart2
+	,BodyPart3
+	,BodyPart4
+	,BodyPart5
+	,Location
+	,NatureInj
+	,URFlag
+	,CarKnowDate
+	,ClaimType
+	,CtrlDay
+	,MCOChoice
+	,ClientCodeDefault
+	,CloseDate
+	,ReopenDate
+	,MedCloseDate
+	,MedStipDate
+	,LegalStatus1
+	,LegalStatus2
+	,LegalStatus3
+	,Jurisdiction
+	,ProductCode
+	,PlaintiffAttorneySeq
+	,DefendantAttorneySeq
+	,BranchID
+	,OccCode
+	,ClaimSeverity
+	,DateLostBegan
+	,AccidentEmployment
+	,RelationToInsured
+	,Policy5Days
+	,Policy90Days
+	,Job5Days
+	,Job90Days
+	,LostDays
+	,ActualRTWDate
+	,MCOTransInd
+	,QualifiedInjWorkInd
+	,PermStationaryInd
+	,HospitalAdmit
+	,QualifiedInjWorkDate
+	,RetToWorkDate
+	,PermStationaryDate
+	,MCOFein
+	,CreateUserID
+	,IDCode
+	,IDType
+	,MPNOptOutEffectiveDate
+	,MPNOptOutTerminationDate
+	,MPNOptOutPhysicianName
+	,MPNOptOutPhysicianTIN
+	,MPNChoice
+	,JurisdictionClaimID
+	,PolicyLimitResult
+	,PatientPrimaryPhone
+	,PatientWorkPhone
+	,PatientAlternatePhone
+	,ICDVersion
+	,LastDateofTrauma
+	,ClaimAdminClaimNum
+	,PatientCountryCode
+FROM src.Claim
+WHERE   OdsRowIsCurrent = 1
+	AND DmlOperation <> 'D';
+GO
+
+

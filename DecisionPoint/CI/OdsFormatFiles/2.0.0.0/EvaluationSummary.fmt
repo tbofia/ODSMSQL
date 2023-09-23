@@ -1,0 +1,11 @@
+11.0
+8
+1       SQLCHAR             0       12      "|"      1     DemandClaimantId                                                         ""
+2       SQLCHAR             0       0       "|"      2     Details                                                                  SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       100     "|"      3     CreatedBy                                                                SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       37      "|"      4     CreatedDate                                                              ""
+5       SQLCHAR             0       100     "|"      5     ModifiedBy                                                               SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       37      "|"      6     ModifiedDate                                                             ""
+7       SQLCHAR             0       12      "|"      7     EvaluationSummaryTemplateVersionId                                       ""
+8       SQLCHAR             0       1       "\r\n"   8     DmlOperation                                                             SQL_Latin1_General_CP1_CI_AS
+

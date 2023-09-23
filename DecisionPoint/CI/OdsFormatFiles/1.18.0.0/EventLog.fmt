@@ -1,0 +1,11 @@
+11.0
+8
+1       SQLCHAR             0       12      "|"      1     EventLogId                       ""
+2       SQLCHAR             0       50      "|"      2     ObjectName                       SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       12      "|"      3     ObjectId                         ""
+4       SQLCHAR             0       15      "|"      4     UserName                         SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       37      "|"      5     LogDate                          ""
+6       SQLCHAR             0       20      "|"      6     ActionName                       SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       200     "|"      7     OrganizationId                   SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       1       "\r\n"   8     DmlOperation                     SQL_Latin1_General_CP1_CI_AS
+

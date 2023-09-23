@@ -1,0 +1,15 @@
+11.0
+13
+1       SQLCHAR             0       12      "|"      1     IDField                      ""
+2       SQLCHAR             0       24      "|"      2     LogDate                      ""
+3       SQLCHAR             0       12      "|"      3     EventId                      ""
+4       SQLCHAR             0       12      "|"      4     ClaimIdNo                    ""
+5       SQLCHAR             0       12      "|"      5     BillIdNo                     ""
+6       SQLCHAR             0       12      "|"      6     UserId                       ""
+7       SQLCHAR             0       12      "|"      7     NetworkId                    ""
+8       SQLCHAR             0       255     "|"      8     FileName                     SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR             0       1000    "|"      9     ExtraText                    SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       7       "|"      10    ProcessInfo                  ""
+11      SQLCHAR             0       7       "|"      11    TieredTypeID                 ""
+12      SQLCHAR             0       7       "|"      12    TierNumber                   ""
+13      SQLCHAR             0       1       "\r\n"   13    DmlOperation                 SQL_Latin1_General_CP1_CI_AS

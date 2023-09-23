@@ -1,0 +1,9 @@
+11.0
+7
+1       SQLCHAR             0       7       "|"      1     VpnId                            ""
+2       SQLCHAR             0       50      "|"      2     NetworkName                      SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       1       "|"      3     PendAndSend                      ""
+4       SQLCHAR             0       1       "|"      4     BypassMatching                   ""
+5       SQLCHAR             0       1       "|"      5     AllowsResends                    ""
+6       SQLCHAR             0       1       "|"      6     OdsEligible                      ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                     SQL_Latin1_General_CP1_CI_AS

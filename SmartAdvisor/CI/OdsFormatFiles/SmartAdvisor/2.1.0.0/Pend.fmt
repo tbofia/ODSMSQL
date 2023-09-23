@@ -1,0 +1,18 @@
+11.0
+16
+1       SQLNCHAR            0       8       "|\0"        1     ClientCode                                               SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       24      "|\0"        2     BillSeq                                                  ""
+3       SQLNCHAR            0       14      "|\0"        3     PendSeq                                                  ""
+4       SQLNCHAR            0       48      "|\0"        4     PendDate                                                 ""
+5       SQLNCHAR            0       2       "|\0"        5     ReleaseFlag                                              SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       26      "|\0"        6     PendToID                                                 SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       2       "|\0"        7     Priority                                                 SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       48      "|\0"        8     ReleaseDate                                              ""
+9       SQLNCHAR            0       16      "|\0"        9     ReasonCode                                               SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       4       "|\0"        10    PendByUserID                                             SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       4       "|\0"        11    ReleaseByUserID                                          SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       2       "|\0"        12    AutoPendFlag                                             SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       10      "|\0"        13    RuleID                                                   SQL_Latin1_General_CP1_CI_AS
+14      SQLNCHAR            0       24      "|\0"        14    WFTaskSeq                                                ""
+15      SQLNCHAR            0       256     "|\0"        15    ReleasedByExternalUserName                               SQL_Latin1_General_CP1_CI_AS
+16      SQLNCHAR            0       2       "\r\0\n\0"   16    DmlOperation                                             SQL_Latin1_General_CP1_CI_AS

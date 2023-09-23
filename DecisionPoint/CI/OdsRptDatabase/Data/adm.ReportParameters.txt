@@ -1,0 +1,46 @@
+1	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:16:06.730
+2	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:15:54.640
+3	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:18:36.737
+4	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:18:49.257
+5	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:19:52.557
+6	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:21:20.260
+8	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:22:46.313
+9	DebugFlag	Debug mode to print the statements	0	2019-06-19 00:20:29.290
+9	InitialLoadTruncateFlag	Truncate tables during Initia Load	1	2019-03-10 05:04:31.340
+9	ODSPABillLineType	For denoting the Non-Pharmacy Lines	Non-Pharmacy Lines	2019-02-25 05:54:16.643
+9	ODSPABillLineTypePharma	For denoting the Pharmacy Lines	Pharmacy Lines	2019-02-25 05:54:16.643
+9	ODSPACMS1500	Provider Codes	CMS-1500	2019-02-25 05:54:16.643
+9	ODSPAEndDate	Provider Data Explorer data load to end date 	12-31-2020	2019-02-25 05:54:16.643
+9	ODSPAFeeSchedulePharma	No feeschedule column available in BillPharm table	0.00	2019-02-25 05:54:16.643
+9	ODSPAGobackby	Provider Data Explorer data load from	12	2019-02-25 05:43:21.443
+9	ODSPAIsIncrementalLoad	Type of load (Full/Incremental)	0	2019-02-25 05:54:16.643
+9	ODSPAPRCategory	Blank	BLANK	2019-02-25 05:54:16.643
+9	ODSPAPRCategoryPharma	NDC Codes	NDC Codes	2019-02-25 05:54:16.643
+9	ODSPAPRCodeTypePharma	NDC	NDC	2019-02-25 05:54:16.643
+9	ODSPAPRDesc	Blank	BLANK	2019-02-25 05:54:16.643
+9	ODSPAPRDescPharma	NDC	NDC	2019-02-25 05:54:16.643
+9	ODSPAPRSubCategory	Blank	BLANK	2019-02-25 05:54:16.643
+9	ODSPAPRSubCategoryPharma	NDC Codes	NDC Codes	2019-02-25 05:54:16.643
+9	ODSPAStartDate	Provider Data Explorer data load from start date 	06-01-2018	2019-02-25 05:54:16.643
+9	ODSPAUB04	Hospital Codes	UB-04	2019-02-25 05:54:16.643
+10	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:21:20.260
+11	RunDate	Upper Date Boundary Filter computed as Of		2019-03-25 12:22:46.313
+12	DebugFlag	Debug mode to print the statements	0	2021-01-08 00:32:51.220
+12	InitialLoadTruncateFlag	Truncate tables during Initia Load	1	2021-01-08 00:32:51.220
+12	ODSPDEICBillLineType	For denoting the Non-Pharmacy Lines	Non-Pharmacy Lines	2021-01-08 00:32:51.220
+12	ODSPDEICBillLineTypePharma	For denoting the Pharmacy Lines	Pharmacy Lines	2021-01-08 00:32:51.220
+12	ODSPDEICCMS1500	Provider Codes	CMS-1500	2021-01-08 00:32:51.220
+12	ODSPDEICEndDate	Provider Data Explorer Industry data load to end date 	12-31-2020	2021-01-08 00:32:51.220
+12	ODSPDEICGobackby	Provider Data Explorer Industry data load from	12	2021-01-08 00:32:51.220
+12	ODSPDEICIsCustomerIncrementalLoad	Type of Load (ALL<0>/NewCustomer<1>)	0	2021-01-08 00:32:51.220
+12	ODSPDEICPRCategory	Blank	BLANK	2021-01-08 00:32:51.220
+12	ODSPDEICPRCategoryPharma	NDC Codes	NDC Codes	2021-01-08 00:32:51.220
+12	ODSPDEICPRCodeTypePharma	NDC	NDC	2021-01-08 00:32:51.220
+12	ODSPDEICPRDesc	Blank	BLANK	2021-01-08 00:32:51.220
+12	ODSPDEICPRDescPharma	NDC	NDC	2021-01-08 00:32:51.220
+12	ODSPDEICPRSubCategory	Blank	BLANK	2021-01-08 00:32:51.220
+12	ODSPDEICPRSubCategoryPharma	NDC Codes	NDC Codes	2021-01-08 00:32:51.220
+12	ODSPDEICStartDate	Provider Data Explorer Industry data load from start date 	01-01-2018	2021-01-08 00:32:51.220
+12	ODSPDEICUB04	Hospital Codes	UB-04	2021-01-08 00:32:51.220
+13	RunDate	Upper Date Boundary Filter computed as Of		2020-03-05 14:55:39.800
+14	RunDate	Upper Date Boundary Filter computed as Of		2020-03-27 16:45:58.990

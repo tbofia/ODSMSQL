@@ -1,0 +1,10 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     CustomIcdActionId                      ""
+2       SQLCHAR             0       12      "|"      2     ProfileId                              ""
+3       SQLCHAR             0       5       "|"      3     IcdVersionId                           ""
+4       SQLCHAR             0       7       "|"      4     Action                                 ""
+5       SQLCHAR             0       24      "|"      5     StartDate                              ""
+6       SQLCHAR             0       24      "|"      6     EndDate                                ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                           SQL_Latin1_General_CP1_CI_AS
+

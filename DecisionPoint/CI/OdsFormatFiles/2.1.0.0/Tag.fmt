@@ -1,0 +1,10 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     TagId                        ""
+2       SQLCHAR             0       50      "|"      2     NAME                         SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       37      "|"      3     DateCreated                  ""
+4       SQLCHAR             0       37      "|"      4     DateModified                 ""
+5       SQLCHAR             0       15      "|"      5     CreatedBy                    SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       15      "|"      6     ModifiedBy                   SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                 SQL_Latin1_General_CP1_CI_AS
+

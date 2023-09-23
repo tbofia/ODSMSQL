@@ -1,0 +1,11 @@
+11.0
+8
+1       SQLNCHAR            0       16      "|\0"        1     RateTypeCode                               SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       4       "|\0"        2     PPONetworkID                               SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       2       "|\0"        3     Category                                   SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       2       "|\0"        4     Priority                                   SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       14      "|\0"        5     VBColor                                    ""
+6       SQLNCHAR            0       140     "|\0"        6     RateTypeDescription                        SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       12000   "|\0"        7     Explanation                                SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       2       "\r\0\n\0"   8     DmlOperation                               SQL_Latin1_General_CP1_CI_AS
+

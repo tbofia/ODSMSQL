@@ -1,0 +1,9 @@
+11.0
+6
+1       SQLCHAR             0       30      "|"      1     LongName                                             SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       2       "|"      2     ShortName                                            SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       2       "|"      3     CbreCoverageTypeCode                                 SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       4       "|"      4     CoverageTypeCategoryCode                             SQL_Latin1_General_CP1_CI_AS
+5		SQLCHAR             0       5       "|"      5     PricingMethodId                              		""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                                         SQL_Latin1_General_CP1_CI_AS
+

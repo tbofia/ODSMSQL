@@ -1,0 +1,12 @@
+11.0
+9
+1       SQLCHAR             0       7       "|"      1     PlaceOfServiceCode                       ""
+2       SQLCHAR             0       255     "|"      2     Description                              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       7       "|"      3     Facility                                 ""
+4       SQLCHAR             0       7       "|"      4     MHL                                      ""
+5       SQLCHAR             0       7       "|"      5     PlusFour                                 ""
+6       SQLCHAR             0       12      "|"      6     Institution                              ""
+7       SQLCHAR             0       30      "|"      7     StartDate                                ""
+8       SQLCHAR             0       30      "|"      8     EndDate                                  ""
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                             SQL_Latin1_General_CP1_CI_AS
+

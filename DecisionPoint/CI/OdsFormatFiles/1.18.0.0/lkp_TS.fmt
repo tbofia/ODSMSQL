@@ -1,0 +1,13 @@
+11.0
+10
+1       SQLCHAR             0       2       "|"      1     ShortName                                SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       30      "|"      2     StartDate                                ""
+3       SQLCHAR             0       30      "|"      3     EndDate                                  ""
+4       SQLCHAR             0       100     "|"      4     LongName                                 SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       7       "|"      5     Global                                   ""
+6       SQLCHAR             0       7       "|"      6     AnesMedDirect                            ""
+7       SQLCHAR             0       7       "|"      7     AffectsPricing                           ""
+8       SQLCHAR             0       1       "|"      8     IsAssistantSurgery                       ""
+9       SQLCHAR             0       1       "|"      9     IsCoSurgeon                              ""
+10      SQLCHAR             0       1       "\r\n"   10    DmlOperation                             SQL_Latin1_General_CP1_CI_AS
+

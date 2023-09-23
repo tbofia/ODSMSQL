@@ -1,0 +1,2 @@
+SmartAdvisor	Smart Advisor	dbo
+WcsOds	WcsOds	rpt

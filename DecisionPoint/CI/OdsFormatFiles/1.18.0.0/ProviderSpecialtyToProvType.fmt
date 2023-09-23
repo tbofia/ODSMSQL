@@ -1,0 +1,11 @@
+11.0
+8
+1       SQLCHAR             0       20      "|"      1     ProviderType                           SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR             0       80      "|"      2     ProviderType_Desc                      SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       20      "|"      3     Specialty                              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       80      "|"      4     Specialty_Desc                         SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       24      "|"      5     CreateDate                             ""
+6       SQLCHAR             0       24      "|"      6     ModifyDate                             ""
+7       SQLCHAR             0       1       "|"      7     LogicalDelete                          SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       1       "\r\n"   8     DmlOperation                           SQL_Latin1_General_CP1_CI_AS
+

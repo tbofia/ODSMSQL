@@ -1,0 +1,9 @@
+11.0
+7
+1       SQLCHAR             0       12      "|"      1     AnalysisRuleThresholdId                            ""
+2       SQLCHAR             0       12      "|"      2     AnalysisRuleId                                     ""
+3       SQLCHAR             0       50      "|"      3     ThresholdKey                                       SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       100     "|"      4     ThresholdValue                                     SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       37      "|"      5     CreateDate                                         ""
+6       SQLCHAR             0       37      "|"      6     LastChangedOn                                      ""
+7       SQLCHAR             0       1       "\r\n"   7     DmlOperation                                       SQL_Latin1_General_CP1_CI_AS

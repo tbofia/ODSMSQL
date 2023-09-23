@@ -1,0 +1,11 @@
+10.0
+9
+1       SQLCHAR             0       12      "|"      1     BillIdNo                           ""
+2       SQLCHAR             0       7       "|"      2     Line_No                            ""
+3       SQLCHAR             0       12      "|"      3     Endnote                            ""
+4       SQLCHAR             0       2       "|"      4     RuleType                           SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       12      "|"      5     RuleId                             ""
+6       SQLCHAR             0       7       "|"      6     PreCertAction                      ""
+7       SQLCHAR             0       30      "|"      7     PercentDiscount                    ""
+8       SQLCHAR             0       7       "|"      8     ActionId                           ""
+9       SQLCHAR             0       1       "\r\n"   9     DmlOperation                       SQL_Latin1_General_CP1_CI_AS

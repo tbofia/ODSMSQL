@@ -1,0 +1,27 @@
+11.0
+24
+1       SQLCHAR             0       12      "|"      1     UDFIdNo                                    ""
+2       SQLCHAR             0       50      "|"      2     UDFName                                    SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       7       "|"      3     ScreenType                                 ""
+4       SQLCHAR             0       1000    "|"      4     UDFDescription                             SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       7       "|"      5     DataFormat                                 ""
+6       SQLCHAR             0       7       "|"      6     RequiredField                              ""
+7       SQLCHAR             0       7       "|"      7     ReadOnly                                   ""
+8       SQLCHAR             0       7       "|"      8     Invisible                                  ""
+9       SQLCHAR             0       7       "|"      9     TextMaxLength                              ""
+10      SQLCHAR             0       50      "|"      10    TextMask                                   SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       7       "|"      11    TextEnforceLength                          ""
+12      SQLCHAR             0       7       "|"      12    RestrictRange                              ""
+13      SQLCHAR             0       30      "|"      13    MinValDecimal                              ""
+14      SQLCHAR             0       30      "|"      14    MaxValDecimal                              ""
+15      SQLCHAR             0       24      "|"      15    MinValDate                                 ""
+16      SQLCHAR             0       24      "|"      16    MaxValDate                                 ""
+17      SQLCHAR             0       7       "|"      17    ListAllowMultiple                          ""
+18      SQLCHAR             0       100     "|"      18    DefaultValueText                           SQL_Latin1_General_CP1_CI_AS
+19      SQLCHAR             0       30      "|"      19    DefaultValueDecimal                        ""
+20      SQLCHAR             0       24      "|"      20    DefaultValueDate                           ""
+21      SQLCHAR             0       7       "|"      21    UseDefault                                 ""
+22      SQLCHAR             0       7       "|"      22    ReqOnSubmit                                ""
+23      SQLCHAR             0       1       "|"      23    IncludeDateButton                          ""
+24      SQLCHAR             0       1       "\r\n"   24    DmlOperation                               SQL_Latin1_General_CP1_CI_AS
+

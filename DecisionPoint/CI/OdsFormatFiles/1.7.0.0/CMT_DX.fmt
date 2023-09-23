@@ -1,0 +1,8 @@
+11.0
+6
+1       SQLCHAR             0       12      "|"      1     BillIDNo                     ""
+2       SQLCHAR             0       8       "|"      2     DX                           SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       7       "|"      3     SeqNum                       ""
+4       SQLCHAR             0       1       "|"      4     POA                          SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       5       "|"      5     IcdVersion                   ""
+6       SQLCHAR             0       1       "\r\n"   6     DmlOperation                 SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,13 @@
+IF OBJECT_ID('adm.LoadStatus', 'U') IS NULL
+BEGIN
+CREATE TABLE adm.LoadStatus
+(	JobRunId INT IDENTITY(1,1) NOT NULL,
+	JobName VARCHAR(MAX) NOT NULL,
+	Status VARCHAR(5) NOT NULL,
+	NoOfCustomers INT NULL,
+	StartDate DATETIME NOT NULL,
+	EndDate DATETIME NULL 
+	)
+END
+GO
+
